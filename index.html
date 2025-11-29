@@ -1,0 +1,1127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Complete Guide: Bokashi to Vermicompost with Vermiwash Collection</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #2a9d8f;
+      --accent-light: rgba(42, 157, 143, 0.1);
+      --muted: #6c757d;
+      --dark: #264653;
+    }
+    
+    body {
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      line-height: 1.7;
+      color: #212529;
+    }
+    
+    header.hero {
+      background: linear-gradient(180deg, rgba(42,157,143,0.08), rgba(42,157,143,0.02));
+      padding: 3.5rem 0;
+    }
+    
+    .toc a {
+      display: block;
+      padding: .25rem 0;
+    }
+    
+    .badge-topic {
+      background: var(--accent);
+      color: #fff;
+    }
+    
+    pre.code-sample {
+      background: #0d1117;
+      color: #e6f1e7;
+      padding: 1rem;
+      border-radius: .375rem;
+      overflow: auto;
+    }
+    
+    .callout {
+      background: var(--accent-light);
+      border-left: 4px solid var(--accent);
+      padding: 1.5rem;
+      border-radius: .375rem;
+      margin: 1.5rem 0;
+    }
+    
+    .step-box {
+      background: #f8f9fa;
+      border-radius: .5rem;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border: 1px solid #e9ecef;
+    }
+    
+    .step-number {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 32px;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    
+    footer {
+      padding: 2rem 0;
+      color: var(--muted);
+      border-top: 1px solid #e9ecef;
+      margin-top: 3rem;
+    }
+    
+    h2, h3, h4 {
+      color: var(--dark);
+      margin-top: 2rem;
+    }
+    
+    h2 {
+      border-bottom: 1px solid #e9ecef;
+      padding-bottom: 0.5rem;
+    }
+    
+    .table-of-contents {
+      position: sticky;
+      top: 20px;
+    }
+    
+    .warning-box {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 1.5rem;
+      border-radius: .375rem;
+      margin: 1.5rem 0;
+    }
+    
+    .tip-box {
+      background: #d1ecf1;
+      border-left: 4px solid #17a2b8;
+      padding: 1.5rem;
+      border-radius: .375rem;
+      margin: 1.5rem 0;
+    }
+    
+    .material-icons {
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Bokashi→Vermi Lab</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
+        <li class="nav-item"><a class="nav-link" href="#bokashi-bran">Bokashi Bran</a></li>
+        <li class="nav-item"><a class="nav-link" href="#bokashi-setup">Bokashi Setup</a></li>
+        <li class="nav-item"><a class="nav-link" href="#neutralize">Neutralization</a></li>
+        <li class="nav-item"><a class="nav-link" href="#vermi-setup">Vermicompost Setup</a></li>
+        <li class="nav-item"><a class="nav-link" href="#vermiwash">Vermiwash Collection</a></li>
+        <li class="nav-item"><a class="nav-link" href="#harvesting">Harvesting</a></li>
+        <li class="nav-item"><a class="nav-link" href="#storage">Storage</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <h1 class="display-5 fw-bold">From Kitchen Waste to Rich Vermicompost & Vermiwash: The Complete Step-by-Step Guide</h1>
+        <p class="lead my-3">Learn how to efficiently convert household organic waste into high-quality vermicompost and nutrient-rich vermiwash using 20-L Bokashi buckets, 60-L vermicompost drums, and simple DIY methods. Designed for novice to experienced gardeners.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container my-5">
+  <div class="row">
+    <div class="col-lg-3 d-none d-lg-block">
+      <div class="table-of-contents">
+        <h5>Table of Contents</h5>
+        <nav id="table-of-contents" class="nav flex-column">
+          <a class="nav-link" href="#overview">Overview</a>
+          <a class="nav-link" href="#bokashi-bran">Bokashi Bran Preparation</a>
+          <a class="nav-link" href="#bokashi-setup">Bokashi Bucket Setup</a>
+          <a class="nav-link" href="#neutralize">Neutralizing Bokashi</a>
+          <a class="nav-link" href="#vermi-setup">Vermicompost Setup</a>
+          <a class="nav-link" href="#vermiwash">Vermiwash Collection</a>
+          <a class="nav-link" href="#harvesting">Harvesting Process</a>
+          <a class="nav-link" href="#storage">Storage Techniques</a>
+          <a class="nav-link" href="#faq">FAQ & Troubleshooting</a>
+        </nav>
+      </div>
+    </div>
+    
+    <div class="col-lg-9">
+      <article>
+
+        <section id="overview">
+          <h2>Overview: The Complete Two-Stage System</h2>
+          <p>This comprehensive guide details a two-stage home-scale composting system that transforms your kitchen waste into two valuable resources: nutrient-rich vermicompost and potent vermiwash. The system is designed for efficiency, using rotational containers to ensure continuous production.</p>
+          
+          <div class="callout">
+            <h5>System Components Overview:</h5>
+            <ul>
+              <li><strong>Two 20-L Bokashi buckets</strong> (rotational use for continuous fermentation)</li>
+              <li><strong>Milk crate or similar container</strong> for neutralizing pre-compost</li>
+              <li><strong>Two 60-L vermicompost drums</strong> (rotational use - one active, one processing)</li>
+              <li><strong>Collection containers</strong> for Bokashi leachate and vermiwash</li>
+              <li><strong>Storage containers</strong> for preserving vermiwash with jaggery</li>
+            </ul>
+          </div>
+          
+          <h3>Why This System Works So Well</h3>
+          <p>The combination of Bokashi fermentation followed by vermicomposting creates a synergistic effect:</p>
+          <ol>
+            <li><strong>Bokashi Fermentation:</strong> Anaerobic fermentation of kitchen waste preserves nutrients, reduces odors, and pre-digests materials that worms might otherwise avoid.</li>
+            <li><strong>Vermicomposting:</strong> Worms efficiently convert the neutralized Bokashi pre-compost into stable humus rich in beneficial microorganisms and plant growth hormones.</li>
+          </ol>
+          
+          <p>The rotational system ensures continuous compost production: while one Bokashi bucket is fermenting, the other can be filled; while one vermicompost drum is processing, the second is ready for feeding. This approach maximizes efficiency and minimizes downtime.</p>
+        </section>
+
+        <hr>
+
+        <section id="bokashi-bran">
+          <h2>Step 1: Preparing Bokashi Bran and Lactic Acid Starter</h2>
+          <p>Bokashi fermentation relies on Effective Microorganisms (EM) to convert kitchen waste without foul odor. The key is creating a high-quality bran inoculated with beneficial microbes.</p>
+          
+          <div class="step-box">
+            <h4><span class="step-number">1</span> DIY LAB (Lactic Acid Bacteria) Starter</h4>
+            <p>Creating your own LAB starter is cost-effective and ensures a fresh, potent culture.</p>
+            
+            <h5>Materials Needed:</h5>
+            <ul>
+              <li>1 cup uncooked rice</li>
+              <li>1 liter fresh, unpasteurized milk (or 200g powdered milk dissolved in 1L water)</li>
+              <li>100g jaggery or unsulfured molasses</li>
+              <li>2-liter wide-mouth glass jar</li>
+              <li>Cheesecloth or breathable cloth for covering</li>
+              <li>Rubber band</li>
+            </ul>
+            
+            <h5>Detailed Procedure:</h5>
+            <ol>
+              <li><strong>Rice Wash Water:</strong> Place rice in a bowl and add just enough water to cover. Gently swirl the rice for 30-45 seconds until the water becomes cloudy. Strain and collect this starchy water.</li>
+              <li><strong>First Fermentation:</strong> Pour the rice water into your glass jar, cover with cheesecloth, and secure with a rubber band. Place in a dark spot at 25-30°C for 5-7 days. A white, creamy layer will form on top - this is your LAB culture.</li>
+              <li><strong>Milk Separation:</strong> Carefully skim off the LAB layer and transfer to a clean jar. Add milk and mix thoroughly. Cover again and let sit for another 5-7 days. The LAB will separate the milk into curds and whey.</li>
+              <li><strong>Final Preparation:</strong> Strain the mixture through a fine cloth or coffee filter. The yellowish liquid is your LAB concentrate. Dissolve jaggery in this liquid (100g per liter) to preserve the culture. Store in refrigerator for up to 6 months.</li>
+            </ol>
+          </div>
+          
+          <div class="step-box">
+            <h4><span class="step-number">2</span> Making Atta-Based Bokashi Bran</h4>
+            <p>Whole wheat flour (atta) provides an excellent carrier for the beneficial microbes.</p>
+            
+            <h5>Ingredients (for approximately 2 kg of finished bran):</h5>
+            <ul>
+              <li>Whole-wheat atta: 2 kg</li>
+              <li>Jaggery or unsulfured molasses: 200-300 g</li>
+              <li>Non-chlorinated water: approximately 1.5 L</li>
+              <li>LAB starter (homemade or EM-1): 200-400 ml</li>
+              <li>Optional: rice starch water from LAB preparation: 200-300 ml for extra microbial diversity</li>
+            </ul>
+            
+            <h5>Detailed Procedure:</h5>
+            <ol>
+              <li><strong>Toasting Atta:</strong> Spread atta evenly on baking trays and toast in an oven at 120°C for 20-30 minutes, stirring occasionally. Alternatively, toast in a large pan over low heat, stirring constantly until fragrant and slightly darkened. This process removes moisture and makes the bran less attractive to pests.</li>
+              <li><strong>Cooling:</strong> Allow the toasted atta to cool completely to room temperature. Hot atta will kill the beneficial microbes.</li>
+              <li><strong>Preparing Inoculant Solution:</strong> Dissolve jaggery/molasses in warm water (not hot). Allow to cool to room temperature, then mix with your LAB starter and optional rice starch water.</li>
+              <li><strong>Mixing:</strong> Place cooled atta in a large, clean container. Gradually add the liquid mixture while stirring continuously. The goal is to achieve a consistency where the mixture holds together when squeezed but crumbles easily when poked. Avoid making it too wet.</li>
+              <li><strong>Fermentation:</strong> Transfer the mixture to an airtight container, pressing down to remove air pockets. Seal and store in a warm, dark place (25-30°C) for 7-14 days. The bran is ready when it develops a sweet-sour fermented aroma (like pickles or yeast) without any foul odors.</li>
+              <li><strong>Drying and Storage:</strong> Spread the finished bran on trays in a well-ventilated area out of direct sunlight to dry completely. Store in airtight containers in a cool, dark place. Properly dried bran can last 6-12 months.</li>
+            </ol>
+          </div>
+          
+          <div class="tip-box">
+            <h5><span class="material-icons">lightbulb</span> Pro Tip: Testing Your Bokashi Bran</h5>
+            <p>To test if your bran is properly activated, mix a tablespoon with a small amount of milk in a jar. Seal and leave for 2-3 days. If the milk has curdled and developed a pleasant fermented smell, your bran is active and ready to use.</p>
+          </div>
+        </section>
+
+        <hr>
+
+        <section id="bokashi-setup">
+          <h2>Step 2: Setting Up and Managing 20-L Bokashi Buckets</h2>
+          <p>Proper setup and management of your Bokashi buckets are crucial for successful fermentation and nutrient preservation.</p>
+          
+          <div class="step-box">
+            <h4><span class="step-number">1</span> Bucket Preparation</h4>
+            
+            <h5>Materials:</h5>
+            <ul>
+              <li>Two 20-L food-grade plastic buckets with airtight lids</li>
+              <li>Optional: Spigot for easy leachate collection</li>
+              <li>Perforated plate or false bottom for solid-liquid separation</li>
+              <li>Drill for creating drainage holes (if not using spigot)</li>
+            </ul>
+            
+            <h5>Setup Procedure:</h5>
+            <ol>
+              <li>If using a spigot, drill a hole about 2-3 cm from the bottom of the bucket and install the spigot according to manufacturer instructions. Ensure it's tightly sealed to prevent leaks.</li>
+              <li>If not using a spigot, drill several small (3-5mm) holes in the bottom of one bucket for drainage.</li>
+              <li>Place the perforated plate or create a false bottom using a layer of straw or crumpled newspaper to prevent waste from blocking drainage.</li>
+              <li>Place the prepared bucket inside the second bucket (which will collect leachate) if not using a spigot.</li>
+            </ol>
+          </div>
+          
+          <div class="step-box">
+            <h4><span class="step-number">2</span> Filling Procedure</h4>
+            
+            <h5>What You Can Add:</h5>
+            <ul>
+              <li><strong>Excellent:</strong> Fruit and vegetable scraps, coffee grounds, tea leaves, eggshells</li>
+              <li><strong>Good:</strong> Bread, grains, pasta (in moderation)</li>
+              <li><strong>Limited:</strong> Dairy, meat, fish (small amounts only)</li>
+              <li><strong>Avoid:</strong> Large bones, excessive liquids, moldy food</li>
+            </ul>
+            
+            <h5>Step-by-Step Filling:</h5>
+            <ol>
+              <li><strong>Preparation:</strong> Chop kitchen waste into small pieces (≤3 cm) to increase surface area and speed fermentation.</li>
+              <li><strong>Initial Layer:</strong> Sprinkle a thin layer of Bokashi bran (about 2 tbsp) on the false bottom.</li>
+              <li><strong>Waste Layer:</strong> Add 2-3 cm layer of prepared kitchen waste.</li>
+              <li><strong>Bran Application:</strong> Sprinkle 1-2 tbsp Bokashi bran evenly over the waste. The amount needed depends on the sugar content of your waste - sweeter materials need more bran.</li>
+              <li><strong>Compression:</strong> Press down firmly to remove air pockets. Oxygen is the enemy of proper Bokashi fermentation.</li>
+              <li><strong>Repeat:</strong> Continue layering waste and bran until the bucket is nearly full, leaving about 5 cm headspace at the top.</li>
+              <li><strong>Final Layer:</strong> Add an extra generous layer of bran (3-4 tbsp) on top of the final waste layer.</li>
+              <li><strong>Sealing:</strong> Place a plastic sheet or zip-lock bag directly on the waste to create an additional barrier, then seal the lid tightly.</li>
+            </ol>
+          </div>
+          
+          <div class="step-box">
+            <h4><span class="step-number">3</span> Bokashi Leachate Management</h4>
+            <p>Bokashi leachate is the liquid that drains from fermenting waste, rich in nutrients and beneficial microbes.</p>
+            
+            <h5>Collection:</h5>
+            <ul>
+              <li>Drain leachate every 2-3 days to prevent buildup and potential odor.</li>
+              <li>If using a spigot, place a container underneath and open the tap slowly.</li>
+              <li>If using nested buckets, carefully separate them and pour out collected liquid.</li>
+            </ul>
+            
+            <h5>Usage and Storage:</h5>
+            <ul>
+              <li><strong>Immediate Use:</strong> Dilute 1:100 for soil application, 1:200 for seedlings. Use within 24 hours for maximum microbial benefit.</li>
+              <li><strong>Short-term Storage:</strong> Store in a sealed container in a cool, dark place for up to 1 week.</li>
+              <li><strong>Long-term Preservation:</strong> Add jaggery (10% of leachate volume) to extend shelf life to 2-3 months at room temperature.</li>
+            </ul>
+          </div>
+          
+          <div class="callout">
+            <h5>Bokashi Fermentation Timeline</h5>
+            <ul>
+              <li><strong>Days 1-3:</strong> Initial fermentation begins, minimal leachate</li>
+              <li><strong>Days 4-10:</strong> Active fermentation, increased leachate production</li>
+              <li><strong>Days 11-14:</strong> Fermentation slows, leachate decreases</li>
+              <li><strong>After 14 days:</strong> Fermentation complete, material ready for neutralization</li>
+            </ul>
+            <p>In cooler temperatures (below 20°C), fermentation may take 3-4 weeks. In warmer climates (above 30°C), it may complete in 10-12 days.</p>
+          </div>
+        </section>
+
+        <hr>
+
+        <section id="neutralize">
+          <h2>Step 3: Neutralizing Bokashi Pre-Compost</h2>
+          <p>Bokashi pre-compost is acidic (pH 3.5-4.5) and needs neutralization before worms can process it safely. This step also introduces aerobic conditions and additional beneficial microbes.</p>
+          
+          <div class="step-box">
+            <h4><span class="step-number">1</span> Neutralization Setup</h4>
+            
+            <h5>Materials:</h5>
+            <ul>
+              <li>Milk crate or similar well-ventilated container</li>
+              <li>Mature vermicompost or garden soil: 2-3 kg</li>
+              <li>Cocopeat (rehydrated): 2-3 kg</li>
+              <li>Optional amendments: crushed eggshells, biochar, rock dust</li>
+              <li>Shallow tray to place under milk crate</li>
+              <li>Breathable cover (hessian cloth, cardboard, or burlap)</li>
+            </ul>
+            
+            <h5>Procedure:</h5>
+            <ol>
+              <li><strong>Prepare Ingredients:</strong> If using cocopeat bricks, rehydrate them several hours in advance. Mature vermicompost should be sieved to remove large particles.</li>
+              <li><strong>Mixing:</strong> In a large container or directly in the milk crate, combine Bokashi pre-compost, vermicompost/soil, and cocopeat in approximately 1:0.5:0.5 ratio by volume. For one full 20L Bokashi bucket, use about 10L of vermicompost/soil and 10L of cocopeat.</li>
+              <li><strong>Optional Amendments:</strong> Add 1-2 cups of crushed eggshells (for calcium and pH balancing) and/or 1-2 cups of biochar (for microbial habitat and odor control).</li>
+              <li><strong>Moisture Check:</strong> The mixture should feel like a wrung-out sponge. If too dry, mist with water; if too wet, add more cocopeat or dry soil.</li>
+              <li><strong>Aeration:</strong> Place the mixture in the milk crate, which allows air circulation from all sides. Do not compact the material.</li>
+              <li><strong>Covering:</strong> Cover loosely with breathable material to maintain moisture while allowing air exchange.</li>
+              <li><strong>Location:</strong> Place in a shaded, well-ventilated area protected from heavy rain.</li>
+            </ol>
+          </div>
+          
+          <div class="step-box">
+            <h4><span class="step-number">2</span> Neutralization Management</h4>
+            
+            <h5>Monitoring:</h5>
+            <ul>
+              <li><strong>Day 1-2:</strong> Material may still have a strong pickled smell</li>
+              <li><strong>Day 3-4:</strong> Smell should transition to earthy aroma</li>
+              <li><strong>Day 5-7:</strong> Material should smell like forest soil, with no sour notes</li>
+            </ul>
+            
+            <h5>Turning:</h5>
+            <p>After 3-4 days, gently turn the material to ensure even aeration and neutralization. Be careful not to compact it during this process.</p>
+            
+            <h5>Readiness Test:</h5>
+            <ol>
+              <li><strong>Smell Test:</strong> The material should have a pleasant, earthy smell with no sour or alcoholic notes.</li>
+              <li><strong>pH Test:</strong> If you have pH strips, test a small sample mixed with distilled water. The pH should be between 6.0-7.5.</li>
+              <li><strong>Worm Test:</strong> Place a small handful in a container with a few worms. If they immediately burrow in and show no signs of distress, the material is ready.</li>
+            </ol>
+          </div>
+          
+          <div class="warning-box">
+            <h5><span class="material-icons">warning</span> Important: Don't Skip Neutralization</h5>
+            <p>Adding acidic Bokashi pre-compost directly to your worm bin can cause worm die-off, attract pests, and create anaerobic conditions. Always complete the neutralization process before feeding to worms.</p>
+          </div>
+        </section>
+
+        <hr>
+
+        <section id="vermi-setup">
+          <h2>Step 4: Vermicomposting in 60-L Drums</h2>
+          <p>The vermicomposting stage transforms neutralized Bokashi into stable, nutrient-rich humus through worm digestion. Using two drums rotationally ensures continuous production.</p>
+          
+          <div class="step-box">
+            <h4><span class="step-number">1</span> Drum Preparation</h4>
+            
+            <h5>Materials:</h5>
+            <ul>
+              <li>Two 60-L food-grade plastic drums with lids</li>
+              <li>Spigot or tap for liquid collection</li>
+              <li>Materials for false floor: bricks, plastic crate, or PVC pipes</li>
+              <li>Fine mesh or landscape fabric</li>
+              <li>Drill with various bit sizes</li>
+            </ul>
+            
+            <h5>Setup Procedure:</h5>
+            <ol>
+              <li><strong>Liquid Drainage:</strong> Install a spigot approximately 2-3 cm from the bottom of the drum. This allows you to drain vermiwash without disturbing the bedding.</li>
+              <li><strong>Aeration Holes:</strong> Drill 8-10 holes (1-2 cm diameter) around the upper sides of the drum for ventilation. Cover these with fine mesh to prevent pest entry.</li>
+              <li><strong>False Floor:</strong> Create a raised platform using bricks, a small plastic crate, or PVC pipes arranged in a grid. This creates a space for liquid collection and prevents anaerobic conditions at the bottom.</li>
+              <li><strong>Mesh Layer:</strong> Place a layer of fine mesh or landscape fabric over the false floor to prevent bedding from falling through while allowing liquid to drain.</li>
+              <li><strong>Lid Modification:</strong> Drill several small ventilation holes in the lid and cover with mesh. Alternatively, use a breathable fabric cover under the solid lid.</li>
+            </ol>
+          </div>
+          
+          <div class="step-box">
+            <h4><span class="step-number">2</span> Bedding Preparation</h4>
+            <p>Proper bedding provides habitat, moisture retention, and carbon balance for your worm ecosystem.</p>
+            
+            <h5>Bedding Materials:</h5>
+            <ul>
+              <li><strong>Primary:</strong> Cocopeat, shredded cardboard, aged manure</li>
+              <li><strong>Supplemental:</strong> Dry leaves, straw, paper shreds</li>
+              <li><strong>Mineral Additives:</strong> Garden soil, rock dust, crushed eggshells</li>
+            </ul>
+            
+            <h5>Bedding Setup:</h5>
+            <ol>
+              <li><strong>Moisture Preparation:</strong> If using cocopeat bricks, rehydrate them 12-24 hours in advance. Shredded cardboard should be soaked and wrung out.</li>
+              <li><strong>Layering:</strong> Create an 8-12 cm deep bedding layer using your chosen materials mixed together.</li>
+              <li><strong>Moisture Level:</strong> The bedding should feel like a wrung-out sponge. Add water gradually if too dry, or add dry bedding if too wet.</li>
+              <li><strong>Initial Feeding:</strong> Mix in a handful of mature compost or garden soil to introduce beneficial microorganisms.</li>
+              <li><strong>Resting Period:</strong> Let the prepared bedding sit for 2-3 days before adding worms to allow microbial establishment.</li>
+            </ol>
+          </div>
+          
+          <div class="step-box">
+            <h4><span class="step-number">3</span> Introducing Worms</h4>
+            
+            <h5>Worm Species:</h5>
+            <ul>
+              <li><strong>Eisenia fetida</strong> (Red Wiggler): Most common for vermicomposting, thrives in organic waste</li>
+              <li><strong>Eisenia hortensis</strong> (European Nightcrawler): Larger, good for fishing and composting</li>
+              <li><strong>Perionyx excavatus</strong> (Indian Blue): Suitable for tropical climates</li>
+            </ul>
+            
+            <h5>Population and Introduction:</h5>
+            <ol>
+              <li><strong>Starting Population:</strong> Begin with 500-1000 Eisenia fetida worms for a 60-L drum. They will multiply to match the available food.</li>
+              <li><strong>Acclimatization:</strong> Place worms on top of the bedding without spreading them out. They will naturally migrate into the bedding to escape light.</li>
+              <li><strong>Initial Cover:</strong> Cover with a layer of moist newspaper or cardboard to maintain darkness and moisture.</li>
+              <li><strong>First Feeding:</strong> Wait 3-4 days before adding the first small feeding of neutralized Bokashi to allow worms to settle.</li>
+            </ol>
+          </div>
+          
+          <div class="step-box">
+            <h4><span class="step-number">4</span> Feeding and Maintenance</h4>
+            
+            <h5>Feeding Procedure:</h5>
+            <ol>
+              <li><strong>Preparation:</strong> Ensure neutralized Bokashi is at proper moisture level and temperature.</li>
+              <li><strong>Pocket Feeding:</strong> Create small pockets in the bedding and add 3-4 cm layer of neutralized Bokashi. Cover with bedding material.</li>
+              <li><strong>Rotation:</strong> Feed in different locations each time to ensure even processing.</li>
+              <li><strong>Covering:</strong> Always cover food with 1-2 cm of bedding or dry leaves to prevent fruit flies and maintain moisture.</li>
+              <li><strong>Frequency:</strong> Feed every 5-10 days, depending on worm population and consumption rate.</li>
+            </ol>
+            
+            <h5>Environmental Monitoring:</h5>
+            <ul>
+              <li><strong>Temperature:</strong> Ideal range 18-30°C. Below 10°C worms become inactive; above 35°C can be fatal.</li>
+              <li><strong>Moisture:</strong> Maintain 60-80% moisture - material should feel like a wrung-out sponge.</li>
+              <li><strong>pH:</strong> Should remain between 6.0-7.5. Add crushed eggshells if too acidic.</li>
+              <li><strong>Aeration:</strong> Gently fluff bedding monthly to prevent compaction.</li>
+            </ul>
+          </div>
+        </section>
+
+        <hr>
+
+        <section id="vermiwash">
+          <h2>Step 5: Comprehensive Vermiwash Collection System</h2>
+          <p>Vermiwash is the nutrient-rich liquid that percolates through the vermicompost system, containing soluble nutrients, beneficial microbes, and plant growth promoters.</p>
+          
+          <div class="step-box">
+            <h4><span class="step-number">1</span> Understanding Vermiwash</h4>
+            
+            <p>Vermiwash differs from Bokashi leachate in several important ways:</p>
+            <ul>
+              <li><strong>Source:</strong> Vermiwash comes from worm activity and contains worm secretions</li>
+              <li><strong>Nutrient Profile:</strong> Rich in enzymes, hormones, and beneficial microorganisms</li>
+              <li><strong>pH:</strong> Typically neutral (6.5-7.5) compared to acidic Bokashi leachate</li>
+              <li><strong>Usage:</strong> Excellent as foliar spray and soil drench for all plant growth stages</li>
+            </ul>
+          </div>
+          
+          <div class="step-box">
+            <h4><span class="step-number">2</span> Collection Methods</h4>
+            
+            <h5>Method A: Direct from Vermicompost Drum</h5>
+            <ol>
+              <li>Place a clean container under the spigot of your vermicompost drum.</li>
+              <li>Open the tap slowly to allow vermiwash to drain without disturbing the system.</li>
+              <li>Collect only the liquid that flows freely - do not force drainage.</li>
+              <li>Close the tap when flow reduces to a drip.</li>
+              <li>Frequency: Drain every 1-2 weeks, or when approximately 1-2 liters have accumulated.</li>
+            </ol>
+            
+            <h5>Method B: Dedicated Vermiwash Unit</h5>
+            <p>For higher yields, create a separate vermiwash collection system:</p>
+            <ol>
+              <li>Use a 20-L bucket with spigot installed near the bottom.</li>
+              <li>Create a false bottom as described for vermicompost drums.</li>
+              <li>Add a 10-15 cm layer of active vermicompost containing worms.</li>
+              <li>Slowly add water until it just begins to drain from the spigot.</li>
+              <li>Close spigot and let sit for 24 hours.</li>
+              <li>Drain collected vermiwash - this will be more concentrated than from your main bin.</li>
+              <li>Refresh the compost monthly with new material from your active bin.</li>
+            </ol>
+          </div>
+          
+          <div class="step-box">
+            <h4><span class="step-number">3</span> Vermiwash Quality Assessment</h4>
+            
+            <h5>Good Quality Vermiwash:</h5>
+            <ul>
+              <li>Color: Light brown to tea-colored</li>
+              <li>Smell: Earthy, pleasant, no foul odors</li>
+              <li>Clarity: Slightly cloudy but not muddy</li>
+              <li>pH: 6.5-7.5 (neutral)</li>
+            </ul>
+            
+            <h5>Poor Quality Indicators:</h5>
+            <ul>
+              <li>Foul, anaerobic smell - indicates poor drainage or overfeeding</li>
+              <li>Very dark, muddy appearance - contains too much solid matter</li>
+              <li>Extremely acidic or alkaline pH - system imbalance</li>
+            </ul>
+            
+            <p>If you collect poor quality vermiwash, do not use it on plants. Instead, add it back to your Bokashi neutralization stage or compost it.</p>
+          </div>
+        </section>
+
+        <hr>
+
+        <section id="harvesting">
+          <h2>Step 6: Harvesting Vermicompost from 60-L Drums</h2>
+          <p>Proper harvesting ensures you collect high-quality vermicompost while preserving your worm population for continued processing.</p>
+          
+          <div class="step-box">
+            <h4><span class="step-number">1</span> Determining Readiness for Harvest</h4>
+            
+            <h5>Signs Your Vermicompost is Ready:</h5>
+            <ul>
+              <li><strong>Appearance:</strong> Dark, crumbly, soil-like material with no recognizable food scraps</li>
+              <li><strong>Timeframe:</strong> Typically 50-90 days after starting, depending on conditions</li>
+              <li><strong>Worm Activity:</strong> Most worms have migrated to newer feeding areas</li>
+              <li><strong>Volume Reduction:</strong> Original volume has decreased by 50-70%</li>
+            </ul>
+            
+            <h5>Pre-Harvest Preparation:</h5>
+            <ol>
+              <li><strong>Stop Feeding:</strong> Cease adding new food 1-2 weeks before planned harvest to allow worms to process remaining material.</li>
+              <li><strong>Moisture Adjustment:</strong> The compost should be moist but not wet for easiest harvesting.</li>
+              <li><strong>Prepare Second Drum:</strong> Ensure your second drum has fresh bedding ready for worm migration.</li>
+            </ol>
+          </div>
+          
+          <div class="step-box">
+            <h4><span class="step-number">2</span> Complete Harvest Method</h4>
+            <p>This method allows you to harvest the entire drum contents at once, which aligns with your rotational system.</p>
+            
+            <h5>Materials Needed:</h5>
+            <ul>
+              <li>Large tarp or plastic sheet</li>
+              <li>Bright light source (lamp or sunlight)</li>
+              <li>Containers for finished compost</li>
+              <li>Second prepared vermicompost drum</li>
+              <li>Small amount of attractive worm food (melon rind, avocado)</li>
+            </ul>
+            
+            <h5>Step-by-Step Procedure:</h5>
+            <ol>
+              <li><strong>Preparation:</strong> Spread the tarp in a well-lit area. Have your containers and second drum ready.</li>
+              <li><strong>Empty Contents:</strong> Carefully empty the entire contents of your vermicompost drum onto the tarp.</li>
+              <li><strong>Create Mounds:</strong> Shape the material into several cone-shaped mounds.</li>
+              <li><strong>Light Migration:</strong> Worms are photophobic and will move away from light. As they migrate downward, gently scrape off the top layers of compost.</li>
+              <li><strong>Repeat Process:</strong> Continue reforming mounds and removing compost until you're left with mostly worms and unprocessed material.</li>
+              <li><strong>Transfer Worms:</strong> Place the worm-rich material into your second prepared drum along with a fresh feeding.</li>
+              <li><strong>Clean Drum:</strong> Clean the now-empty drum and prepare it for future use when the second drum is full.</li>
+            </ol>
+          </div>
+          
+          <div class="step-box">
+            <h4><span class="step-number">3</span> Post-Harvest Processing</h4>
+            
+            <h5>Curing:</h5>
+            <p>Freshly harvested vermicompost benefits from a curing period:</p>
+            <ol>
+              <li>Place harvested compost in containers or piles, but do not compact.</li>
+              <li>Store in a shaded, well-ventilated area for 2-4 weeks.</li>
+              <li>Turn occasionally to ensure even curing.</li>
+              <li>Maintain moderate moisture - add water if it becomes too dry.</li>
+            </ol>
+            
+            <h5>Sieving (Optional):</h5>
+            <p>For a finer product, sieve the cured compost through a 4-6 mm mesh:</p>
+            <ul>
+              <li>Return any uncomposted material and worm cocoons to your active bin</li>
+              <li>Use the fine compost for potting mixes and seed starting</li>
+              <li>The coarser material can be used as mulch or soil amendment</li>
+            </ul>
+            
+            <h5>Storage:</h5>
+            <ul>
+              <li>Store cured vermicompost in breathable containers (cloth bags, burlap sacks)</li>
+              <li>Keep in a cool, dark place to preserve microbial life</li>
+              <li>Use within 6 months for maximum benefit</li>
+            </ul>
+          </div>
+        </section>
+
+        <hr>
+
+        <section id="storage">
+          <h2>Step 7: Storage and Preservation Techniques</h2>
+          <p>Proper storage ensures your valuable vermiwash and leachate maintain their potency until needed.</p>
+          
+          <div class="step-box">
+            <h4><span class="step-number">1</span> Vermiwash Preservation with Jaggery</h4>
+            <p>Jaggery acts as a natural preservative by feeding beneficial microbes and creating an environment that inhibits pathogens.</p>
+            
+            <h5>Materials:</h5>
+            <ul>
+              <li>Fresh vermiwash</li>
+              <li>Jaggery (10% of vermiwash volume by weight)</li>
+              <li>Clean, airtight storage containers (glass or food-grade plastic)</li>
+              <li>Funnel for transferring liquid</li>
+              <li>Scale for measuring jaggery</li>
+            </ul>
+            
+            <h5>Procedure:</h5>
+            <ol>
+              <li><strong>Filter:</strong> Strain vermiwash through a fine mesh or cloth to remove solid particles.</li>
+              <li><strong>Measure:</strong> Note the volume of filtered vermiwash and calculate 10% of that volume in jaggery weight (e.g., for 1 liter vermiwash, use 100g jaggery).</li>
+              <li><strong>Dissolve:</strong> Gently warm a small amount of vermiwash and dissolve the jaggery in it. Do not overheat as this can kill beneficial microbes.</li>
+              <li><strong>Combine:</strong> Mix the jaggery solution with the remaining vermiwash, stirring gently but thoroughly.</li>
+              <li><strong>Store:</strong> Transfer to clean storage containers, leaving 2-3 cm headspace. Seal tightly.</li>
+              <li><strong>Label:</strong> Clearly label with contents and date of preservation.</li>
+              <li><strong>Initial Burping:</strong> For the first week, open containers daily to release any gas buildup from continued fermentation.</li>
+            </ol>
+            
+            <h5>Storage Conditions:</h5>
+            <ul>
+              <li><strong>Location:</strong> Store in a cool, dark place at room temperature (20-25°C)</li>
+              <li><strong>Light Protection:</strong> Use dark containers or store in a cupboard to protect from light degradation</li>
+              <li><strong>Shelf Life:</strong> Properly preserved vermiwash can last 3-6 months</li>
+            </ul>
+          </div>
+          
+          <div class="step-box">
+            <h4><span class="step-number">2</span> Quality Monitoring During Storage</h4>
+            
+            <h5>Regular Checks:</h5>
+            <ul>
+              <li><strong>Weekly:</strong> Check for pressure buildup, unusual odors, or mold formation</li>
+              <li><strong>Monthly:</strong> Inspect clarity and color - some darkening is normal</li>
+              <li><strong>Before Use:</strong> Always check smell and appearance before application</li>
+            </ul>
+            
+            <h5>Signs of Spoilage:</h5>
+            <ul>
+              <li>Foul, putrid smell (instead of earthy)</li>
+              <li>Excessive gas production when opened</li>
+              <li>Visible mold growth on surface</li>
+              <li>Extremely dark, almost black color</li>
+            </ul>
+            
+            <p>If you notice any signs of spoilage, do not use the vermiwash on plants. It can be added to your compost pile or used to pre-moisten dry carbon materials.</p>
+          </div>
+          
+          <div class="tip-box">
+            <h5><span class="material-icons">lightbulb</span> Pro Tip: Creating Vermiwash Concentrate</h5>
+            <p>For space-efficient storage, you can create a vermiwash concentrate by using half the usual amount of water when collecting from a dedicated vermiwash unit. This concentrated form takes up less space and can be diluted when needed. Preserve with jaggery as described above.</p>
+          </div>
+        </section>
+
+        <hr>
+
+        <section id="faq">
+          <h2>Comprehensive FAQ & Troubleshooting Guide</h2>
+          <p>This section addresses common questions and problems that may arise in your integrated Bokashi-vermicomposting system. Use this as a quick reference when you encounter issues.</p>
+          
+          <div class="system-section">
+            <h3>Bokashi System FAQs & Troubleshooting</h3>
+            
+            <div class="faq-item">
+              <h5>Why is my Bokashi bucket developing a foul smell instead of a pickled smell?</h5>
+              <p><strong>Possible Causes:</strong></p>
+              <ul>
+                <li>Insufficient Bokashi bran application</li>
+                <li>Air exposure due to improper sealing</li>
+                <li>Too much liquid in the system</li>
+                <li>Extreme temperatures affecting fermentation</li>
+              </ul>
+              <p><strong>Solutions:</strong></p>
+              <ol>
+                <li>Ensure you're using enough bran (1-2 tablespoons per 2-3 cm layer)</li>
+                <li>Check bucket seal and use a plastic sheet directly on the waste before closing</li>
+                <li>Drain leachate regularly and avoid adding watery foods</li>
+                <li>Maintain temperature between 18-30°C for optimal fermentation</li>
+              </ol>
+            </div>
+            
+            <div class="faq-item">
+              <h5>White mold appeared in my Bokashi bucket - is this normal?</h5>
+              <p>Yes, white mold is a sign of successful fermentation and indicates the presence of beneficial fungi. However, if you see green, black, or blue mold, this indicates contamination and the batch should be discarded.</p>
+            </div>
+            
+            <div class="faq-item">
+              <h5>How long can I store finished Bokashi pre-compost before neutralization?</h5>
+              <p>Properly fermented Bokashi can be stored in its sealed bucket for 2-3 weeks after fermentation is complete. For longer storage, you can bury it directly in garden soil or transfer to airtight containers, but neutralization should ideally occur within a month.</p>
+            </div>
+            
+            <h4>Bokashi Troubleshooting Table</h4>
+            <div class="table-responsive">
+              <table class="table table-striped troubleshooting-table">
+                <thead>
+                  <tr>
+                    <th>Problem</th>
+                    <th>Possible Causes</th>
+                    <th>Solutions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Foul, rotting smell</td>
+                    <td>Insufficient bran, air exposure, too wet</td>
+                    <td>Add more bran, improve sealing, drain leachate, add dry materials</td>
+                  </tr>
+                  <tr>
+                    <td>No leachate production</td>
+                    <td>Dry materials, low moisture content, cool temperatures</td>
+                    <td>Add slightly moist foods, mist with water if too dry, move to warmer location</td>
+                  </tr>
+                  <tr>
+                    <td>Excessive leachate</td>
+                    <td>High moisture foods, inadequate drainage</td>
+                    <td>Drain more frequently, pre-dry watery vegetables, add absorbent materials</td>
+                  </tr>
+                  <tr>
+                    <td>Fruit flies around bucket</td>
+                    <td>Improper sealing, food exposed on top</td>
+                    <td>Ensure tight seal, add extra bran layer on top, use vinegar traps</td>
+                  </tr>
+                  <tr>
+                    <td>Slow fermentation</td>
+                    <td>Cool temperatures, old/inactive bran, large pieces</td>
+                    <td>Move to warmer spot, test bran activity, chop materials smaller</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+          <div class="system-section">
+            <h3>Neutralization Process FAQs & Troubleshooting</h3>
+            
+            <div class="faq-item">
+              <h5>How do I know when neutralization is complete?</h5>
+              <p>Neutralization is complete when:</p>
+              <ul>
+                <li>The material smells earthy like forest soil with no sour notes</li>
+                <li>pH tests between 6.0-7.5 (if using test strips)</li>
+                <li>Worms readily move into sample material without trying to escape</li>
+                <li>Visual inspection shows no recognizable anaerobic decomposition</li>
+              </ul>
+            </div>
+            
+            <div class="faq-item">
+              <h5>My neutralization material is developing a foul smell - what went wrong?</h5>
+              <p>This indicates the material has become anaerobic during neutralization. Solutions include:</p>
+              <ol>
+                <li>Turn the material more frequently (every 2-3 days)</li>
+                <li>Ensure proper aeration in your neutralization container</li>
+                <li>Add more bulking agents like cocopeat or shredded cardboard</li>
+                <li>Reduce the thickness of the neutralization layer</li>
+              </ol>
+            </div>
+            
+            <div class="faq-item">
+              <h5>Can I speed up the neutralization process?</h5>
+              <p>Yes, several methods can accelerate neutralization:</p>
+              <ul>
+                <li>Increase aeration by turning more frequently</li>
+                <li>Add more mature compost to introduce beneficial microbes</li>
+                <li>Maintain optimal moisture (like a wrung-out sponge)</li>
+                <li>Keep in warmer location (25-30°C ideal)</li>
+                <li>Mix in crushed eggshells or garden lime to buffer acidity</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="system-section">
+            <h3>Vermicompost System FAQs & Troubleshooting</h3>
+            
+            <div class="faq-item">
+              <h5>Why are my worms trying to escape from the bin?</h5>
+              <p>Worms typically try to escape when conditions are unfavorable:</p>
+              <ul>
+                <li><strong>pH imbalance:</strong> Test and adjust with crushed eggshells if too acidic</li>
+                <li><strong>Overfeeding:</strong> Reduce food input until worms catch up</li>
+                <li><strong>Anaerobic conditions:</strong> Fluff bedding to improve aeration</li>
+                <li><strong>Temperature extremes:</strong> Maintain 18-30°C range</li>
+                <li><strong>Moisture issues:</strong> Adjust to wrung-out sponge consistency</li>
+              </ul>
+            </div>
+            
+            <div class="faq-item">
+              <h5>What are these small white worms/mites in my vermicompost?</h5>
+              <p>Common harmless inhabitants include:</p>
+              <ul>
+                <li><strong>Pot worms (Enchytraeidae):</strong> Small white worms indicating acidic conditions</li>
+                <li><strong>Springtails:</strong> Tiny jumping insects that help decomposition</li>
+                <li><strong>Mites:</strong> Various types - most are beneficial decomposers</li>
+              </ul>
+              <p>These are generally beneficial and help break down organic matter. Only worry if population explosions occur, which may indicate overfeeding.</p>
+            </div>
+            
+            <div class="faq-item">
+              <h5>How can I increase my worm population faster?</h5>
+              <p>To encourage worm reproduction:</p>
+              <ol>
+                <li>Maintain ideal temperature (20-25°C)</li>
+                <li>Provide balanced nutrition (avoid highly acidic foods)</li>
+                <li>Ensure proper moisture (60-80%)</li>
+                <li>Add calcium source (crushed eggshells)</li>
+                <li>Avoid disturbances - worms reproduce better in stable environments</li>
+              </ol>
+            </div>
+            
+            <h4>Vermicompost Troubleshooting Table</h4>
+            <div class="table-responsive">
+              <table class="table table-striped troubleshooting-table">
+                <thead>
+                  <tr>
+                    <th>Problem</th>
+                    <th>Possible Causes</th>
+                    <th>Solutions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Worms dying or trying to escape</td>
+                    <td>Extreme pH, overfeeding, anaerobic conditions, temperature extremes</td>
+                    <td>Test pH, stop feeding, fluff bedding, adjust temperature, add eggshells</td>
+                  </tr>
+                  <tr>
+                    <td>Foul odors</td>
+                    <td>Overfeeding, anaerobic conditions, improper food types</td>
+                    <td>Stop feeding, aerate bedding, add dry carbon materials, avoid dairy/meat</td>
+                  </tr>
+                  <tr>
+                    <td>Fruit flies or gnats</td>
+                    <td>Exposed food, overripe fruit, too moist</td>
+                    <td>Bury food properly, cover with bedding, add dry materials, use traps</td>
+                  </tr>
+                  <tr>
+                    <td>Slow decomposition</td>
+                    <td>Too few worms, low temperatures, improper feeding</td>
+                    <td>Increase worm population, move to warmer location, chop food smaller</td>
+                  </tr>
+                  <tr>
+                    <td>Excessive moisture</td>
+                    <td>Overwatering, high-moisture foods, poor drainage</td>
+                    <td>Add dry bedding, drain excess liquid, adjust food types</td>
+                  </tr>
+                  <tr>
+                    <td>Worms clustered in specific areas</td>
+                    <td>Temperature variations, feeding patterns, moisture differences</td>
+                    <td>Even out conditions, rotate feeding locations, mix bedding gently</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+          <div class="system-section">
+            <h3>Vermiwash Collection & Storage FAQs</h3>
+            
+            <div class="faq-item">
+              <h5>How is vermiwash different from Bokashi leachate?</h5>
+              <p>Key differences:</p>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Characteristic</th>
+                    <th>Vermiwash</th>
+                    <th>Bokashi Leachate</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>pH Level</td>
+                    <td>Neutral (6.5-7.5)</td>
+                    <td>Acidic (3.5-4.5)</td>
+                  </tr>
+                  <tr>
+                    <td>Primary Use</td>
+                    <td>Foliar spray, soil drench for all plants</td>
+                    <td>Soil conditioner (diluted), drain cleaner</td>
+                  </tr>
+                  <tr>
+                    <td>Nutrient Content</td>
+                    <td>Enzymes, hormones, beneficial microbes</td>
+                    <td>Organic acids, some nutrients</td>
+                  </tr>
+                  <tr>
+                    <td>Storage Life</td>
+                    <td>1-2 weeks fresh, 3-6 months with jaggery</td>
+                    <td>1 week fresh, 2-3 months with jaggery</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <div class="faq-item">
+              <h5>My vermiwash smells bad - can I still use it?</h5>
+              <p>Foul-smelling vermiwash indicates anaerobic conditions and potential pathogen growth. Do not use it on plants. Instead:</p>
+              <ul>
+                <li>Add it back to your compost system</li>
+                <li>Use it to pre-moisten dry carbon materials</li>
+                <li>Dilute heavily and use on non-edible plants only as last resort</li>
+              </ul>
+              <p>To prevent this issue, ensure proper drainage in your vermicompost system and don't let vermiwash stagnate.</p>
+            </div>
+            
+            <div class="faq-item">
+              <h5>How much jaggery should I use for preserving vermiwash?</h5>
+              <p>Use jaggery at 10% of the vermiwash volume by weight. For example:</p>
+              <ul>
+                <li>1 liter vermiwash = 100g jaggery</li>
+                <li>500ml vermiwash = 50g jaggery</li>
+                <li>2 liters vermiwash = 200g jaggery</li>
+              </ul>
+              <p>Dissolve the jaggery in a small amount of warm vermiwash first, then mix with the remainder. Store in airtight containers in a cool, dark place.</p>
+            </div>
+            
+            <h4>Vermiwash Quality Assessment Guide</h4>
+            <div class="table-responsive">
+              <table class="table table-striped troubleshooting-table">
+                <thead>
+                  <tr>
+                    <th>Characteristic</th>
+                    <th>Good Quality</th>
+                    <th>Poor Quality</th>
+                    <th>Action Required</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Color</td>
+                    <td>Light brown, tea-colored</td>
+                    <td>Dark brown/black, muddy</td>
+                    <td>Improve drainage, avoid overcollection</td>
+                  </tr>
+                  <tr>
+                    <td>Smell</td>
+                    <td>Earthy, pleasant</td>
+                    <td>Foul, putrid, anaerobic</td>
+                    <td>Do not use on plants; improve aeration</td>
+                  </tr>
+                  <tr>
+                    <td>Clarity</td>
+                    <td>Slightly cloudy but transparent</td>
+                    <td>Opaque, contains solids</td>
+                    <td>Filter before use, check false bottom</td>
+                  </tr>
+                  <tr>
+                    <td>pH Level</td>
+                    <td>6.5-7.5 (neutral)</td>
+                    <td><6 or >8 (acidic/alkaline)</td>
+                    <td>Adjust feeding, add buffering materials</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+          <div class="system-section">
+            <h3>Integrated System FAQs</h3>
+            
+            <div class="faq-item">
+              <h5>How do I time my two-drum system for continuous production?</h5>
+              <p>Optimal timing for a continuous system:</p>
+              <ul>
+                <li><strong>Bokashi Fermentation:</strong> 2 weeks per bucket</li>
+                <li><strong>Neutralization:</strong> 1 week</li>
+                <li><strong>Vermicomposting:</strong> 8-10 weeks per drum</li>
+              </ul>
+              <p>With two drums and two buckets, you can establish a rhythm where one drum is always active while the other finishes processing. Start your second drum when the first is approximately 70% full.</p>
+            </div>
+            
+            <div class="faq-item">
+              <h5>Can I add unfinished Bokashi directly to my garden?</h5>
+              <p>Yes, but with important considerations:</p>
+              <ul>
+                <li>Bury at least 15-20 cm deep to avoid attracting pests</li>
+                <li>Wait 2-3 weeks before planting in that area</li>
+                <li>Best done in established garden beds, not containers</li>
+                <li>Mix with soil rather than leaving as concentrated pockets</li>
+              </ul>
+              <p>For most situations, completing the vermicomposting stage yields superior results with fewer risks.</p>
+            </div>
+            
+            <div class="faq-item">
+              <h5>What's the best way to transition between drums?</h5>
+              <p>When your first drum is full and processed:</p>
+              <ol>
+                <li>Stop adding food to the full drum 1-2 weeks before harvest</li>
+                <li>Prepare second drum with fresh bedding</li>
+                <li>Harvest finished compost from first drum using light separation method</li>
+                <li>Transfer worms and any unfinished material to second drum</li>
+                <li>Add a fresh feeding to help worms establish in new drum</li>
+                <li>Clean and prepare empty drum for next rotation</li>
+              </ol>
+            </div>
+          </div>
+          
+          <div class="system-section">
+            <h3>Seasonal Considerations</h3>
+            
+            <div class="faq-item">
+              <h5>How should I manage my system during extreme heat?</h5>
+              <p>Hot weather strategies:</p>
+              <ul>
+                <li>Move system to coolest available location</li>
+                <li>Increase moisture monitoring - may need more frequent watering</li>
+                <li>Provide shade and ventilation</li>
+                <li>Consider frozen water bottles placed on top of bedding to cool worms</li>
+                <li>Feed smaller amounts more frequently</li>
+              </ul>
+            </div>
+            
+            <div class="faq-item">
+              <h5>What adjustments are needed for winter/cold weather?</h5>
+              <p>Cold weather adaptations:</p>
+              <ul>
+                <li>Insulate bins with bubble wrap, blankets, or straw</li>
+                <li>Move to warmer location (garage, basement)</li>
+                <li>Reduce feeding as worm activity decreases</li>
+                <li>Add extra bedding for insulation</li>
+                <li>Consider adding a small heat source if temperatures drop below 10°C</li>
+              </ul>
+            </div>
+            
+            <div class="faq-item">
+              <h5>How does monsoon/humid weather affect the system?</h5>
+              <p>High humidity considerations:</p>
+              <ul>
+                <li>Reduce additional water input</li>
+                <li>Increase drainage checks</li>
+                <li>Add more dry carbon materials to absorb excess moisture</li>
+                <li>Ensure good ventilation to prevent anaerobic conditions</li>
+                <li>Watch for mold growth and adjust as needed</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="danger-box">
+            <h5><span class="material-icons">warning</span> When to Start Over Completely</h5>
+            <p>In rare cases, it may be necessary to restart your system:</p>
+            <ul>
+              <li>Persistent foul odors that don't respond to troubleshooting</li>
+              <li>Mass worm die-offs with unknown cause</li>
+              <li>Visible signs of hazardous mold throughout the system</li>
+              <li>Infestation of pests that cannot be controlled</li>
+            </ul>
+            <p>If restarting, thoroughly clean all containers with vinegar solution, replace all bedding materials, and source new worms if necessary.</p>
+          </div>
+          
+          <div class="callout">
+            <h5>Quick Reference: Optimal Parameters</h5>
+            <div class="row">
+              <div class="col-md-6">
+                <h6>Bokashi System</h6>
+                <ul>
+                  <li>Temperature: 18-30°C</li>
+                  <li>Time: 10-14 days fermentation</li>
+                  <li>Bran: 1-2 tbsp per layer</li>
+                  <li>Leachate: Drain every 2-3 days</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h6>Vermicompost System</h6>
+                <ul>
+                  <li>Temperature: 18-30°C</li>
+                  <li>Moisture: 60-80% (like wrung-out sponge)</li>
+                  <li>pH: 6.5-7.5</li>
+                  <li>Processing time: 50-90 days</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="mt-5">
+          <p>Comprehensive Guide for Home-Scale Bokashi & Vermicomposting with Vermiwash Collection. This guide is designed for clarity and accessibility for gardeners of all experience levels, from complete beginners to experienced composters looking to optimize their system.</p>
+        </footer>
+
+      </article>
+    </div>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
