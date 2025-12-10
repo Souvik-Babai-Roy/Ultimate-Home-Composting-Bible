@@ -1,0 +1,1002 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Complete Guide: Bokashi to Vermicompost with Vermiwash Collection</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+
+<!-- Reading Progress Bar -->
+<div class="reading-progress" id="readingProgress"></div>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container-fluid px-3 px-md-4 px-lg-5 d-flex justify-content-between align-items-center">
+
+<a class="navbar-brand fw-bold d-flex align-items-center compost-brand" href="#">
+  <span class="material-icons compost-icon">compost</span>
+  <span class="compost-text">CompostCraft</span>
+</a>
+
+<style>
+/* -------------------------------------------------
+   UNIVERSAL ANIMATIONS
+-------------------------------------------------*/
+@keyframes gradientFlow {
+  0% { background-position:0% 50%; }
+  50% { background-position:100% 50%; }
+  100% { background-position:0% 50%; }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { filter:var(--glow); }
+  50%      { filter:var(--glow-strong); }
+}
+
+/* -------------------------------------------------
+   BASE BRAND STYLE
+-------------------------------------------------*/
+.compost-brand {
+  display:flex;
+  align-items:center;
+  gap:6px;
+  letter-spacing:0.45px;
+}
+
+.compost-icon, .compost-text {
+  transition:0.25s ease-in-out;
+}
+
+/* Icon */
+.compost-icon {
+  font-size:1.7rem;
+  background: var(--icon-gradient);
+  -webkit-background-clip:text;
+  color:transparent;
+  animation:pulseGlow 3s infinite ease-in-out;
+}
+
+/* Text */
+.compost-text {
+  font-weight:700;
+  background: var(--text-gradient);
+  background-size:300% 300%;
+  -webkit-background-clip:text;
+  color:transparent;
+  animation:gradientFlow 7s ease infinite;
+}
+
+/* -------------------------------------------------
+   🌞 LIGHT MODE – DARKER, MORE VISIBLE
+-------------------------------------------------*/
+:root {
+  --icon-gradient: linear-gradient(135deg, #065f46, #047857, #16a34a);
+  --text-gradient: linear-gradient(90deg, #065f46, #047857, #16a34a, #22c55e);
+
+  --glow: drop-shadow(0 0 4px rgba(4,120,87,0.35));
+  --glow-strong: drop-shadow(0 0 10px rgba(4,120,87,0.55));
+}
+
+/* Stronger dark outline for visibility on white */
+body:not([data-bs-theme="dark"]) .compost-text {
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.35));
+}
+
+body:not([data-bs-theme="dark"]) .compost-icon {
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.35));
+}
+
+/* -------------------------------------------------
+   🌙 DARK MODE – NEON ORGANIC
+-------------------------------------------------*/
+body[data-bs-theme="dark"] {
+  --icon-gradient: linear-gradient(135deg, #2dd4bf, #4ade80, #a3e635);
+  --text-gradient: linear-gradient(90deg, #34e5c7, #4ade80, #a3e635);
+
+  --glow: drop-shadow(0 0 12px rgba(64,240,190,0.55));
+  --glow-strong: drop-shadow(0 0 18px rgba(64,240,190,0.9));
+}
+
+body[data-bs-theme="dark"] .compost-text {
+  filter: drop-shadow(0 0 8px rgba(64,240,190,0.65));
+}
+</style>
+
+
+
+    <div class="d-flex align-items-center">
+
+      <!-- Theme Toggle (md + lg) -->
+      <div id="themeToggleWrapper" class="theme-toggle-container d-none d-md-flex me-3">
+  <!-- New toggle switch -->
+  <input type="checkbox" id="theme-toggle-checkbox" class="day-night-checkbox">
+  <label for="theme-toggle-checkbox" class="day-night-toggle">
+    <span class="toggle-button">
+      <span class="crater crater-1"></span>
+      <span class="crater crater-2"></span>
+      <span class="crater crater-3"></span>   
+      <span class="crater crater-4"></span>
+      <span class="crater crater-5"></span>
+      <span class="crater crater-6"></span>
+      <span class="crater crater-7"></span>
+    </span>
+    <span class="star star-1"></span>
+    <span class="star star-2"></span>
+    <span class="star star-3"></span>
+    <span class="star star-4"></span>
+    <span class="star star-5"></span>
+    <span class="star star-6"></span>
+    <span class="star star-7"></span>
+    <span class="star star-8"></span>
+  </label>
+</div>
+
+      <!-- Menu Button (sm + md) -->
+      <button id="menuToggleBtn" class="menu-btn d-lg-none">
+        <span class="material-icons">menu</span>
+      </button>
+
+    </div>
+
+  </div>
+</nav>
+
+<!-- Dropdown Menu -->
+<div id="dropdownMenu" class="dropdown-menu-panel">
+
+  <!-- Extra theme toggle for small screens -->
+  <div class="theme-toggle-container d-md-none mb-3">
+  <input type="checkbox" id="theme-toggle-checkbox-mobile" class="day-night-checkbox">
+  <label for="theme-toggle-checkbox-mobile" class="day-night-toggle">
+    <span class="toggle-button">
+      <span class="crater crater-1"></span>
+      <span class="crater crater-2"></span>
+      <span class="crater crater-3"></span>   
+      <span class="crater crater-4"></span>
+      <span class="crater crater-5"></span>
+      <span class="crater crater-6"></span>
+      <span class="crater crater-7"></span>
+    </span>
+    <span class="star star-1"></span>
+    <span class="star star-2"></span>
+    <span class="star star-3"></span>
+    <span class="star star-4"></span>
+    <span class="star star-5"></span>
+    <span class="star star-6"></span>
+    <span class="star star-7"></span>
+    <span class="star star-8"></span>
+  </label>
+</div>
+
+  <h6 class="menu-heading">Table of Contents</h6>
+  <div id="menu-toc"></div>
+</div>
+
+
+
+<header class="hero">
+  <div class="container-fluid px-3 px-md-4 px-lg-5">
+    <div class="row">
+      <div class="col-lg-9">
+        <h1 class="display-5 fw-bold">Complete Guide: Bokashi to Vermicompost with Vermiwash Collection</h1>
+        <p class="lead my-3">Master the art of converting kitchen waste into nutrient-rich vermicompost and powerful vermiwash. A comprehensive step-by-step guide for beginners to advanced gardeners, featuring enhanced Bokashi bran, 70L crate systems, and professional techniques.</p>
+        <div class="d-flex flex-wrap gap-2 mt-4">
+          <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill">
+            <span class="material-icons me-1">schedule</span> 35-Day Complete Cycle
+          </span>
+          <span class="badge bg-success bg-opacity-10 text-success px-3 py-2 rounded-pill">
+            <span class="material-icons me-1">recycling</span> Zero Waste System
+          </span>
+          <span class="badge bg-warning bg-opacity-10 text-warning px-3 py-2 rounded-pill">
+            <span class="material-icons me-1">science</span> Microbial Optimization
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container-fluid my-5 px-2 px-md-4 px-lg-5">
+  <div class="row">
+    <div class="col-lg-3 d-none d-lg-block">
+      <div class="table-of-contents">
+        <h5 class="mb-3">Quick Navigation</h5>
+        <nav class="nav flex-column">
+          <a class="nav-link" href="#overview">Overview</a>
+          <a class="nav-link" href="#bokashi-bran">Step 1: Bokashi Bran</a>
+          <a class="nav-link" href="#bokashi-setup">Step 2: Bokashi Setup</a>
+          <a class="nav-link" href="#neutralize">Step 3: Neutralization</a>
+          <a class="nav-link" href="#vermi-setup">Step 4: Vermicompost Setup</a>
+          <a class="nav-link" href="#vermiwash">Step 5: Vermiwash Collection</a>
+          <a class="nav-link" href="#harvesting">Step 6: Harvesting</a>
+          <a class="nav-link" href="#storage">Step 7: Storage</a>
+          <a class="nav-link" href="#liquid-amendments">Step 8: Liquid Amendments</a>
+          <a class="nav-link" href="#faq">FAQ & Troubleshooting</a>
+        </nav>
+      </div>
+    </div>
+    
+    <div class="col-lg-9">
+      <article>
+        <!-- Article Starts -->
+        <section id="overview" class="fade-in">
+          <h2>Overview</h2>
+          <p>Welcome to the ultimate guide on transforming kitchen waste into nutrient-rich vermicompost and potent vermiwash using an integrated Bokashi to Vermicompost system. This comprehensive guide covers everything from preparing enhanced Bokashi bran to setting up a 70L crate system for efficient composting. Whether you're a beginner or an experienced gardener, this step-by-step approach will help you achieve optimal results while minimizing waste.</p>
+        </section>
+        <section id="bokashi-bran" class="fade-in">
+    <h2>Step 1: Crafting Ultimate Enhanced Bokashi Bran</h2>
+    <p class="lead">This is not a recipe—it is a controlled microbial cultivation protocol. We engineer a superior biological inoculant by transforming simple ingredients into a nutrient-charged, microbially-diverse powder that drives rapid fermentation, enhances nutrient cycling, and creates the perfect pre-digested feed for vermicomposting.</p>
+
+    <div class="callout">
+        <h5><span class="material-icons me-2">biotech</span> Core Scientific Philosophy: Building a Complete Ecosystem</h5>
+        <p>Standard Bokashi bran relies primarily on Lactic Acid Bacteria (LAB). This enhanced protocol cultivates a <strong>complete functional guild</strong> of microorganisms, each with a specific role, supported by mineral and organic amendments that elevate the entire process from preservation to biological enrichment.</p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h6>The Microbial Consortium & Their Roles:</h6>
+                <ul>
+                    <li><strong>Lactic Acid Bacteria (LAB):</strong> <em>Lactobacillus, Pediococcus.</em> Primary fermenters. Produce lactic acid, lowering pH to ~3.5-4.0. This creates a selective environment that suppresses pathogens (E. coli, Salmonella) and preserves nutrients via acidification.</li>
+                    <li><strong>Yeasts:</strong> <em>Saccharomyces, Candida.</em> Produce ethanol, CO₂, and B-vitamins. Ethanol acts as a secondary preservative; yeasts outcompete spoilage microbes for sugars.</li>
+                    <li><strong>Photosynthetic Bacteria (PSB):</strong> <em>Rhodopseudomonas.</em> Anaerobic photoheterotrophs. Metabolize foul-smelling hydrogen sulfide and volatile fatty acids, eliminating odors. Produce plant growth promoters like 5-aminolevulinic acid (ALA).</li>
+                    <li><strong>Actinomycetes & Fungi:</strong> <em>Streptomyces, Trichoderma.</em> Decompose complex chitin and cellulose. Produce geosmin (earthy smell) and chitinase enzymes, offering natural biocontrol against pests.</li>
+                    <li><strong>Plant Growth-Promoting Rhizobacteria (PGPR):</strong> From Biovita X & soil: <em>Azotobacter</em> (N-fixer), <em>Pseudomonas</em> (P-solubilizer). Initiate nutrient cycling and produce phytohormones (IAA, Gibberellins).</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h6>The Mineral & Organic Matrix Enhancements:</h6>
+                <ul>
+                    <li><strong>Humic Acid:</strong> A powerful chelating agent. Binds to micronutrients (Fe, Zn, Mn) from rock dust, preventing them from becoming "locked up" and making them 40-70% more plant-available. Acts as a microbial prebiotic, stimulating activity.</li>
+                    <li><strong>Tata Ralligold / Rock Dust:</strong> Provides a slow-release bank of essential trace elements in oxide/silicate forms. The acidic fermentation environment and microbial exudates slowly solubilize these minerals over time.</li>
+                    <li><strong>Oilseed Cakes (Mustard & Neem):</strong> Beyond NPK, mustard cake contains glucosinolates (sulfur compounds) with mild antimicrobial properties that suppress unwanted fungi. Neem cake adds azadirachtin, a natural nematicide and insect growth regulator.</li>
+                    <li><strong>Wheat Bran Carrier:</strong> Its porous, lignocellulosic structure provides maximum surface area for microbial colonization and an ideal carbon source for sustained fermentation.</li>
+                </ul>
+            </div>
+        </div>
+        <p class="mt-3"><strong>The Result:</strong> A bran that doesn't just pickle waste, but pre-digests it into a buffet of organic acids, solubilized minerals, and microbial biomass. This leads to faster vermicomposting, increased worm reproduction, and a final compost with superior nutrient availability and disease-suppressive properties.</p>
+    </div>
+
+    <!-- STAGE 1: THE DRY MATRIX -->
+    <div class="step-box">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="d-flex align-items-center">
+                <span class="step-number me-3">1</span>
+                <div>
+                    <h4 class="mb-0 mt-2">Stage 1: Formulating the Dry Base Matrix</h4>
+                    <p class="text-muted fst-italic mb-0 small">Precision preparation of the nutrient-dense carrier</p>
+                </div>
+            </div>
+        </div>
+
+        <p>This stage is about creating a consistent, sterile, and nutritionally balanced food source for your microbes. Measure everything by weight with a 1g-accuracy scale.</p>
+
+        <div class="materials-list">
+            <h6><span class="material-icons me-2">scale</span> Master Dry Ingredient Formulation (Yield: ~1 kg)</h6>
+            <table class="enhanced-table table table-bordered table-striped table-hover-emphasis">
+    <thead>
+        <tr>
+            <th>Ingredient</th>
+            <th>Quantity</th>
+            <th class="text-center">Preparation & Scientific Purpose</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td><strong>Wheat Bran</strong></td>
+            <td>600 g</td>
+            <td>
+                <strong>Preparation:</strong> Sieve, then lightly toast (5–7 mins) to 60–70°C to reduce surface microbes without destroying nutrients.<br>
+                <strong>Scientific Role:</strong> Main carbon substrate for LAB, Bacillus, Rhodopseudomonas, and yeast. Its porous lignocellulosic structure provides large microbial attachment surfaces. Toasting reduces native bioload, giving inoculant microbes a competitive advantage and ensuring predictable fermentation.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Rice Husk Powder (Fine)</strong></td>
+            <td>80 g</td>
+            <td>
+                <strong>Preparation:</strong> Grind to &lt;2 mm for consistent texture.<br>
+                <strong>Scientific Role:</strong> Increases aeration and prevents clumping. High silica improves enzymatic anchoring, buffers acidity during fermentation, and enhances moisture distribution. Keeps the bran structurally stable even when moistened.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Mustard Cake Powder</strong></td>
+            <td>100 g</td>
+            <td>
+                <strong>Preparation:</strong> Grind to ≤1 mm. Avoid oil-rich or rancid material.<br>
+                <strong>Scientific Role:</strong> Supplies nitrogen (5–6%) for microbial biomass. Glucosinolates suppress unwanted molds but are tolerated by LAB and Bacillus, helping maintain a selective LAB-dominant fermentation environment.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Peanut Cake Powder</strong></td>
+            <td>60 g</td>
+            <td>
+                <strong>Preparation:</strong> Use only fresh, cold-pressed cake; grind ≤1 mm.<br>
+                <strong>Scientific Role:</strong> Rich protein (45–50%) acts as an amino-acid source for rapid growth of yeasts and Bacillus. Enhances protease activity for deeper fermentation. Lipids stabilize moisture. <em>Avoid rancid cake to prevent butyric contamination.</em>
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Neem Cake Powder</strong></td>
+            <td>40 g</td>
+            <td>
+                <strong>Preparation:</strong> Use as a fine powder.<br>
+                <strong>Scientific Role:</strong> Azadirachtin suppresses nematodes (Meloidogyne), soil fungi (Pythium, Fusarium), and harmful insects. Does not inhibit LAB. Prevents external fungal contamination during fermentation and makes the final bokashi pest-resistant.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Mineral Mix</strong></td>
+            <td>25 g</td>
+            <td>
+                <strong>Composition:</strong> Tata Ralligold (10 g), Basalt Rock Dust (10 g), Sterilized Eggshell Powder (5 g).<br>
+                <strong>Scientific Role:</strong> Provides Fe, Mn, Zn, Cu, Mg, Si, and Ca—essential enzyme cofactors that accelerate microbial metabolism. Basalt’s paramagnetic silicates boost redox reactions. Eggshell buffers acidity and prevents over-acidification.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Powdered Jaggery / Molasses Powder</strong></td>
+            <td>10 g</td>
+            <td>
+                <strong>Preparation:</strong> Use a fine powder to ensure uniform distribution.<br>
+                <strong>Scientific Role:</strong> Provides simple sugars (glucose + sucrose) for instant microbial energy. Accelerates LAB and yeast activation, stabilizes early fermentation, and ensures a strong anaerobic environment. Prevents slow/uneven fermentation.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Mycorrhizal Spores (Glomus spp.)</strong></td>
+            <td>1 g</td>
+            <td>
+                <strong>Preparation:</strong> Add only in dry stage before moistening.<br>
+                <strong>Scientific Role:</strong> Spores stay dormant during anaerobic fermentation. In soil, they colonize roots and enhance uptake of P, K, Zn, Fe while boosting drought resistance. Converts bokashi into a biological growth enhancer, not just a fertilizer.
+            </td>
+        </tr>
+
+        <tr>
+            <td><strong>Old Bokashi Bran</strong></td>
+            <td>50 g</td>
+            <td>
+                <strong>Preparation:</strong> Use only from a well-fermented, sweet-smelling batch.<br>
+                <strong>Scientific Role:</strong> Contains an adaptive consortium of LAB, yeasts, phototrophic bacteria, actinomycetes, and Bacillus. Ensures reliable fermentation by seeding proven microbial communities and suppressing contaminants.
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+        </div>
+
+        <div class="pro-tip">
+            <h6><span class="material-icons me-2">scatter_plot</span> Pro Technique: Geometric Dilution for Even Inoculation</h6>
+            <p>To evenly distribute the tiny 1g quantities of Biovita X and Mycorrhizal powder through 1kg of dry matter:
+                <br>1. Mix the 1g inoculant with 10g of wheat bran in a small jar. Shake vigorously.
+                <br>2. Add this 11g mix to 100g more bran. Mix thoroughly.
+                <br>3. Blend this 111g pre-mix into the remaining dry ingredients. Use a lifting and folding motion for 10 minutes.
+                <br><strong>Result:</strong> Every single gram of your final bran contains a full spectrum of microbes.
+            </p>
+        </div>
+    </div>
+
+    <!-- STAGE 2: LIQUID LIBRARY -->
+    <div class="step-box">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="d-flex align-items-center">
+                <span class="step-number me-3">2</span>
+                <div>
+                    <h4 class="mb-0 mt-2">Stage 2: Cultivating the Liquid Microbial Library</h4>
+                    <p class="text-muted fst-italic mb-0 small">Brewing six distinct microbial cultures for maximum diversity</p>
+                </div>
+            </div>
+        </div>
+
+        <p>Diversity equals resilience. Begin this phase <strong>21 days before</strong> mixing your dry bran. Each culture is an ecosystem.</p>
+
+        <div class="info-box">
+            <h6><span class="material-icons me-2">today</span> Master Cultivation Timeline</h6>
+            <div class="row text-center">
+                <div class="col-md-2 mb-2"><span class="badge-topic">Day -21</span><br><small>Start PSB & Pond Water</small></div>
+                <div class="col-md-2 mb-2"><span class="badge-topic">Day -14</span><br><small>Start Forest Soil Extract</small></div>
+                <div class="col-md-2 mb-2"><span class="badge-topic">Day -7</span><br><small>Start LAB Serum</small></div>
+                <div class="col-md-2 mb-2"><span class="badge-topic">Day -5</span><br><small>Start FPJ & Seaweed Extract</small></div>
+                <div class="col-md-2 mb-2"><span class="badge-topic">Day -3</span><br><small>Start Wild Yeast Water</small></div>
+                <div class="col-md-2 mb-2"><span class="badge-topic">Day -1</span><br><small>Prepare Jaggery Solution</small></div>
+            </div>
+        </div>
+
+        <!-- LIQUID 1: LAB -->
+        <div class="scientific-box">
+            <h6><span class="material-icons me-2">bubble_chart</span> Culture 1: Lactic Acid Bacteria (LAB) Serum</h6>
+            <p><strong>Primary Function:</strong> To create the foundational acidic, preservative environment.</p>
+            <h6>Method A: From Dairy Whey (Most Reliable)</h6>
+            <ol>
+                <li>Strain 500ml of fresh, plain yogurt or curd through cheesecloth. Collect 200-300ml of whey.</li>
+                <li>Dissolve 50g jaggery in 50ml warm water (≤40°C). Mix with whey.</li>
+                <li>Ferment in a jar with loose lid at 25-30°C for 5-7 days.</li>
+                <li><strong>Success:</strong> pH 3.5-4.0, clean sour smell. Passes milk curdling test.</li>
+            </ol>
+            <h6>Method B: From Rice Wash (Traditional)</h6>
+            <ol>
+                <li>Rinse 1 cup uncooked rice in 2 cups water. Collect cloudy "rice wash."</li>
+                <li>Ferment in open jar for 5-7 days until sour. Strain.</li>
+                <li>Add equal part jaggery water, ferment 2 more days.</li>
+            </ol>
+            <div class="pro-tip">
+                <p class="mb-0"><strong>Pro Tip:</strong> Combine whey and rice wash LAB 1:1 for a broader LAB species diversity (<em>L. plantarum</em> from plants, <em>L. casei</em> from dairy).</p>
+            </div>
+        </div>
+
+        <!-- LIQUID 2: FPJ -->
+        <div class="scientific-box">
+            <h6><span class="material-icons me-2">grass</span> Culture 2: Fermented Plant Juice (FPJ) with Tulsi</h6>
+            <p><strong>Primary Function:</strong> To capture wild yeasts, plant-growth hormones (auxins, cytokinins), and epiphytic microbes from leaf surfaces.</p>
+            <ol>
+                <li>Harvest 200g of fresh, healthy Tulsi (Holy Basil) leaves in the morning. Its natural antimicrobial oils (eugenol) add beneficial properties.</li>
+                <li>Chop coarsely and mix with 200g of brown sugar or jaggery in a wide-mouth jar.</li>
+                <li>Press down firmly to remove air. Sugar will osmotically draw out plant sap.</li>
+                <li>Cover with breathable cloth. Ferment at 25-28°C for 5-7 days.</li>
+                <li>Strain. Liquid should be dark, fragrant, sweet-sour. <strong>Yield: ~100ml.</strong></li>
+            </ol>
+        </div>
+
+        <!-- LIQUID 3: PSB & POND WATER -->
+        <div class="scientific-box">
+            <h6><span class="material-icons me-2">light_mode</span> Culture 3: Photosynthetic Bacteria (PSB) & Pond Water</h6>
+            <p><strong>Primary Function:</strong> To introduce odor-eating PSB and a vast array of aquatic microorganisms.</p>
+            <h6>Long-Ferment Pond Water Method:</h6>
+            <ol>
+                <li>Collect 1 liter of water from a healthy, unpolluted pond (look for algal growth).</li>
+                <li>Add 1 tbsp of molasses as a food source.</li>
+                <li>Place in a clear container, cover with loose lid, and keep in <strong>bright, indirect sunlight</strong> for 10-20 days.</li>
+                <li><strong>Success Signs:</strong> Water develops a reddish-purple hue (PSB growth) and a clean, earthy smell. <strong>No foul odor.</strong></li>
+            </ol>
+            <h6>Accelerated PSB Culture (Optional):</h6>
+            <ol>
+                <li>Mix 1g of commercial PSB starter, 5g ammonium sulfate, 1 tbsp molasses in 1L non-chlorinated water.</li>
+                <li>Keep in bright light for 7-10 days until deep red.</li>
+            </ol>
+        </div>
+
+        <!-- LIQUID 4: WILD YEAST -->
+        <div class="scientific-box">
+            <h6><span class="material-icons me-2">biotech</span> Culture 4: Wild Yeast Water from Fruit</h6>
+            <p><strong>Primary Function:</strong> To boost yeast population for ethanol production and B-vitamin synthesis.</p>
+            <ol>
+                <li>Take 100g of organic fruit skins (banana, grape, apple). Do not wash heavily.</li>
+                <li>Add to 500ml non-chlorinated water with 2 tbsp jaggery.</li>
+                <li>Ferment at 25-30°C for 2-3 days until bubbly and fruity-smelling.</li>
+                <li>Strain. <strong>Use within 1 week.</strong></li>
+            </ol>
+            <div class="pro-tip">
+                <p class="mb-0"><strong>Adding Dry Yeast:</strong> For guaranteed activity, dissolve 0.5g of active dry baking yeast in 50ml of this culture 12 hours before use. This supercharges the yeast population.</p>
+            </div>
+        </div>
+
+        <!-- LIQUID 5 & 6 -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="materials-list scientific-box">
+                    <h6><span class="material-icons me-2">forest</span> Culture 5: Forest Soil / Compost Fungal Extract</h6>
+                    <p><strong>Purpose:</strong> Inoculates actinomycetes and beneficial fungi (Trichoderma).</p>
+                    <ol>
+                        <li>Add 2 cups of forest humus or mature compost to 2L water.</li>
+                        <li>Add 1 tbsp molasses. Aerate with aquarium pump for 48 hours.</li>
+                        <li>Let settle, strain. Use supernatant. <strong>Yield: ~1.5L.</strong></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="materials-list scientific-box">
+                    <h6><span class="material-icons me-2">science</span> Culture 6: Fortified Jaggery-Molasses Solution</h6>
+                    <p><strong>Purpose:</strong> Concentrated microbial food with minerals.</p>
+                    <ol>
+                        <li>Dissolve 200g jaggery + 50g blackstrap molasses in 500ml warm water.</li>
+                        <li>Add 1g each of Epsom salt (Mg) and micronized zinc sulfate.</li>
+                        <li>Cool. This is a potent feed. <strong>Yield: ~750ml.</strong></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout mt-4">
+            <h6><span class="material-icons me-2">mediation</span> Final Liquid Blend Protocol for 1kg Dry Mix</h6>
+            <p>On mixing day, blend your cultures in this ratio to total ~500ml:</p>
+            <ul>
+                <li><strong>LAB Serum:</strong> 200 ml (Core acidifier)</li>
+                <li><strong>Fortified Jaggery Solution:</strong> 150 ml (Primary food)</li>
+                <li><strong>PSB Pond Water:</strong> 50 ml (Odor control, PSB)</li>
+                <li><strong>FPJ (Tulsi):</strong> 50 ml (Yeasts, hormones)</li>
+                <li><strong>Forest Soil Extract:</strong> 30 ml (Actinomycetes, fungi)</li>
+                <li><strong>Wild Yeast Water:</strong> 20 ml (Yeast boost)</li>
+            </ul>
+            <p class="mb-0"><strong>Critical Step:</strong> Warm 100ml of this blend to 40°C. Use it to fully dissolve the <strong>5g Humic Acid</strong>, <strong>1g Biovita X</strong>, and <strong>1g Mycorrhizal</strong> powder. Once dissolved, mix this concentrated slurry back into the main liquid blend.</p>
+        </div>
+    </div>
+
+    <!-- STAGE 3: FERMENTATION MASTERY -->
+    <div class="step-box">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="d-flex align-items-center">
+                <span class="step-number me-3">3</span>
+                <div>
+                    <h4 class="mb-0 mt-2">Stage 3: Inoculation & Controlled Anaerobic Fermentation</h4>
+                    <p class="text-muted fst-italic mb-0 small">The critical 28-day microbial colonization process</p>
+                </div>
+            </div>
+        </div>
+
+        <h5>Step-by-Step Inoculation & Packing</h5>
+        <ol>
+            <li><strong>Sanitize:</strong> Clean all surfaces and tools with food-grade hydrogen peroxide or vinegar.</li>
+            <li><strong>Create a Well:</strong> Place dry mix in a large bowl. Form a deep well in the center.</li>
+            <li><strong>Gradual Mixing:</strong> Pour ¾ of your liquid blend into the well. Using gloved hands, mix from center outward. Ensure no dry pockets remain.</li>
+            <li><strong>The Clench Test (Most Critical):</strong>
+                <ul>
+                    <li>Grab a fistful and squeeze with maximum force.</li>
+                    <li><strong>Perfect:</strong> Forms a solid ball that holds shape. When you press your thumb into it, it cracks and crumbles. 1-2 drops of liquid max.</li>
+                    <li><strong>Too Wet (>50% moisture):</strong> Water streams out, feels muddy. <em>Remedy:</em> Mix in additional dry wheat bran (50g at a time).</li>
+                    <li><strong>Too Dry (<35% moisture):</strong> Falls apart, no moisture. <em>Remedy:</em> Add more liquid blend, one tbsp at a time.</li>
+                </ul>
+            </li>
+            <li><strong>Anaerobic Packing:</strong>
+                <ul>
+                    <li>Pack moist bran tightly into a glass jar or fermentation crock.</li>
+                    <li>Use a tamper to compress every 2-inch layer and eliminate air pockets.</li>
+                    <li>Fill only to 70% capacity. Sprinkle a thin layer of sea salt on top to deter surface mold.</li>
+                    <li>Seal airtight. Label with "Day 0" and expected finish date.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <div class="quick-facts">
+            <h6><span class="material-icons me-2">monitor</span> Fermentation Monitoring Parameters</h6>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul>
+                        <li><strong>Ideal Temperature:</strong> 28-30°C (82-86°F)</li>
+                        <li><strong>Acceptable Range:</strong> 24-35°C (75-95°F)</li>
+                        <li><strong>Too Cold (<20°C):</strong> Fermentation stalls</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul>
+                        <li><strong>Too Hot (>35°C):</strong> Risks killing LAB, favors putrefying bacteria</li>
+                        <li><strong>Duration:</strong> <strong>Minimum 14 days, Optimal 28 days</strong></li>
+                        <li><strong>Golden Rule:</strong> <span class="text-danger fw-bold">DO NOT OPEN.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h5 class="mt-4">The Four Phases of Fermentation: A Biological Timeline</h5>
+        <div class="table-container">
+            <table class="enhanced-table table-bordered">
+                <thead>
+                    <tr>
+                        <th width="15%">Phase</th>
+                        <th width="15%">Timeline</th>
+                        <th width="35%">Microbial Activity & Chemical Changes</th>
+                        <th width="35%">Visual/Olfactory Signs & Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. Lag Phase</strong></td>
+                        <td>Days 0-3</td>
+                        <td>Microbes activate, acclimate, and begin metabolizing simple sugars and organic acids. Initial pH drop begins.</td>
+                        <td>Container may feel slightly warm. <strong>Action:</strong> Place in dark, stable-temperature location. DO NOT OPEN.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Exponential (Log) Phase</strong></td>
+                        <td>Days 4-14</td>
+                        <td>Explosive growth of LAB and yeasts. Rapid production of lactic acid, ethanol, and CO₂. pH drops sharply to ~4.0-4.5.</td>
+                        <td>Strong sour, pickle-like smell near seal. Container may bulge from CO₂. <strong>Action:</strong> If bulging excessively, briefly "burp" lid (1-2 sec) and reseal. Avoid frequent opening.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Stationary Phase</strong></td>
+                        <td>Days 15-25</td>
+                        <td>Nutrient depletion slows growth. LAB dominate. PSB and actinomycetes become more active. pH stabilizes at ~3.5-4.0.</td>
+                        <td>Aroma remains strong but less aggressive. Pressure buildup decreases. <strong>Action:</strong> No action needed. Maintain stable temperature.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. Maturation Phase</strong></td>
+                        <td>Days 26-28+</td>
+                        <td>Fermentation complete. Microbial activity slows as they enter dormant state, preserved by acidity and lack of oxygen.</td>
+                        <td>Aroma is pleasant, complex, and stable. <strong>Action:</strong> Prepare for drying. Batch is ready.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="warning-box">
+            <h6><span class="material-icons me-2">bug_report</span> Advanced Troubleshooting Guide</h6>
+            <p><strong>Problem: Foul, Putrid Odor (Like Rotten Eggs) Upon Opening.</strong>
+                <br><strong>Causes:</strong> 1) Moisture >50% causing anaerobic rot (Clostridium). 2) Contaminated liquid culture. 3) Temperature too high (>35°C).
+                <br><strong>Solution:</strong> Batch is likely lost. Discard. Review moisture test and ensure culture sterility.
+            </p>
+            <p><strong>Problem: No Sour Smell, Sweet or No Aroma After 10 Days.</strong>
+                <br><strong>Causes:</strong> 1) Temperature too low (<20°C). 2) Inactive or dead LAB culture. 3) Antagonistic chemicals in ingredients.
+                <br><strong>Solution:</strong> Move to warmer spot. If no change, unpack, add 100ml fresh LAB serum, repack.
+            </p>
+            <p><strong>Problem: Excessive White, Fuzzy Mold on Surface (When Opened).</strong>
+                <br><strong>Causes:</strong> 1) Air pockets in packing. 2) Insufficient LAB dominance initially. 3) Opened during fermentation.
+                <br><strong>Solution:</strong> Scrape off top 2cm. Underlying bran is usually fine. Ensure better compaction next time.
+            </p>
+            <p class="mb-0"><strong>Problem: Black or Green Mold.</strong>
+                <br><strong>Cause:</strong> Significant oxygen exposure or gross contamination.
+                <br><strong>Solution:</strong> <span class="text-danger">Discard entire batch.</span> Sterilize all equipment.
+            </p>
+        </div>
+    </div>
+
+    <!-- STAGE 4: DRYING & STORAGE -->
+    <div class="step-box">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div class="d-flex align-items-center">
+                <span class="step-number me-3">4</span>
+                <div>
+                    <h4 class="mb-0 mt-2">Stage 4: Precision Drying, Storage & Viability Assurance</h4>
+                    <p class="text-muted fst-italic mb-0 small">Preserving microbial viability for 18-24 months</p>
+                </div>
+            </div>
+        </div>
+
+        <p>The goal is to reduce moisture to below 10% without killing microbes through heat or UV damage.</p>
+
+        <h5>Three-Stage Drying Protocol</h5>
+        <div class="materials-list">
+            <h6>Stage 1: Primary Drying (Days 1-3) - Moisture: 45% → 25%</h6>
+            <ul>
+                <li><strong>Action:</strong> Spread fermented bran 2cm thick on stainless steel screens or trays lined with unbleached paper.</li>
+                <li><strong>Environment:</strong> Dehumidified room or well-ventilated box with gentle fan for cross-flow.</li>
+                <li><strong>Check:</strong> Bran will feel damp but no longer wet, and will begin to crumble.</li>
+            </ul>
+
+            <h6>Stage 2: Secondary Drying & Curing (Days 4-10) - Moisture: 25% → 12%</h6>
+            <ul>
+                <li><strong>Action:</strong> Break into pea-sized pieces. Reduce layer thickness to 1cm. Move to dark, ventilated cupboard.</li>
+                <li><strong>Action:</strong> Turn bran thoroughly twice daily.</li>
+                <li><strong>Purpose:</strong> This slower drying allows microbial communities to stabilize into dormancy.</li>
+            </ul>
+
+            <h6>Stage 3: Final Desiccation (Day 11+) - Moisture: 12% → <10%</h6>
+            <ul>
+                <li><strong>Action:</strong> Use a food dehydrator at 35°C (95°F) max for 2-4 hours, or continue air-drying in low humidity.</li>
+                <li><strong>The Ultimate Dryness Test:</strong> Grind a pinch between fingers. It should feel bone-dry, make a crisp sound, and not stick to the side of a glass jar. Place a sample in a sealed jar overnight—<span class="text-danger">zero condensation</span> should form.</li>
+            </ul>
+        </div>
+
+        <div class="pro-tip">
+            <h6><span class="material-icons me-2">opacity</span> Pro Method: DIY Desiccant Chamber for Humid Climates</h6>
+            <p>For climates with >70% humidity, build a chamber:
+                <br>1. Place bran on trays inside a large, airtight plastic storage tote.
+                <br>2. At the bottom, place an open container with 2kg of reusable silica gel beads or calcium chloride (industrial desiccant).
+                <br>3. Seal the tote. The desiccant will actively pull moisture from the air and the bran.
+                <br>4. Reactivate desiccant weekly by drying in an oven (silica gel) or replacing (calcium chloride).
+                <br><strong>This can dry bran perfectly in 5-7 days even at 80% RH.</strong>
+            </p>
+        </div>
+
+        <h5 class="mt-4">Advanced Storage Strategy for Maximum Shelf Life</h5>
+        <div class="table-container">
+            <table class="enhanced-table comparison-table">
+                <thead>
+                    <tr>
+                        <th width="20%">Tier</th>
+                        <th width="25%">Method</th>
+                        <th width="25%">Procedure</th>
+                        <th width="15%">Shelf Life</th>
+                        <th width="15%">Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Working Supply</strong></td>
+                        <td>Airtight Kitchen Container</td>
+                        <td>Store in opaque, airtight jar with 5g silica gel packet. Keep in cool pantry.</td>
+                        <td>1-2 months</td>
+                        <td>Frequent use</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Medium-Term</strong></td>
+                        <td>Vacuum Sealed Portions</td>
+                        <td>Seal in 200g food-grade bags with oxygen absorber packet. Store in dark cupboard.</td>
+                        <td>12-18 months</td>
+                        <td>Seasonal use</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Long-Term Archive</strong></td>
+                        <td>Mylar Bag + Refrigeration</td>
+                        <td>Vacuum seal as above, then place inside a Mylar bag with large oxygen absorber. Store at 4°C.</td>
+                        <td>24+ months</td>
+                        <td>Backup stock</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h5 class="mt-4">Comprehensive Viability & Potency Testing</h5>
+        <div class="scientific-box">
+            <h6><span class="material-icons me-2">science</span> Test 1: Milk Curdling Test (Basic Activity)</h6>
+            <p>Confirms live, active LAB.
+                <br><strong>Procedure:</strong> Mix 1 tbsp bran into 1 cup warm milk. Keep at 25-30°C for 24-48 hours.
+                <br><strong>Success:</strong> Milk separates into solid curds and clear whey, with a clean yogurt smell.
+            </p>
+        </div>
+        <div class="scientific-box">
+            <h6><span class="material-icons me-2">eco</span> Test 2: Seed Germination Bioassay (Phytotoxicity & Growth Promotion)</h6>
+            <p>Tests for harmful by-products and beneficial compounds.
+                <br><strong>Procedure:</strong>
+                <br>1. Make a 1% bran extract (10g bran in 1L water, shake, filter).
+                <br>2. Soak 20 radish seeds in extract; 20 in plain water (control).
+                <br>3. Place on moist paper towels for 72 hours.
+                <br><strong>Success:</strong> Extract-soaked seeds show equal or faster germination and longer root hairs than control.
+            </p>
+        </div>
+        <div class="scientific-box">
+            <h6><span class="material-icons me-2">compost</span> Test 3: Decomposition Performance Test (Real-World Efficacy)</h6>
+            <p>The ultimate test of your bran's function.
+                <br><strong>Procedure:</strong>
+                <br>1. Take two identical containers with 100g of kitchen scraps.
+                <br>2. Mix 15g of your bran into one (Test). Leave other untreated (Control).
+                <br>3. Seal and keep at 25°C for 10 days.
+                <br><strong>Success:</strong> Test scraps show white mold, sour pickle smell, minimal decomposition. Control is likely putrid and slimy.
+            </p>
+        </div>
+    </div>
+
+    <!-- FINAL SUMMARY -->
+    <div class="callout">
+        <h5><span class="material-icons me-2">summarize</span> The Complete Master Timeline: 36 Days to Perfection</h5>
+        <p>This process is a commitment to quality. Here is the integrated timeline for a 28-day fermentation batch.</p>
+        <div class="process-timeline">
+            <div class="timeline-item">
+                <h6>Phase 1: Liquid Library Cultivation (Days -21 to -1)</h6>
+                <p>Sequential start of PSB Pond Water, Forest Soil Extract, LAB Serum, FPJ, Wild Yeast, and Jaggery Solution.</p>
+            </div>
+            <div class="timeline-item">
+                <h6>Day 0: Mixing & Inoculation</h6>
+                <p>Prepare dry matrix, blend liquids, inoculate, pack, and seal for fermentation.</p>
+            </div>
+            <div class="timeline-item">
+                <h6>Phase 2: Anaerobic Fermentation (Days 1 to 28)</h6>
+                <p>Undisturbed fermentation at 28-30°C. Microbial succession through Lag, Exponential, Stationary, and Maturation phases.</p>
+            </div>
+            <div class="timeline-item">
+                <h6>Phase 3: Drying & Curing (Days 29 to 36)</h6>
+                <p>Three-stage drying to below 10% moisture. Performance testing.</p>
+            </div>
+            <div class="timeline-item">
+                <h6>Day 36+: Storage & Use</h6>
+                <p>Package using tiered storage strategy. Your Ultimate Enhanced Bokashi Bran is ready to power your composting system.</p>
+            </div>
+        </div>
+        <p class="mt-3 mb-0"><strong>Total Active Work Time:</strong> 8-10 hours (spread over 5 weeks).
+            <br><strong>Total Calendar Time:</strong> 36 days from first culture to stable product.
+            <br><strong>Yield:</strong> 1 kg of the most potent, scientifically-crafted Bokashi bran possible.
+        </p>
+    </div>
+
+    <div class="tip-box">
+        <h5><span class="material-icons me-2">verified</span> The Hallmarks of Master-Crafted Enhanced Bokashi Bran</h5>
+        <p>Your batch is a success when it meets all these criteria:</p>
+        <ul>
+            <li><strong>Aroma Profile:</strong> Complex, vibrant, and pleasant. Notes of sharp sourdough, earthy mushrooms, clean vinegar. <span class="text-danger">No alcohol, ammonia, or decay.</span></li>
+            <li><strong>Physical Structure:</strong> Dry, granular, free-flowing. Crumbles easily with a slight rustling sound. A visual sparkle from mineral dust.</li>
+            <li><strong>Performance Signature:</strong> In your kitchen bucket: produces rich, amber leachate within 2-3 days; surfaces with white mycelium; pickles waste without foul odor in 10-14 days.</li>
+            <li><strong>Biological Legacy:</strong> Passes all three viability tests. When used to treat waste for worms, it increases reproduction rates and yields a vermicompost with enhanced structure, water retention, and plant growth response.</li>
+        </ul>
+        <p class="mb-0">This meticulously crafted bran represents the pinnacle of home-scale microbial cultivation. It transforms the first stage of your integrated system from simple waste preservation into a powerful act of biological alchemy, setting an unparalleled standard for everything that follows.</p>
+    </div>
+        </section>
+        
+        <!-- Additional sections would go here -->
+      <!-- Article Ends -->
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>Complete Bokashi to Vermicompost System Guide © 2024</p>
+    <p class="small">Theme: <span id="currentTheme">Light</span> | <button class="btn btn-sm btn-link p-0" id="footerToggle">Switch Theme</button></p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const body = document.body;
+  const desktopCheckbox = document.getElementById('theme-toggle-checkbox');
+  const mobileCheckbox = document.getElementById('theme-toggle-checkbox-mobile');
+  const footerToggle = document.getElementById('footerToggle');
+  const currentTheme = document.getElementById("currentTheme");
+  const progressBar = document.getElementById("readingProgress");
+
+  /* -------------------------
+     LOAD SAVED THEME
+  --------------------------*/
+  const saved = localStorage.getItem("bokashi-theme") || "light";
+  if (saved === "dark") {
+    body.setAttribute("data-bs-theme", "dark");
+    currentTheme.textContent = "Dark";
+    // Set checkboxes to checked for dark mode
+    if (desktopCheckbox) desktopCheckbox.checked = true;
+    if (mobileCheckbox) mobileCheckbox.checked = true;
+  } else {
+    body.removeAttribute("data-bs-theme");
+    currentTheme.textContent = "Light";
+    // Set checkboxes to unchecked for light mode
+    if (desktopCheckbox) desktopCheckbox.checked = false;
+    if (mobileCheckbox) mobileCheckbox.checked = false;
+  }
+
+  /* -------------------------
+     MASTER THEME TOGGLER
+  --------------------------*/
+  function toggleTheme() {
+    const isDark = body.getAttribute("data-bs-theme") === "dark";
+    
+    if (isDark) {
+      body.removeAttribute("data-bs-theme");
+      localStorage.setItem("bokashi-theme", "light");
+      currentTheme.textContent = "Light";
+      // Update checkboxes
+      if (desktopCheckbox) desktopCheckbox.checked = false;
+      if (mobileCheckbox) mobileCheckbox.checked = false;
+    } else {
+      body.setAttribute("data-bs-theme", "dark");
+      localStorage.setItem("bokashi-theme", "dark");
+      currentTheme.textContent = "Dark";
+      // Update checkboxes
+      if (desktopCheckbox) desktopCheckbox.checked = true;
+      if (mobileCheckbox) mobileCheckbox.checked = true;
+    }
+  }
+
+  /* ------------------------- 
+     EVENT LISTENERS FOR THEME TOGGLES
+  --------------------------*/
+  // Desktop toggle
+  if (desktopCheckbox) {
+    desktopCheckbox.addEventListener('change', toggleTheme);
+  }
+
+  // Mobile toggle
+  if (mobileCheckbox) {
+    mobileCheckbox.addEventListener('change', toggleTheme);
+  }
+
+  // Footer toggle (button)
+  if (footerToggle) {
+    footerToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      toggleTheme();
+    });
+  }
+
+  /* -------------------------
+     MENU TOGGLE
+  --------------------------*/
+  const menuBtn = document.getElementById("menuToggleBtn");
+  const dropdownMenu = document.getElementById("dropdownMenu");
+
+  if (menuBtn && dropdownMenu) {
+    menuBtn.addEventListener("click", () => {
+      dropdownMenu.classList.toggle("show-menu");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!dropdownMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+        dropdownMenu.classList.remove("show-menu");
+      }
+    });
+  }
+
+  /* -------------------------
+     READING PROGRESS BAR
+  --------------------------*/
+  function updateProgressBar() {
+    const article = document.querySelector('article');
+    if (!article) return;
+
+    const articleTop = article.offsetTop;
+    const articleHeight = article.offsetHeight;
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+
+    const progress = Math.min(
+      100,
+      Math.max(0, ((scrollY + windowHeight - articleTop) / articleHeight) * 100)
+    );
+
+    if (progressBar) {
+      progressBar.style.width = progress + '%';
+    }
+  }
+
+  /* -------------------------
+     TABLE OF CONTENTS HIGHLIGHT
+  --------------------------*/
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.table-of-contents .nav-link');
+
+  function highlightNav() {
+    let current = '';
+    const scrollPos = window.scrollY + 120;
+
+    sections.forEach(sec => {
+      if (scrollPos >= sec.offsetTop && scrollPos < sec.offsetTop + sec.offsetHeight) {
+        current = sec.id;
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.toggle("active", link.getAttribute('href').substring(1) === current);
+    });
+  }
+
+  /* -------------------------
+     MOBILE TABLE PREPARATION
+  --------------------------*/
+  function prepareTablesForMobile() {
+    document.querySelectorAll('.enhanced-table').forEach(table => {
+      const headers = [...table.querySelectorAll('thead th')].map(th => th.innerText.trim());
+      table.querySelectorAll('tbody tr').forEach(row => {
+        row.querySelectorAll('td').forEach((cell, i) => {
+          if (headers[i]) cell.setAttribute('data-label', headers[i]);
+        });
+      });
+    });
+  }
+
+  prepareTablesForMobile();
+
+  /* -------------------------
+     AUTO GENERATE MOBILE MENU TOC
+  --------------------------*/
+  const tocContainer = document.querySelector("#menu-toc");
+  const tocLinks = document.querySelectorAll(".table-of-contents .nav-link");
+
+  if (tocContainer && tocLinks.length > 0) {
+    tocLinks.forEach(link => {
+      const menuItem = document.createElement("a");
+      menuItem.href = link.getAttribute("href");
+      menuItem.textContent = link.textContent;
+      menuItem.className = "dropdown-item";
+      
+      // Close menu when clicking on a link
+      menuItem.addEventListener('click', () => {
+        if (dropdownMenu) dropdownMenu.classList.remove("show-menu");
+      });
+      
+      tocContainer.appendChild(menuItem);
+    });
+  }
+
+  /* -------------------------
+     EVENT LISTENERS FOR SCROLL & RESIZE
+  --------------------------*/
+  window.addEventListener('scroll', () => {
+    updateProgressBar();
+    highlightNav();
+  });
+
+  window.addEventListener('resize', prepareTablesForMobile);
+
+  // Initialize
+  updateProgressBar();
+  highlightNav();
+});
+</script>
+
+
+
+
+</body>
+</html>

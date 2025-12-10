@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Complete Guide: Bokashi to Vermicompost with Vermiwash Collection</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    :root {
+      /* Color System */
+      --bs-primary: #2a9d8f;
+      --bs-primary-dark: #21867a;
+      --bs-primary-light: rgba(42, 157, 143, 0.1);
+      --bs-secondary: #264653;
+      --bs-accent: #e9c46a;
+      --bs-success: #2a9d8f;
+      --bs-warning: #e9c46a;
+      --bs-danger: #e76f51;
+      --bs-info: #457b9d;
+      --bs-muted: #6c757d;
+      
+      /* Theme Variables - Light */
+      --bs-theme-bg: #fefefe;
+      --bs-theme-surface: #ffffff;
+      --bs-theme-text: #212529;
+      --bs-theme-text-secondary: #6c757d;
+      --bs-theme-border: rgba(0, 0, 0, 0.08);
+      --bs-theme-shadow: rgba(0, 0, 0, 0.08);
+      --bs-theme-radius: 8px;
+      --bs-theme-transition: all 0.3s ease;
+      --bs-theme-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+      
+      /* Table Variables - Light */
+      --bs-table-bg: #ffffff;
+      --bs-table-header-bg: linear-gradient(135deg, #2a9d8f 0%, #21867a 100%);
+      --bs-table-header-text: #ffffff;
+      --bs-table-striped-bg: rgba(42, 157, 143, 0.04);
+      --bs-table-hover-bg: rgba(42, 157, 143, 0.08);
+      --bs-table-border: rgba(42, 157, 143, 0.15);
+      --bs-table-cell-bg: #ffffff;
+      --bs-table-even-row: rgba(42, 157, 143, 0.02);
+      --bs-table-odd-row: #ffffff;
+    }
+    
+    /* Dark Theme */
+    [data-bs-theme="dark"] {
+      --bs-primary: #2a9d8f;
+      --bs-primary-dark: #21867a;
+      --bs-primary-light: rgba(42, 157, 143, 0.2);
+      --bs-secondary: #8ecae6;
+      --bs-accent: #ffb703;
+      
+      --bs-theme-bg: #121212;
+      --bs-theme-surface: #1e1e1e;
+      --bs-theme-text: #e9ecef;
+      --bs-theme-text-secondary: #adb5bd;
+      --bs-theme-border: rgba(255, 255, 255, 0.08);
+      --bs-theme-shadow: rgba(0, 0, 0, 0.3);
+      
+      --bs-table-bg: #1e1e1e;
+      --bs-table-header-bg: linear-gradient(135deg, #1a7a6f 0%, #156b60 100%);
+      --bs-table-header-text: #ffffff;
+      --bs-table-striped-bg: rgba(42, 157, 143, 0.08);
+      --bs-table-hover-bg: rgba(42, 157, 143, 0.15);
+      --bs-table-border: rgba(42, 157, 143, 0.25);
+      --bs-table-cell-bg: #1e1e1e;
+      --bs-table-even-row: rgba(42, 157, 143, 0.05);
+      --bs-table-odd-row: #1e1e1e;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.7;
+      color: var(--bs-theme-text);
+      background-color: var(--bs-theme-bg);
+      scroll-behavior: smooth;
+      transition: var(--bs-theme-transition);
+      overflow-x: hidden;
+      max-width: 100vw;
+    }
+    
+    /* Typography */
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--bs-secondary);
+      font-weight: 600;
+      margin-top: 2rem;
+    }
+    
+    h1 { font-size: 2.5rem; line-height: 1.2; }
+    h2 { 
+      font-size: 1.8rem; 
+      border-bottom: 2px solid var(--bs-primary-light);
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    h3 { font-size: 1.5rem; margin-top: 2.5rem; }
+    
+    /* Navigation */
+    .navbar {
+      box-shadow: 0 2px 10px var(--bs-theme-shadow);
+      padding: 0.6rem 0;
+      background: var(--bs-theme-surface) !important;
+      border-bottom: 1px solid var(--bs-theme-border);
+    }
+    
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.35rem;
+      color: var(--bs-primary) !important;
+    }
+    
+    /* Theme Toggle */
+    .theme-toggle-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-left: 0.5rem;
+    }
+    
+    .theme-toggle-switch {
+      position: relative;
+      width: 60px;
+      height: 30px;
+      background: var(--bs-theme-border);
+      border-radius: 30px;
+      cursor: pointer;
+      transition: var(--bs-theme-transition);
+      overflow: hidden;
+      box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .theme-toggle-switch::before {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background: var(--bs-primary);
+      border-radius: 50%;
+      top: 3px;
+      left: 3px;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      z-index: 2;
+    }
+    
+    [data-bs-theme="dark"] .theme-toggle-switch::before {
+      transform: translateX(30px);
+      background: var(--bs-accent);
+    }
+    
+    .theme-toggle-icons {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 8px;
+      pointer-events: none;
+    }
+    
+    .theme-toggle-icons .material-icons {
+      font-size: 16px;
+      transition: opacity 0.3s ease;
+      z-index: 1;
+    }
+    
+    .theme-toggle-icons .material-icons:first-child { color: #ffb703; }
+    .theme-toggle-icons .material-icons:last-child { color: #264653; }
+    
+    [data-bs-theme="dark"] .theme-toggle-icons .material-icons:first-child { opacity: 1; }
+    [data-bs-theme="dark"] .theme-toggle-icons .material-icons:last-child { opacity: 0.5; }
+    body:not([data-bs-theme="dark"]) .theme-toggle-icons .material-icons:first-child { opacity: 0.5; }
+    body:not([data-bs-theme="dark"]) .theme-toggle-icons .material-icons:last-child { opacity: 1; }
+    
+    /* Hero Section */
+    header.hero {
+      position: relative;
+      padding: 5rem 0 4rem;
+      background: linear-gradient(135deg, rgba(42,157,143,0.15) 0%, rgba(38,70,83,0.1) 100%);
+      overflow: hidden;
+    }
+    
+    [data-bs-theme="dark"] header.hero {
+      background: linear-gradient(135deg, rgba(42,157,143,0.2) 0%, rgba(38,70,83,0.15) 100%);
+    }
+    
+    /* Table of Contents */
+    .table-of-contents {
+      position: sticky;
+      top: 100px;
+      background: var(--bs-theme-surface);
+      border-radius: var(--bs-theme-radius);
+      padding: 1.5rem;
+      box-shadow: var(--bs-theme-shadow-md);
+      border-left: 4px solid var(--bs-primary);
+    }
+    
+    .table-of-contents .nav-link {
+      color: var(--bs-theme-text-secondary);
+      padding: 0.5rem 0;
+      border-left: 2px solid transparent;
+      transition: var(--bs-theme-transition);
+    }
+    
+    .table-of-contents .nav-link:hover,
+    .table-of-contents .nav-link.active {
+      color: var(--bs-primary);
+      border-left-color: var(--bs-primary);
+      padding-left: 1rem;
+    }
+    
+    /* Content Sections */
+    section {
+      margin-bottom: 3rem;
+      padding-bottom: 1.5rem;
+    }
+    
+    section:not(:last-child) {
+      border-bottom: 1px solid var(--bs-theme-border);
+    }
+    
+    /* Callout Boxes */
+    .callout {
+      background: linear-gradient(to right, var(--bs-primary-light) 0%, var(--bs-theme-surface) 100%);
+      border-left: 4px solid var(--bs-primary);
+      padding: 1.75rem;
+      border-radius: var(--bs-theme-radius);
+      margin: 2rem 0;
+      box-shadow: 0 2px 8px var(--bs-theme-shadow);
+    }
+    
+    /* Step Boxes */
+    .step-box {
+      background: var(--bs-theme-surface);
+      border-radius: var(--bs-theme-radius);
+      padding: 2rem;
+      margin: 2rem 0;
+      border: 1px solid var(--bs-theme-border);
+      box-shadow: var(--bs-theme-shadow-md);
+      transition: var(--bs-theme-transition);
+    }
+    
+    .step-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px var(--bs-theme-shadow);
+    }
+    
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bs-primary);
+      color: white;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      margin-right: 12px;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    
+    /* Enhanced Tables - Mobile Responsive */
+    .bokashi-table-container {
+      border-radius: var(--bs-theme-radius);
+      box-shadow: var(--bs-theme-shadow-md);
+      margin-bottom: 2rem;
+      background-color: var(--bs-table-bg);
+      overflow: hidden;
+    }
+    
+    .bokashi-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: var(--bs-table-bg);
+      color: var(--bs-theme-text);
+      border: 1px solid var(--bs-table-border);
+      margin: 0;
+      table-layout: fixed;
+    }
+    
+    .bokashi-table thead th {
+      background: var(--bs-table-header-bg);
+      color: var(--bs-table-header-text);
+      border: none;
+      font-weight: 600;
+      padding: 1rem 0.75rem;
+      text-align: left;
+      font-size: 0.9em;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      word-wrap: break-word;
+    }
+    
+    .bokashi-table tbody td {
+      padding: 1rem 0.75rem;
+      border-top: 1px solid var(--bs-table-border);
+      background-color: var(--bs-table-cell-bg);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    
+    .bokashi-table tbody tr {
+      transition: var(--bs-theme-transition);
+    }
+    
+    .bokashi-table tbody tr:hover {
+      background-color: var(--bs-table-hover-bg) !important;
+      transform: translateX(4px);
+      box-shadow: 4px 0 0 var(--bs-primary) inset;
+    }
+    
+    .bokashi-table.bokashi-table-striped tbody tr:nth-of-type(odd) {
+      background-color: var(--bs-table-odd-row);
+    }
+    
+    .bokashi-table.bokashi-table-striped tbody tr:nth-of-type(even) {
+      background-color: var(--bs-table-even-row);
+    }
+    
+    /* Mobile Table Stacking */
+    @media screen and (max-width: 768px) {
+      .bokashi-table-container {
+        box-shadow: none;
+        background: transparent;
+        overflow: hidden;
+        max-width: 100%;
+      }
+      
+      .bokashi-table {
+        border: 0;
+        display: block;
+        table-layout: auto;
+      }
+      
+      .bokashi-table thead {
+        display: none;
+      }
+      
+      .bokashi-table tbody,
+      .bokashi-table tbody tr,
+      .bokashi-table tbody td {
+        display: block;
+        width: 100%;
+      }
+      
+      .bokashi-table tbody tr {
+        margin-bottom: 1rem;
+        background-color: var(--bs-table-cell-bg);
+        border-radius: var(--bs-theme-radius);
+        box-shadow: 0 2px 8px var(--bs-theme-shadow);
+        border: 1px solid var(--bs-table-border);
+        overflow: hidden;
+      }
+      
+      .bokashi-table tbody td {
+        padding: 0.75rem;
+        border-bottom: 1px solid var(--bs-table-border);
+        text-align: left;
+        max-width: 100%;
+      }
+      
+      .bokashi-table tbody td::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: 700;
+        color: var(--bs-primary);
+        font-size: 0.8em;
+        text-transform: uppercase;
+        margin-bottom: 0.25rem;
+        padding-bottom: 0.25rem;
+        border-bottom: 1px solid var(--bs-table-border);
+        width: 100%;
+      }
+      
+      .bokashi-table tbody td:last-child {
+        border-bottom: 0;
+      }
+      
+      .bokashi-table tbody tr:hover {
+        transform: none;
+        box-shadow: 0 4px 8px var(--bs-theme-shadow);
+      }
+    }
+    
+    /* Footer */
+    footer {
+      padding: 3rem 0;
+      color: var(--bs-theme-text-secondary);
+      background: linear-gradient(to right, rgba(42,157,143,0.05) 0%, var(--bs-theme-bg) 100%);
+      margin-top: 3rem;
+      text-align: center;
+      border-top: 1px solid var(--bs-theme-border);
+    }
+    
+    /* Responsive */
+    @media (max-width: 991.98px) {
+      .table-of-contents {
+        position: static;
+        margin-bottom: 2rem;
+      }
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.6rem; }
+    }
+    
+    @media (max-width: 767.98px) {
+      header.hero {
+        padding: 3rem 0 2.5rem;
+      }
+      
+      .theme-toggle-switch {
+        width: 50px;
+        height: 25px;
+      }
+      
+      .theme-toggle-switch::before {
+        width: 19px;
+        height: 19px;
+      }
+      
+      [data-bs-theme="dark"] .theme-toggle-switch::before {
+        transform: translateX(25px);
+      }
+    }
+    
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: var(--bs-theme-bg);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: var(--bs-primary);
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">🌱 Bokashi→Vermi Lab</a>
+    <div class="d-flex align-items-center">
+      <div class="theme-toggle-container">
+        <div class="theme-toggle-switch" id="themeToggle">
+          <div class="theme-toggle-icons">
+            <span class="material-icons">light_mode</span>
+            <span class="material-icons">dark_mode</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1 class="display-5 fw-bold">From Kitchen Waste to Rich Vermicompost & Vermiwash</h1>
+        <p class="lead my-3">Learn how to efficiently convert household organic waste into high-quality vermicompost and nutrient-rich vermiwash using 20-L Bokashi buckets, 60-L vermicompost drums, and simple DIY methods.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container my-5">
+  <div class="row">
+    <div class="col-lg-3 d-none d-lg-block">
+      <div class="table-of-contents">
+        <h5>Quick Navigation</h5>
+        <nav class="nav flex-column">
+          <a class="nav-link" href="#overview">Overview</a>
+          <a class="nav-link" href="#bokashi">Bokashi Setup</a>
+          <a class="nav-link" href="#neutralize">Neutralization</a>
+          <a class="nav-link" href="#vermicompost">Vermicomposting</a>
+          <a class="nav-link" href="#vermiwash">Vermiwash</a>
+        </nav>
+      </div>
+    </div>
+    
+    <div class="col-lg-9">
+      <section id="overview">
+        <h2>System Overview</h2>
+        <div class="callout">
+          <h5>Complete Two-Stage System Components:</h5>
+          <ul>
+            <li><strong>Two 20-L Bokashi buckets</strong> - rotational fermentation</li>
+            <li><strong>Milk crate</strong> - neutralizing pre-compost</li>
+            <li><strong>Two 60-L vermicompost drums</strong> - continuous processing</li>
+            <li><strong>Collection containers</strong> - leachate and vermiwash</li>
+          </ul>
+        </div>
+        
+        <h3>Why This System Works</h3>
+        <p>The combination of Bokashi fermentation followed by vermicomposting creates a synergistic effect that preserves nutrients while producing stable, nutrient-rich humus.</p>
+      </section>
+
+      <section id="bokashi">
+        <h2>Bokashi Bucket Setup</h2>
+        <div class="step-box">
+          <h4><span class="step-number">1</span> Materials Needed</h4>
+          <div class="bokashi-table-container">
+            <table class="bokashi-table bokashi-table-striped">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Quantity</th>
+                  <th>Purpose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Item">Food-grade buckets</td>
+                  <td data-label="Quantity">2 × 20L</td>
+                  <td data-label="Purpose">Rotational fermentation</td>
+                </tr>
+                <tr>
+                  <td data-label="Item">Bokashi bran</td>
+                  <td data-label="Quantity">1-2 kg</td>
+                  <td data-label="Purpose">Fermentation inoculant</td>
+                </tr>
+                <tr>
+                  <td data-label="Item">Spigot/tap</td>
+                  <td data-label="Quantity">2</td>
+                  <td data-label="Purpose">Leachate collection</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="neutralize">
+        <h2>Neutralization Process</h2>
+        <p>Bokashi pre-compost is acidic (pH 3.5-4.5) and must be neutralized before adding to worms.</p>
+        
+        <div class="step-box">
+          <h4><span class="step-number">1</span> Mixing Ratios</h4>
+          <div class="bokashi-table-container">
+            <table class="bokashi-table bokashi-table-striped">
+              <thead>
+                <tr>
+                  <th>Material</th>
+                  <th>Ratio</th>
+                  <th>Purpose</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Material">Bokashi pre-compost</td>
+                  <td data-label="Ratio">1 part</td>
+                  <td data-label="Purpose">Base material</td>
+                </tr>
+                <tr>
+                  <td data-label="Material">Vermicompost/soil</td>
+                  <td data-label="Ratio">0.5 part</td>
+                  <td data-label="Purpose">Microbes & buffering</td>
+                </tr>
+                <tr>
+                  <td data-label="Material">Cocopeat</td>
+                  <td data-label="Ratio">0.5 part</td>
+                  <td data-label="Purpose">Carbon balance</td>
+                </tr>
+                <tr>
+                  <td data-label="Material">Cow dung manure</td>
+                  <td data-label="Ratio">0.5 part</td>
+                  <td data-label="Purpose">Rapid neutralization</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="vermicompost">
+        <h2>Vermicomposting Setup</h2>
+        <p>Transform neutralized Bokashi into stable, nutrient-rich humus through worm digestion.</p>
+        
+        <div class="callout">
+          <h5>Optimal Conditions:</h5>
+          <ul>
+            <li>Temperature: 18-30°C</li>
+            <li>Moisture: 60-80% (wrung-out sponge)</li>
+            <li>pH: 6.5-7.5</li>
+            <li>Processing time: 50-90 days</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="vermiwash">
+        <h2>Vermiwash Collection</h2>
+        <div class="step-box">
+          <h4><span class="step-number">1</span> Quality Assessment</h4>
+          <div class="bokashi-table-container">
+            <table class="bokashi-table bokashi-table-colorful">
+              <thead>
+                <tr>
+                  <th>Property</th>
+                  <th>Good Quality</th>
+                  <th>Poor Quality</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Property">Color</td>
+                  <td data-label="Good Quality">Light brown, tea-colored</td>
+                  <td data-label="Poor Quality">Dark brown/black</td>
+                </tr>
+                <tr>
+                  <td data-label="Property">Smell</td>
+                  <td data-label="Good Quality">Earthy, pleasant</td>
+                  <td data-label="Poor Quality">Foul, putrid</td>
+                </tr>
+                <tr>
+                  <td data-label="Property">pH</td>
+                  <td data-label="Good Quality">6.5-7.5</td>
+                  <td data-label="Poor Quality">&lt;6 or &gt;8</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>Comprehensive Guide for Home-Scale Bokashi & Vermicomposting</p>
+    <p class="small">Theme: <span id="currentTheme">Light</span> | <button class="btn btn-sm btn-link" id="footerToggle">Switch</button></p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const body = document.body;
+  const themeToggle = document.getElementById('themeToggle');
+  const footerToggle = document.getElementById('footerToggle');
+  const currentTheme = document.getElementById('currentTheme');
+  
+  // Load saved theme
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  if (savedTheme === 'dark') {
+    body.setAttribute('data-bs-theme', 'dark');
+    currentTheme.textContent = 'Dark';
+  }
+  
+  function toggleTheme() {
+    const isDark = body.getAttribute('data-bs-theme') === 'dark';
+    body.setAttribute('data-bs-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('theme', isDark ? 'light' : 'dark');
+    currentTheme.textContent = isDark ? 'Light' : 'Dark';
+  }
+  
+  themeToggle.addEventListener('click', toggleTheme);
+  footerToggle.addEventListener('click', toggleTheme);
+  
+  // Active navigation
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.nav-link');
+  
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      if (pageYOffset >= sectionTop - 200) {
+        current = section.getAttribute('id');
+      }
+    });
+    
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').substring(1) === current) {
+        link.classList.add('active');
+      }
+    });
+  });
+  
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        window.scrollTo({
+          top: target.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>

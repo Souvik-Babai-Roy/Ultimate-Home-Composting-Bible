@@ -9,150 +9,127 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style>
     :root {
-      --primary: #2a9d8f;
-      --primary-dark: #21867a;
-      --primary-light: rgba(42, 157, 143, 0.1);
-      --secondary: #264653;
-      --accent: #e9c46a;
-      --muted: #6c757d;
-      --light: #f8f9fa;
-      --dark: #212529;
-      --success: #2a9d8f;
-      --warning: #e9c46a;
-      --danger: #e76f51;
-      --info: #457b9d;
-      --border-radius: 8px;
-      --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      --transition: all 0.3s ease;
+      /* Color System */
+      --bs-primary: #2a9d8f;
+      --bs-primary-dark: #21867a;
+      --bs-primary-light: rgba(42, 157, 143, 0.1);
+      --bs-secondary: #264653;
+      --bs-accent: #e9c46a;
+      --bs-success: #2a9d8f;
+      --bs-warning: #e9c46a;
+      --bs-danger: #e76f51;
+      --bs-info: #457b9d;
+      --bs-muted: #6c757d;
       
-      /* Light theme colors */
-      --bg-color: #fefefe;
-      --surface-color: #ffffff;
-      --text-color: #212529;
-      --text-secondary: #6c757d;
-      --border-color: rgba(0, 0, 0, 0.08);
-      --shadow-color: rgba(0, 0, 0, 0.08);
+      /* Theme Variables - Light */
+      --bs-theme-bg: #fefefe;
+      --bs-theme-surface: #ffffff;
+      --bs-theme-text: #212529;
+      --bs-theme-text-secondary: #6c757d;
+      --bs-theme-border: rgba(0, 0, 0, 0.08);
+      --bs-theme-shadow: rgba(0, 0, 0, 0.08);
+      --bs-theme-radius: 8px;
+      --bs-theme-transition: all 0.3s ease;
+      --bs-theme-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
       
-      /* Light theme table colors */
-      --table-bg: #ffffff;
-      --table-header-bg: linear-gradient(135deg, #2a9d8f 0%, #21867a 100%);
-      --table-header-text: #ffffff;
-      --table-striped-bg: rgba(42, 157, 143, 0.04);
-      --table-hover-bg: rgba(42, 157, 143, 0.08);
-      --table-border: rgba(42, 157, 143, 0.15);
-      --table-cell-bg: #ffffff;
-      --table-even-row: rgba(42, 157, 143, 0.02);
-      --table-odd-row: #ffffff;
-      --table-accent-1: rgba(42, 157, 143, 0.06);
-      --table-accent-2: rgba(233, 196, 106, 0.06);
-      --table-accent-3: rgba(69, 123, 157, 0.06);
-      
-      /* Code sample colors for light theme */
-      --code-bg: #f8f9fa;
-      --code-text: #212529;
-      --code-border: rgba(0, 0, 0, 0.1);
+      /* Table Variables - Light */
+      --bs-table-bg: #ffffff;
+      --bs-table-header-bg: linear-gradient(135deg, #2a9d8f 0%, #21867a 100%);
+      --bs-table-header-text: #ffffff;
+      --bs-table-striped-bg: rgba(42, 157, 143, 0.04);
+      --bs-table-hover-bg: rgba(42, 157, 143, 0.08);
+      --bs-table-border: rgba(42, 157, 143, 0.15);
+      --bs-table-cell-bg: #ffffff;
+      --bs-table-even-row: rgba(42, 157, 143, 0.02);
+      --bs-table-odd-row: #ffffff;
     }
     
-    /* Dark theme colors */
-    [data-theme="dark"] {
-      --primary: #2a9d8f;
-      --primary-dark: #21867a;
-      --primary-light: rgba(42, 157, 143, 0.2);
-      --secondary: #8ecae6;
-      --accent: #ffb703;
-      --muted: #adb5bd;
-      --light: #343a40;
-      --dark: #e9ecef;
-      --success: #2a9d8f;
-      --warning: #ffb703;
-      --danger: #fb8500;
-      --info: #457b9d;
+    /* Dark Theme */
+    [data-bs-theme="dark"] {
+      --bs-primary: #2a9d8f;
+      --bs-primary-dark: #21867a;
+      --bs-primary-light: rgba(42, 157, 143, 0.2);
+      --bs-secondary: #8ecae6;
+      --bs-accent: #ffb703;
       
-      --bg-color: #121212;
-      --surface-color: #1e1e1e;
-      --text-color: #e9ecef;
-      --text-secondary: #adb5bd;
-      --border-color: rgba(255, 255, 255, 0.08);
-      --shadow-color: rgba(0, 0, 0, 0.3);
+      --bs-theme-bg: #121212;
+      --bs-theme-surface: #1e1e1e;
+      --bs-theme-text: #e9ecef;
+      --bs-theme-text-secondary: #adb5bd;
+      --bs-theme-border: rgba(255, 255, 255, 0.08);
+      --bs-theme-shadow: rgba(0, 0, 0, 0.3);
       
-      /* Dark theme table colors */
-      --table-bg: #1e1e1e;
-      --table-header-bg: linear-gradient(135deg, #1a7a6f 0%, #156b60 100%);
-      --table-header-text: #ffffff;
-      --table-striped-bg: rgba(42, 157, 143, 0.08);
-      --table-hover-bg: rgba(42, 157, 143, 0.15);
-      --table-border: rgba(42, 157, 143, 0.25);
-      --table-cell-bg: #1e1e1e;
-      --table-even-row: rgba(42, 157, 143, 0.05);
-      --table-odd-row: #1e1e1e;
-      --table-accent-1: rgba(42, 157, 143, 0.1);
-      --table-accent-2: rgba(255, 183, 3, 0.1);
-      --table-accent-3: rgba(69, 123, 157, 0.1);
-      
-      /* Code sample colors for dark theme */
-      --code-bg: #2d2d2d;
-      --code-text: #f8f9fa;
-      --code-border: rgba(255, 255, 255, 0.1);
+      --bs-table-bg: #1e1e1e;
+      --bs-table-header-bg: linear-gradient(135deg, #1a7a6f 0%, #156b60 100%);
+      --bs-table-header-text: #ffffff;
+      --bs-table-striped-bg: rgba(42, 157, 143, 0.08);
+      --bs-table-hover-bg: rgba(42, 157, 143, 0.15);
+      --bs-table-border: rgba(42, 157, 143, 0.25);
+      --bs-table-cell-bg: #1e1e1e;
+      --bs-table-even-row: rgba(42, 157, 143, 0.05);
+      --bs-table-odd-row: #1e1e1e;
+    }
+    
+    * {
+      box-sizing: border-box;
     }
     
     body {
-      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
       line-height: 1.7;
-      color: var(--text-color);
-      background-color: var(--bg-color);
+      color: var(--bs-theme-text);
+      background-color: var(--bs-theme-bg);
       scroll-behavior: smooth;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      transition: var(--bs-theme-transition);
+      overflow-x: hidden;
+      max-width: 100vw;
     }
     
-    /* Improved Typography */
+    /* Reading Progress Bar */
+    .reading-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--bs-primary) 0%, var(--bs-accent) 100%);
+      z-index: 9999;
+      transition: width 0.3s ease;
+      box-shadow: 0 2px 8px rgba(42, 157, 143, 0.3);
+    }
+    
+    /* Typography */
     h1, h2, h3, h4, h5, h6 {
-      color: var(--secondary);
+      color: var(--bs-secondary);
       font-weight: 600;
       margin-top: 2rem;
     }
     
-    h1 {
-      font-size: 2.5rem;
-      line-height: 1.2;
-    }
-    
-    h2 {
-      font-size: 1.8rem;
-      border-bottom: 2px solid var(--primary-light);
+    h1 { font-size: 2.5rem; line-height: 1.2; }
+    h2 { 
+      font-size: 1.8rem; 
+      border-bottom: 2px solid var(--bs-primary-light);
       padding-bottom: 0.75rem;
       margin-bottom: 1.5rem;
     }
+    h3 { font-size: 1.5rem; margin-top: 2.5rem; }
     
-    h3 {
-      font-size: 1.5rem;
-      margin-top: 2.5rem;
-    }
-    
-    h4 {
-      font-size: 1.3rem;
-    }
-    
-    p {
-      margin-bottom: 1.2rem;
-    }
-    
-    /* Enhanced Navigation */
+    /* Navigation */
     .navbar {
-      box-shadow: 0 2px 10px var(--shadow-color);
+      box-shadow: 0 2px 10px var(--bs-theme-shadow);
       padding: 0.6rem 0;
-      background: var(--surface-color) !important;
-      transition: all 0.3s ease;
-      border-bottom: 1px solid var(--border-color);
+      background: var(--bs-theme-surface) !important;
+      border-bottom: 1px solid var(--bs-theme-border);
+      z-index: 1000;
     }
     
     .navbar-brand {
       font-weight: 700;
       font-size: 1.35rem;
-      color: var(--primary) !important;
-      letter-spacing: 0.3px;
+      color: var(--bs-primary) !important;
     }
     
-    /* Theme Toggle Switch - Improved Design */
+    /* Theme Toggle */
     .theme-toggle-container {
       position: relative;
       display: flex;
@@ -164,10 +141,10 @@
       position: relative;
       width: 60px;
       height: 30px;
-      background: var(--border-color);
+      background: var(--bs-theme-border);
       border-radius: 30px;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: var(--bs-theme-transition);
       overflow: hidden;
       box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
     }
@@ -177,31 +154,18 @@
       position: absolute;
       width: 24px;
       height: 24px;
-      background: var(--primary);
+      background: var(--bs-primary);
       border-radius: 50%;
       top: 3px;
       left: 3px;
       transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-      transform: translateX(0);
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       z-index: 2;
     }
     
-    [data-theme="dark"] .theme-toggle-switch::before {
+    [data-bs-theme="dark"] .theme-toggle-switch::before {
       transform: translateX(30px);
-      background: var(--accent);
-    }
-    
-    .theme-toggle-switch:hover {
-      box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.15);
-    }
-    
-    .theme-toggle-switch:hover::before {
-      transform: translateX(0) scale(1.1);
-    }
-    
-    [data-theme="dark"] .theme-toggle-switch:hover::before {
-      transform: translateX(30px) scale(1.1);
+      background: var(--bs-accent);
     }
     
     .theme-toggle-icons {
@@ -221,607 +185,297 @@
       z-index: 1;
     }
     
-    .theme-toggle-icons .material-icons:first-child {
-      color: #ffb703;
-    }
+    .theme-toggle-icons .material-icons:first-child { color: #ffb703; }
+    .theme-toggle-icons .material-icons:last-child { color: #264653; }
     
-    .theme-toggle-icons .material-icons:last-child {
-      color: #264653;
-    }
+    [data-bs-theme="dark"] .theme-toggle-icons .material-icons:first-child { opacity: 1; }
+    [data-bs-theme="dark"] .theme-toggle-icons .material-icons:last-child { opacity: 0.5; }
+    body:not([data-bs-theme="dark"]) .theme-toggle-icons .material-icons:first-child { opacity: 0.5; }
+    body:not([data-bs-theme="dark"]) .theme-toggle-icons .material-icons:last-child { opacity: 1; }
     
-    [data-theme="dark"] .theme-toggle-icons .material-icons:first-child {
-      opacity: 1;
-    }
-    
-    [data-theme="dark"] .theme-toggle-icons .material-icons:last-child {
-      opacity: 0.5;
-    }
-    
-    body:not([data-theme="dark"]) .theme-toggle-icons .material-icons:first-child {
-      opacity: 0.5;
-    }
-    
-    body:not([data-theme="dark"]) .theme-toggle-icons .material-icons:last-child {
-      opacity: 1;
-    }
-    
-    /* Toggle Animation */
-    @keyframes toggleBounce {
-      0%, 100% { transform: translateX(0) scale(1); }
-      50% { transform: translateX(0) scale(1.2); }
-    }
-    
-    .theme-toggle-switch.animating::before {
-      animation: toggleBounce 0.6s ease;
-    }
-    
-    /* Enhanced Hero Section */
+    /* Hero Section */
     header.hero {
       position: relative;
       padding: 5rem 0 4rem;
       background: linear-gradient(135deg, rgba(42,157,143,0.15) 0%, rgba(38,70,83,0.1) 100%);
       overflow: hidden;
-      z-index: 1;
+      margin-top: 4px; /* For progress bar */
     }
     
-    [data-theme="dark"] header.hero {
+    [data-bs-theme="dark"] header.hero {
       background: linear-gradient(135deg, rgba(42,157,143,0.2) 0%, rgba(38,70,83,0.15) 100%);
     }
     
-    /* Image layer using contain */
-    header.hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url('img/hero-image.png');
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      opacity: 0.4;
-      z-index: -2;
-      filter: blur(1px);
-    }
-    
-    [data-theme="dark"] header.hero::before {
-      opacity: 0.2;
-    }
-    
-    /* Overlay for readability */
-    header.hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(255,255,255,0.45), rgba(255,255,255,0.25));
-      z-index: -1;
-    }
-    
-    [data-theme="dark"] header.hero::after {
-      background: linear-gradient(135deg, rgba(18,18,18,0.6), rgba(18,18,18,0.4));
-    }
-    
-    /* Subtle floating animation */
-    @keyframes floatBg {
-      0% { transform: scale(1) translateY(0px); }
-      50% { transform: scale(1.05) translateY(-6px); }
-      100% { transform: scale(1) translateY(0px); }
-    }
-    
-    header.hero::before {
-      animation: floatBg 10s ease-in-out infinite;
-    }
-    
-    .hero h1 {
-      font-weight: 700;
-      color: var(--secondary);
-      margin-bottom: 1.5rem;
-    }
-    
-    .hero .lead {
-      font-size: 1.25rem;
-      color: var(--text-secondary);
-      font-weight: 400;
-    }
-    
-    /* Enhanced Table of Contents */
+    /* Table of Contents */
     .table-of-contents {
       position: sticky;
       top: 100px;
-      background: var(--surface-color);
-      border-radius: var(--border-radius);
+      background: var(--bs-theme-surface);
+      border-radius: var(--bs-theme-radius);
       padding: 1.5rem;
-      box-shadow: var(--box-shadow);
-      border-left: 4px solid var(--primary);
-      transition: background-color 0.3s ease;
-    }
-    
-    .table-of-contents h5 {
-      color: var(--primary);
-      margin-bottom: 1rem;
-      font-weight: 600;
+      box-shadow: var(--bs-theme-shadow-md);
+      border-left: 4px solid var(--bs-primary);
     }
     
     .table-of-contents .nav-link {
-      color: var(--text-secondary);
+      color: var(--bs-theme-text-secondary);
       padding: 0.5rem 0;
       border-left: 2px solid transparent;
-      transition: var(--transition);
-      font-weight: 500;
+      transition: var(--bs-theme-transition);
     }
     
     .table-of-contents .nav-link:hover,
     .table-of-contents .nav-link.active {
-      color: var(--primary);
-      border-left-color: var(--primary);
+      color: var(--bs-primary);
+      border-left-color: var(--bs-primary);
       padding-left: 1rem;
     }
     
-    /* Enhanced Content Sections */
+    /* Content Sections */
     section {
       margin-bottom: 3rem;
       padding-bottom: 1.5rem;
     }
     
     section:not(:last-child) {
-      border-bottom: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--bs-theme-border);
     }
     
-    /* Enhanced Callout Boxes */
+    /* Callout Boxes */
     .callout {
-      background: linear-gradient(to right, var(--primary-light) 0%, var(--surface-color) 100%);
-      border-left: 4px solid var(--primary);
+      background: linear-gradient(to right, var(--bs-primary-light) 0%, var(--bs-theme-surface) 100%);
+      border-left: 4px solid var(--bs-primary);
       padding: 1.75rem;
-      border-radius: var(--border-radius);
+      border-radius: var(--bs-theme-radius);
       margin: 2rem 0;
-      box-shadow: 0 2px 8px var(--shadow-color);
+      box-shadow: 0 2px 8px var(--bs-theme-shadow);
     }
     
-    .callout h5 {
-      color: var(--primary);
-      margin-bottom: 1rem;
-      font-weight: 600;
+    .tip-box {
+      background: linear-gradient(to right, rgba(233, 196, 106, 0.1) 0%, var(--bs-theme-surface) 100%);
+      border-left: 4px solid var(--bs-accent);
+      padding: 1.5rem;
+      border-radius: var(--bs-theme-radius);
+      margin: 1.5rem 0;
     }
     
-    /* Enhanced Step Boxes */
+    .warning-box {
+      background: linear-gradient(to right, rgba(231, 111, 81, 0.1) 0%, var(--bs-theme-surface) 100%);
+      border-left: 4px solid var(--bs-danger);
+      padding: 1.5rem;
+      border-radius: var(--bs-theme-radius);
+      margin: 1.5rem 0;
+    }
+    
+    /* Step Boxes */
     .step-box {
-      background: var(--surface-color);
-      border-radius: var(--border-radius);
+      background: var(--bs-theme-surface);
+      border-radius: var(--bs-theme-radius);
       padding: 2rem;
       margin: 2rem 0;
-      border: 1px solid var(--border-color);
-      box-shadow: var(--box-shadow);
-      transition: var(--transition);
+      border: 1px solid var(--bs-theme-border);
+      box-shadow: var(--bs-theme-shadow-md);
+      transition: var(--bs-theme-transition);
     }
     
     .step-box:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 20px var(--shadow-color);
+      box-shadow: 0 8px 20px var(--bs-theme-shadow);
     }
     
     .step-number {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: var(--primary);
+      background: var(--bs-primary);
       color: white;
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      text-align: center;
-      line-height: 36px;
       margin-right: 12px;
       font-weight: 700;
       font-size: 1rem;
     }
     
-    /* Enhanced Tip and Warning Boxes */
-    .tip-box {
-      background: linear-gradient(to right, var(--table-accent-3) 0%, var(--surface-color) 100%);
-      border-left: 4px solid var(--info);
-      padding: 1.75rem;
-      border-radius: var(--border-radius);
-      margin: 1.5rem 0;
-    }
-    
-    .warning-box {
-      background: linear-gradient(to right, rgba(231, 111, 81, 0.1) 0%, var(--surface-color) 100%);
-      border-left: 4px solid var(--danger);
-      padding: 1.75rem;
-      border-radius: var(--border-radius);
-      margin: 1.5rem 0;
-    }
-    
-    .danger-box {
-      background: linear-gradient(to right, rgba(231, 76, 60, 0.1) 0%, var(--surface-color) 100%);
-      border-left: 4px solid #e74c3c;
-      padding: 1.75rem;
-      border-radius: var(--border-radius);
-      margin: 1.5rem 0;
-    }
-    
-    [data-theme="dark"] .warning-box {
-      background: linear-gradient(to right, rgba(251, 133, 0, 0.1) 0%, var(--surface-color) 100%);
-    }
-    
-    [data-theme="dark"] .danger-box {
-      background: linear-gradient(to right, rgba(231, 76, 60, 0.15) 0%, var(--surface-color) 100%);
-    }
-    
-    .tip-box h5, .warning-box h5, .danger-box h5 {
-      margin-bottom: 0.75rem;
-      display: flex;
-      align-items: center;
-    }
-    
-    .material-icons {
-      vertical-align: middle;
-      margin-right: 8px;
-    }
-    
-    /* Enhanced Code Samples */
-    pre.code-sample {
-      background: var(--code-bg);
-      color: var(--code-text);
-      padding: 1.5rem;
-      border-radius: var(--border-radius);
-      overflow: auto;
-      margin: 1.5rem 0;
-      border: 1px solid var(--code-border);
-      font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-      font-size: 0.9rem;
-      line-height: 1.5;
-    }
-    
-    /* IMPROVED RESPONSIVE TABLES */
-    
-    /* Desktop table styling */
-    .table {
-      background-color: var(--table-bg);
-      color: var(--text-color);
-      border-collapse: collapse;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      border: 1px solid var(--table-border);
-      border-radius: var(--border-radius);
+    /* Enhanced Tables - Mobile Responsive */
+    .bokashi-table-container {
+      border-radius: var(--bs-theme-radius);
+      box-shadow: var(--bs-theme-shadow-md);
+      margin-bottom: 2rem;
+      background-color: var(--bs-table-bg);
       overflow: hidden;
-      box-shadow: 0 2px 8px var(--shadow-color);
-      margin-bottom: 1.5rem;
-      table-layout: auto;
     }
     
-    .table caption {
-      font-size: 1.5em;
-      margin: .5em 0 .75em;
-      text-align: left;
-      color: var(--text-color);
-      font-weight: 600;
+    .bokashi-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: var(--bs-table-bg);
+      color: var(--bs-theme-text);
+      border: 1px solid var(--bs-table-border);
+      margin: 0;
+      table-layout: fixed;
     }
     
-    .table thead {
-      background: var(--table-header-bg);
-    }
-    
-    .table thead th {
-      color: var(--table-header-text);
+    .bokashi-table thead th {
+      background: var(--bs-table-header-bg);
+      color: var(--bs-table-header-text);
       border: none;
       font-weight: 600;
       padding: 1rem 0.75rem;
-      border-bottom: 2px solid var(--primary-dark);
-      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-      position: relative;
-      overflow: hidden;
       text-align: left;
       font-size: 0.9em;
-      letter-spacing: 0.05em;
       text-transform: uppercase;
+      letter-spacing: 0.05em;
+      word-wrap: break-word;
     }
     
-    .table tbody td {
+    .bokashi-table tbody td {
       padding: 1rem 0.75rem;
-      border-top: 1px solid var(--table-border);
-      transition: all 0.2s ease;
-      background-color: var(--table-cell-bg);
-      text-align: left;
+      border-top: 1px solid var(--bs-table-border);
+      background-color: var(--bs-table-cell-bg);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
     
-    .table tbody tr {
-      transition: all 0.3s ease;
+    .bokashi-table tbody tr {
+      transition: var(--bs-theme-transition);
     }
     
-    .table tbody tr:hover {
-      background-color: var(--table-hover-bg) !important;
+    .bokashi-table tbody tr:hover {
+      background-color: var(--bs-table-hover-bg) !important;
       transform: translateX(4px);
-      box-shadow: 4px 0 0 var(--primary) inset;
+      box-shadow: 4px 0 0 var(--bs-primary) inset;
     }
     
-    /* Enhanced striped tables with alternating colors */
-    .table-striped tbody tr:nth-of-type(odd) {
-      background-color: var(--table-odd-row);
+    .bokashi-table.bokashi-table-striped tbody tr:nth-of-type(odd) {
+      background-color: var(--bs-table-odd-row);
     }
     
-    .table-striped tbody tr:nth-of-type(even) {
-      background-color: var(--table-even-row);
+    .bokashi-table.bokashi-table-striped tbody tr:nth-of-type(even) {
+      background-color: var(--bs-table-even-row);
     }
     
-    /* Special styling for troubleshooting tables */
-    .troubleshooting-table {
-      border: 1px solid var(--table-border);
-    }
-    
-    .troubleshooting-table tbody tr:nth-of-type(odd) {
-      background-color: var(--table-accent-1);
-    }
-    
-    .troubleshooting-table tbody tr:nth-of-type(even) {
-      background-color: var(--table-accent-2);
-    }
-    
-    .troubleshooting-table tbody tr:hover {
-      background-color: var(--table-hover-bg) !important;
-      transform: translateX(8px);
-      box-shadow: 8px 0 0 var(--accent) inset;
-    }
-    
-    /* Comparison tables */
+    /* Special Table Styles */
     .table-bordered {
-      border: 2px solid var(--table-border);
+      border: 1px solid var(--bs-table-border);
     }
     
     .table-bordered th,
     .table-bordered td {
-      border: 1px solid var(--table-border);
-      background-color: var(--table-cell-bg);
+      border: 1px solid var(--bs-table-border);
     }
     
-    .table-bordered thead th {
-      background: var(--table-header-bg);
-      color: var(--table-header-text);
+    .table-dark {
+      background: var(--bs-table-header-bg) !important;
+      color: var(--bs-table-header-text) !important;
     }
     
-    .table-bordered tbody tr:nth-of-type(odd) {
-      background-color: var(--table-accent-1);
-    }
-    
-    .table-bordered tbody tr:nth-of-type(even) {
-      background-color: var(--table-accent-3);
-    }
-    
-    /* Quality assessment table */
-    .quality-table tbody tr:nth-child(4n+1) {
-      background-color: var(--table-accent-1);
-    }
-    
-    .quality-table tbody tr:nth-child(4n+2) {
-      background-color: var(--table-accent-2);
-    }
-    
-    .quality-table tbody tr:nth-child(4n+3) {
-      background-color: var(--table-accent-3);
-    }
-    
-    .quality-table tbody tr:nth-child(4n+4) {
-      background-color: var(--table-even-row);
-    }
-    
-    /* Table responsive container */
-    .table-responsive {
-      border-radius: var(--border-radius);
-      box-shadow: 0 2px 8px var(--shadow-color);
-      margin-bottom: 2rem;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-    
-    .table-responsive .table {
-      margin-bottom: 0;
-      box-shadow: none;
-      min-width: 600px; /* Minimum width for tables with many columns */
-    }
-    
-    /* MOBILE RESPONSIVE TABLE STYLES */
-    @media screen and (max-width: 768px) {
-      /* For tablets and mobile phones */
-      .table-responsive {
-        box-shadow: none;
-        border-radius: 0;
-        margin-bottom: 1rem;
-      }
-      
-      .table {
-        border: 0;
-        border-radius: 0;
-        box-shadow: none;
-        min-width: 100%;
-        width: 100%;
-        margin-bottom: 0;
-      }
-      
-      .table caption {
-        font-size: 1.3em;
-        margin-bottom: 1em;
-      }
-      
-      /* Hide table headers on mobile */
-      .table thead {
-        border: none;
-        clip: rect(0 0 0 0);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
-      }
-      
-      /* Convert rows to blocks */
-      .table tr {
-        border-bottom: 3px solid var(--table-border);
-        display: block;
-        margin-bottom: 1rem;
-        padding: 0;
-        background-color: var(--table-cell-bg);
-        border-radius: var(--border-radius);
-        box-shadow: 0 2px 4px var(--shadow-color);
-      }
-      
-      /* Convert cells to blocks */
-      .table td {
-        border-bottom: 1px solid var(--table-border);
-        display: block;
-        font-size: 0.9em;
-        text-align: right;
-        padding: 0.75rem;
-        position: relative;
-        min-height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      
-      /* Add data-label before content */
-      .table td::before {
-        /* Use data-label attribute if available, otherwise fallback */
-        content: attr(data-label);
-        content: attr(data-label);
-        position: static;
-        float: left;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: var(--text-secondary);
-        font-size: 0.85em;
-        margin-right: 1rem;
-        text-align: left;
-        width: 40%;
-        flex-shrink: 0;
-      }
-      
-      /* Last cell doesn't need bottom border */
-      .table td:last-child {
-        border-bottom: 0;
-      }
-      
-      /* Adjust hover effects for mobile */
-      .table tbody tr:hover {
-        transform: none;
-        box-shadow: 0 4px 8px var(--shadow-color);
-        background-color: var(--table-hover-bg) !important;
-      }
-      
-      /* Remove striped backgrounds on mobile for better readability */
-      .table-striped tbody tr:nth-of-type(odd),
-      .table-striped tbody tr:nth-of-type(even),
-      .troubleshooting-table tbody tr:nth-of-type(odd),
-      .troubleshooting-table tbody tr:nth-of-type(even),
-      .table-bordered tbody tr:nth-of-type(odd),
-      .table-bordered tbody tr:nth-of-type(even),
-      .quality-table tbody tr:nth-child(4n+1),
-      .quality-table tbody tr:nth-child(4n+2),
-      .quality-table tbody tr:nth-child(4n+3),
-      .quality-table tbody tr:nth-child(4n+4) {
-        background-color: var(--table-cell-bg);
-      }
-      
-      /* Special styling for tables inside table-responsive */
-      .table-responsive .table tbody tr {
-        border: 1px solid var(--table-border);
-        margin-bottom: 1rem;
-      }
-      
-      .table-responsive .table td {
-        border-color: var(--table-border);
-      }
-      
-      /* Fix for tables without data-label - show table headers on very small screens */
-      @media screen and (max-width: 480px) {
-        .table td::before {
-          width: 45%;
-          font-size: 0.8em;
-        }
-        
-        .table td {
-          font-size: 0.85em;
-          padding: 0.625rem;
-        }
-        
-        .table tr {
-          margin-bottom: 0.625em;
-        }
-      }
-    }
-    
-    /* For very small screens (phones) */
-    @media screen and (max-width: 480px) {
-      .table td::before {
-        width: 45%;
-        font-size: 0.75em;
-      }
-      
-      .table td {
-        font-size: 0.8em;
-        padding: 0.625rem 0.5rem;
-      }
-    }
-    
-    /* Enhanced FAQ Section */
+    /* FAQ Specific */
     .faq-item {
-      margin-bottom: 2rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var(--border-color);
-    }
-    
-    .faq-item h5 {
-      color: var(--secondary);
-      margin-bottom: 0.75rem;
-      font-weight: 600;
+      background: var(--bs-theme-surface);
+      border-radius: var(--bs-theme-radius);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      border: 1px solid var(--bs-theme-border);
     }
     
     .system-section {
-      margin-bottom: 3rem;
+      margin: 3rem 0;
+      padding: 2rem 0;
+      border-top: 2px solid var(--bs-theme-border);
     }
     
-    .system-section h3 {
-      color: var(--primary);
-      margin-bottom: 1.5rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--primary-light);
+    .danger-box {
+      background: linear-gradient(to right, rgba(231, 111, 81, 0.15) 0%, var(--bs-theme-surface) 100%);
+      border-left: 4px solid var(--bs-danger);
+      padding: 1.5rem;
+      border-radius: var(--bs-theme-radius);
+      margin: 2rem 0;
     }
     
-    /* Enhanced Footer */
+    /* Mobile Table Stacking */
+    @media screen and (max-width: 768px) {
+      .bokashi-table-container {
+        box-shadow: none;
+        background: transparent;
+        overflow: hidden;
+        max-width: 100%;
+      }
+      
+      .bokashi-table {
+        border: 0;
+        display: block;
+        table-layout: auto;
+      }
+      
+      .bokashi-table thead {
+        display: none;
+      }
+      
+      .bokashi-table tbody,
+      .bokashi-table tbody tr,
+      .bokashi-table tbody td {
+        display: block;
+        width: 100%;
+      }
+      
+      .bokashi-table tbody tr {
+        margin-bottom: 1rem;
+        background-color: var(--bs-table-cell-bg);
+        border-radius: var(--bs-theme-radius);
+        box-shadow: 0 2px 8px var(--bs-theme-shadow);
+        border: 1px solid var(--bs-table-border);
+        overflow: hidden;
+      }
+      
+      .bokashi-table tbody td {
+        padding: 0.75rem;
+        border-bottom: 1px solid var(--bs-table-border);
+        text-align: left;
+        max-width: 100%;
+      }
+      
+      .bokashi-table tbody td::before {
+        content: attr(data-label);
+        display: block;
+        font-weight: 700;
+        color: var(--bs-primary);
+        font-size: 0.8em;
+        text-transform: uppercase;
+        margin-bottom: 0.25rem;
+        padding-bottom: 0.25rem;
+        border-bottom: 1px solid var(--bs-table-border);
+        width: 100%;
+      }
+      
+      .bokashi-table tbody td:last-child {
+        border-bottom: 0;
+      }
+      
+      .bokashi-table tbody tr:hover {
+        transform: none;
+        box-shadow: 0 4px 8px var(--bs-theme-shadow);
+      }
+    }
+    
+    /* Footer */
     footer {
       padding: 3rem 0;
-      color: var(--text-secondary);
-      background: linear-gradient(to right, rgba(42,157,143,0.05) 0%, var(--bg-color) 100%);
+      color: var(--bs-theme-text-secondary);
+      background: linear-gradient(to right, rgba(42,157,143,0.05) 0%, var(--bs-theme-bg) 100%);
       margin-top: 3rem;
       text-align: center;
-      border-top: 1px solid var(--border-color);
+      border-top: 1px solid var(--bs-theme-border);
     }
     
-    [data-theme="dark"] footer {
-      background: linear-gradient(to right, rgba(42,157,143,0.1) 0%, var(--bg-color) 100%);
-    }
-    
-    /* Badges */
-    .badge-topic {
-      background: var(--primary);
-      color: #fff;
-      font-weight: 500;
-      padding: 0.4rem 0.8rem;
-    }
-    
-    /* Responsive Adjustments */
+    /* Responsive */
     @media (max-width: 991.98px) {
       .table-of-contents {
         position: static;
         margin-bottom: 2rem;
       }
-      
-      h1 {
-        font-size: 2rem;
-      }
-      
-      h2 {
-        font-size: 1.6rem;
-      }
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.6rem; }
     }
     
     @media (max-width: 767.98px) {
@@ -829,167 +483,51 @@
         padding: 3rem 0 2.5rem;
       }
       
-      .step-box {
-        padding: 1.5rem;
-      }
-      
-      .callout, .tip-box, .warning-box {
-        padding: 1.25rem;
-      }
-      
       .theme-toggle-switch {
         width: 50px;
         height: 25px;
       }
       
-      [data-theme="dark"] .theme-toggle-switch::before {
-        transform: translateX(25px);
-      }
-      
       .theme-toggle-switch::before {
         width: 19px;
         height: 19px;
-        top: 3px;
-        left: 3px;
       }
       
-      .theme-toggle-icons .material-icons {
-        font-size: 14px;
-      }
-      
-      /* Table adjustments for medium screens */
-      .table tbody tr:hover {
-        transform: translateX(2px);
-        box-shadow: 2px 0 0 var(--primary) inset;
+      [data-bs-theme="dark"] .theme-toggle-switch::before {
+        transform: translateX(25px);
       }
     }
     
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    .fade-in {
-      animation: fadeIn 0.6s ease-out;
-    }
-    
-    @keyframes rowHighlight {
-      0% { background-color: var(--table-cell-bg); }
-      50% { background-color: var(--table-hover-bg); }
-      100% { background-color: var(--table-cell-bg); }
-    }
-    
-    .highlight-row {
-      animation: rowHighlight 1.5s ease;
-    }
-    
-    /* Custom Scrollbar */
+    /* Scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
     }
     
     ::-webkit-scrollbar-track {
-      background: var(--bg-color);
+      background: var(--bs-theme-bg);
     }
     
     ::-webkit-scrollbar-thumb {
-      background: var(--primary);
+      background: var(--bs-primary);
       border-radius: 4px;
     }
     
     ::-webkit-scrollbar-thumb:hover {
-      background: var(--primary-dark);
-    }
-    
-    /* Utility Classes */
-    .d-flex-center {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    /* List Improvements */
-    ul, ol {
-      padding-left: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-    
-    ul li, ol li {
-      margin-bottom: 0.5rem;
-    }
-    
-    ul strong, ol strong {
-      color: var(--primary);
-    }
-    
-    /* Theme Transition Layer */
-    .theme-transition-layer {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: var(--primary);
-      z-index: 9999;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-    }
-    
-    .theme-transition-layer.active {
-      opacity: 0.1;
-    }
-    
-    /* Dark mode specific fixes */
-    [data-theme="dark"] {
-      /* Enhance dark mode table colors for better contrast in mobile view */
-      --table-bg: #1e1e1e;
-      --table-header-bg: linear-gradient(135deg, #1a7a6f 0%, #156b60 100%);
-      --table-header-text: #ffffff;
-      --table-cell-bg: #1e1e1e;
-      --table-odd-row: #1e1e1e;
-      --table-even-row: #252525;
-      --table-border: rgba(42, 157, 143, 0.3);
-      --table-hover-bg: rgba(42, 157, 143, 0.2);
-      --table-accent-1: rgba(42, 157, 143, 0.15);
-      --table-accent-2: rgba(255, 183, 3, 0.15);
-      --table-accent-3: rgba(69, 123, 157, 0.15);
-    }
-    
-    /* Ensure table text is always visible in dark mode */
-    [data-theme="dark"] table,
-    [data-theme="dark"] .table,
-    [data-theme="dark"] .table th,
-    [data-theme="dark"] .table td,
-    [data-theme="dark"] .table-responsive table,
-    [data-theme="dark"] .table-responsive table td,
-    [data-theme="dark"] .table-responsive table td::before {
-      color: #e9ecef !important;
-    }
-    
-    [data-theme="dark"] .table td::before {
-      color: #adb5bd !important;
-    }
-    
-    /* Fix for tables inside responsive containers in dark mode */
-    [data-theme="dark"] .table-responsive {
-      background-color: var(--table-bg);
+      background: var(--bs-primary-dark);
     }
   </style>
 </head>
 <body>
-<!-- Theme Transition Layer -->
-<div class="theme-transition-layer" id="themeTransitionLayer"></div>
 
-<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+<!-- Reading Progress Bar -->
+<div class="reading-progress" id="readingProgress"></div>
+
+<nav class="navbar navbar-expand-lg sticky-top">
   <div class="container">
-    <a class="navbar-brand" href="#">Bokashi→Vermi Lab</a>
-    
+    <a class="navbar-brand" href="#">🌱 Bokashi→Vermi Lab</a>
     <div class="d-flex align-items-center">
-      <!-- Enhanced Theme Toggle Switch -->
       <div class="theme-toggle-container">
-        <div class="theme-toggle-switch" id="themeToggleSwitch">
+        <div class="theme-toggle-switch" id="themeToggle">
           <div class="theme-toggle-icons">
             <span class="material-icons">light_mode</span>
             <span class="material-icons">dark_mode</span>
@@ -1002,38 +540,36 @@
 
 <header class="hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-8 fade-in">
-        <h1 class="display-5 fw-bold">From Kitchen Waste to Rich Vermicompost & Vermiwash: The Complete Step-by-Step Guide</h1>
-        <p class="lead my-3">Learn how to efficiently convert household organic waste into high-quality vermicompost and nutrient-rich vermiwash using 20-L Bokashi buckets, 60-L vermicompost drums, and simple DIY methods. Designed for novice to experienced gardeners.</p>
+    <div class="row">
+      <div class="col-lg-8">
+        <h1 class="display-5 fw-bold">From Kitchen Waste to Rich Vermicompost & Vermiwash</h1>
+        <p class="lead my-3">Learn how to efficiently convert household organic waste into high-quality vermicompost and nutrient-rich vermiwash using 20-L Bokashi buckets, 60-L vermicompost drums, and simple DIY methods.</p>
       </div>
     </div>
   </div>
 </header>
 
-<main class="container my-5">
+<main class="container-fluid my-5 mx-5">
   <div class="row">
     <div class="col-lg-3 d-none d-lg-block">
       <div class="table-of-contents">
-        <h5>Table of Contents</h5>
-        <nav id="table-of-contents" class="nav flex-column">
+        <h5>Quick Navigation</h5>
+        <nav class="nav flex-column">
           <a class="nav-link" href="#overview">Overview</a>
-          <a class="nav-link" href="#bokashi-bran">Bokashi Bran Preparation</a>
-          <a class="nav-link" href="#bokashi-setup">Bokashi Bucket Setup</a>
-          <a class="nav-link" href="#neutralize">Neutralizing Bokashi</a>
-          <a class="nav-link" href="#vermi-setup">Vermicompost Setup</a>
-          <a class="nav-link" href="#vermiwash">Vermiwash Collection</a>
-          <a class="nav-link" href="#harvesting">Harvesting Process</a>
-          <a class="nav-link" href="#storage">Storage Techniques</a>
+          <a class="nav-link" href="#bokashi-bran">Step 1: Bokashi Bran</a>
+          <a class="nav-link" href="#bokashi-setup">Step 2: Bokashi Setup</a>
+          <a class="nav-link" href="#neutralize">Step 3: Neutralization</a>
+          <a class="nav-link" href="#vermi-setup">Step 4: Vermicompost Setup</a>
+          <a class="nav-link" href="#vermiwash">Step 5: Vermiwash Collection</a>
+          <a class="nav-link" href="#harvesting">Step 6: Harvesting</a>
+          <a class="nav-link" href="#storage">Step 7: Storage</a>
           <a class="nav-link" href="#faq">FAQ & Troubleshooting</a>
         </nav>
       </div>
     </div>
     
     <div class="col-lg-9">
-      <!-- Your existing article content remains here -->
-        <article>
-
+      <article>
         <section id="overview">
           <h2>Overview: The Complete Two-Stage System</h2>
           <p>This comprehensive guide details a two-stage home-scale composting system that transforms your kitchen waste into two valuable resources: nutrient-rich vermicompost and potent vermiwash. The system is designed for efficiency, using rotational containers to ensure continuous production.</p>
@@ -1063,14 +599,13 @@
 
         <section id="bokashi-bran">
     <h2>Step 1: Preparing Enhanced Bokashi Bran - Complete Guide</h2>
-    <li>Mix whey and jaggery solution in 1-liter glass jar</li>
-    <p class="lead">This comprehensive guide details the preparation of high-density nutrient-rich Bokashi bran using multiple microbial sources, starting directly from curd (yogurt) whey for LAB culture.</p>
+    <p class="lead">This comprehensive guide details the preparation of high-density nutrient-rich Bokashi bran using multiple microbial sources, humic acid, Tata Ralligold granules, and Biovita X for maximum nutrient availability and microbial diversity.</p>
     
     <div class="callout">
         <h5><span class="material-icons">auto_awesome</span> What Makes This Enhanced Version Superior</h5>
         <p>This recipe creates a <strong>supercharged Bokashi bran</strong> that provides:</p>
         <ul>
-            <li><strong>Superior Microbial Diversity:</strong> 6+ different microbial sources including LAB from curd whey, wild yeast, PSB, actinomycetes, and PGPR</li>
+            <li><strong>Superior Microbial Diversity:</strong> 6+ different microbial sources including LAB, yeast, PSB, actinomycetes, and PGPR</li>
             <li><strong>Enhanced Nutrient Profile:</strong> Humic acid for nutrient chelation, Tata Ralligold for slow-release micronutrients, Biovita X for NPK solubilization</li>
             <li><strong>Extended Shelf Life:</strong> 12-24 months when properly dried and stored</li>
             <li><strong>Faster Fermentation:</strong> More active microbial culture reduces Bokashi processing time</li>
@@ -1081,104 +616,87 @@
     <!-- Liquid Component Preparation Section -->
     <div class="step-box">
         <h4><span class="step-number">1</span> Preparing Liquid Microbial Components</h4>
-        <p>These liquid components must be prepared in advance as they require different fermentation times. The LAB starter begins directly from curd whey, eliminating the need for rice wash water and milk separation steps.</p>
+        <p>These liquid components must be prepared in advance as they require different fermentation times. Start this process 20-25 days before you plan to make your Bokashi bran.</p>
         
-        <h5>Component 1: LAB Starter from Curd Whey - Start 3-5 Days in Advance</h5>
+        <h5>Component 1: LAB Starter (Lactic Acid Bacteria) - Start 8-12 Days in Advance</h5>
         <div class="alert alert-info">
-            <strong>Advantage:</strong> Faster method using existing lactic acid bacteria from curd (yogurt)
+            <strong>Purpose:</strong> Primary acidifying agent, preserves nutrients, controls odor
         </div>
         
         <h6>Materials & Equipment:</h6>
         <ul>
-            <li>500ml fresh, unpasteurized curd (homemade yogurt preferred)</li>
+            <li>1 cup uncooked rice</li>
+            <li>1 liter fresh, unpasteurized milk (or 200g powdered milk dissolved in 1L non-chlorinated water)</li>
             <li>100g jaggery (unrefined sugar) or unsulfured molasses</li>
-            <li>500ml non-chlorinated water</li>
-            <li>1-liter wide-mouth glass jar with airtight lid</li>
-            <li>Cheesecloth or fine strainer</li>
-            <li>Clean storage bottle (500ml-1L capacity)</li>
-            <li>Digital pH strips (optional, for quality check)</li>
+            <li>2-liter wide-mouth glass jar</li>
+            <li>Cheesecloth or breathable cotton cloth</li>
+            <li>Rubber band</li>
+            <li>Fine mesh strainer or coffee filter</li>
+            <li>Clean storage bottle</li>
         </ul>
         
         <h6>Detailed Procedure:</h6>
         <ol>
-            <li><strong>Day 1: Whey Extraction</strong>
+            <li><strong>Day 1: Rice Wash Water Preparation</strong>
                 <ul>
-                    <li>Place 500ml fresh curd in a clean bowl or jar</li>
-                    <li>If curd is thick, add 100ml water and mix gently</li>
-                    <li>Line a strainer with cheesecloth or clean cotton cloth</li>
-                    <li>Pour curd into strainer over a clean container</li>
-                    <li>Let it drain for 4-6 hours at room temperature</li>
-                    <li>The yellowish liquid that collects is whey - this contains LAB</li>
-                    <li>You should get 200-300ml whey from 500ml curd</li>
+                    <li>Place 1 cup uncooked rice in a clean bowl</li>
+                    <li>Add just enough water to cover the rice (approximately 1.5 cups)</li>
+                    <li>Gently swirl and massage the rice for 30-45 seconds until water becomes milky white with starch</li>
+                    <li>Strain rice, collecting the starchy water in a clean container</li>
+                    <li>Discard rice or use for cooking</li>
                 </ul>
             </li>
             
-            <li><strong>Day 1: Jaggery Addition and Activation</strong>
+            <li><strong>Day 1-7: First Fermentation</strong>
                 <ul>
-                    <li>Measure collected whey (e.g., 250ml)</li>
-                    <li>Dissolve jaggery in warm water (50ml) - <strong>not hot, max 40°C</strong></li>
-                    <li>Allow jaggery solution to cool to room temperature (25-30°C)</li>
-                    <li>Stir gently with clean plastic or wooden spoon</li>
+                    <li>Pour rice wash water into 2-liter glass jar</li>
+                    <li>Cover jar opening with 2-3 layers of cheesecloth or breathable cloth</li>
+                    <li>Secure with rubber band - <em>do not use airtight lid</em></li>
+                    <li>Place in dark location with stable temperature (25-30°C ideal)</li>
+                    <li>After 5-7 days, a white, creamy layer will form on top</li>
+                    <li>This layer contains LAB cultures - do not disturb</li>
                 </ul>
             </li>
             
-            <li><strong>Day 1-3: Anaerobic Fermentation</strong>
+            <li><strong>Day 8: Milk Separation Setup</strong>
                 <ul>
-                    <li>Seal jar with airtight lid</li>
-                    <li>Label with date and contents</li>
-                    <li>Place in dark location at 25-30°C</li>
-                    <li>Ferment for 3-5 days (3 days at 30°C, 5 days at 25°C)</li>
-                    <li><strong>Do not open during fermentation</strong></li>
-                    <li>Gas may form - if jar bulges, briefly loosen lid to release pressure</li>
+                    <li>Carefully skim off the white LAB layer with a clean spoon</li>
+                    <li>Transfer to clean 2-liter jar</li>
+                    <li>Add 1 liter fresh milk (room temperature)</li>
+                    <li>Mix gently but thoroughly</li>
+                    <li>Cover again with breathable cloth</li>
+                    <li>Return to dark location at 25-30°C</li>
                 </ul>
             </li>
             
-            <li><strong>Day 3-5: Completion and Storage</strong>
+            <li><strong>Day 8-15: Second Fermentation</strong>
                 <ul>
-                    <li>After 3-5 days, open jar in well-ventilated area</li>
-                    <li>Check for pleasant sour aroma (like fresh yogurt)</li>
-                    <li>No foul or rotten smells should be present</li>
-                    <li>Strain through cheesecloth if any solids formed</li>
+                    <li>Over next 5-7 days, LAB will separate milk into curds and whey</li>
+                    <li>Clear yellowish liquid (whey) will separate from white curds</li>
+                    <li>Do not disturb during this process</li>
+                </ul>
+            </li>
+            
+            <li><strong>Day 15: Final Processing</strong>
+                <ul>
+                    <li>Strain mixture through fine cloth or coffee filter</li>
+                    <li>Collect yellowish whey liquid - this is your LAB concentrate</li>
+                    <li>Dissolve 100g jaggery in the whey (helps preserve culture)</li>
                     <li>Transfer to clean storage bottle, leave 2cm headspace</li>
-                    <li>Store in refrigerator at 4-8°C</li>
-                    <li><strong>Shelf life:</strong> 3-6 months refrigerated</li>
-                    <li><strong>Yield:</strong> 450-500ml LAB starter</li>
-                </ul>
-            </li>
-            
-            <li><strong>Alternative: Direct Curd Method (Even Simpler)</strong>
-                <ul>
-                    <li>Add non-chlorinated water to make total volume 500ml</li>
-                    <li>Mix 200ml fresh curd with 300ml water</li>
-                    <li>Add 50g jaggery dissolved in 50ml warm water</li>
-                    <li>Blend until smooth (no need to separate whey)</li>
-                    <li>Ferment in airtight jar for 3-5 days at 25-30°C</li>
-                    <li>Strain before use</li>
-                    <li>This method preserves more diverse microbes from curd</li>
+                    <li>Store in refrigerator - lasts 3-6 months</li>
+                    <li><strong>Yield:</strong> Approximately 800-900ml LAB starter</li>
                 </ul>
             </li>
         </ol>
         
         <div class="tip-box">
-            <h5><span class="material-icons">science</span> Quality Check for Curd-Based LAB Starter</h5>
-            <p>Good LAB starter from curd should have:</p>
+            <h5><span class="material-icons">science</span> Quality Check</h5>
+            <p>Good LAB starter should have:</p>
             <ul>
-                <li><strong>Appearance:</strong> Clear to slightly cloudy yellowish liquid</li>
-                <li><strong>Smell:</strong> Pleasant, tangy yogurt aroma (not foul)</li>
-                <li><strong>pH:</strong> 3.5-4.0 (optional test with pH strips)</li>
-                <li><strong>Activity Test:</strong> Add 1 tbsp to 100ml milk - should curdle in 24-48 hours at 30°C</li>
-                <li><strong>No signs of mold or separation</strong></li>
-            </ul>
-        </div>
-        
-        <div class="warning-box">
-            <h5><span class="material-icons">warning</span> Critical Considerations for Curd-Based Starter</h5>
-            <ul>
-                <li><strong>Curd Quality:</strong> Use fresh, unpasteurized, homemade curd for maximum microbial diversity</li>
-                <li><strong>Commercial Yogurt:</strong> May contain preservatives that inhibit microbial growth - avoid if possible</li>
-                <li><strong>Temperature Control:</strong> Maintain 25-30°C for optimal LAB activity</li>
-                <li><strong>Chlorine-Free Water:</strong> Chlorine kills beneficial microbes - use filtered, boiled (cooled), or aged tap water</li>
-                <li><strong>Clean Equipment:</strong> Sanitize all containers with boiling water or vinegar solution</li>
+                <li><strong>Appearance:</strong> Clear yellowish liquid</li>
+                <li><strong>Smell:</strong> Pleasant, slightly sour (like yogurt)</li>
+                <li><strong>pH:</strong> 3.5-4.0 (optional test)</li>
+                <li><strong>No signs of mold or foul odor</strong></li>
             </ul>
         </div>
         
@@ -1307,53 +825,6 @@
             <li><strong>Method:</strong> Add directly to liquid mix, stir gently</li>
             <li><strong>Important:</strong> Mycorrhizae remain dormant until contacting plant roots</li>
         </ul>
-        
-        <div class="callout">
-            <h5><span class="material-icons">schedule</span> Liquid Component Timeline Summary</h5>
-            <table class="table table-sm">
-                <thead class="table-responsive table-dark"> 
-                    <tr>
-                        <th>Component</th>
-                        <th>Start Before</th>
-                        <th>Fermentation Time</th>
-                        <th>Total Days Needed</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>LAB Starter (from curd)</td>
-                        <td>Day -5</td>
-                        <td>3-5 days</td>
-                        <td>5 days</td>
-                    </tr>
-                    <tr>
-                        <td>Pond Water</td>
-                        <td>Day -20</td>
-                        <td>10-20 days</td>
-                        <td>20 days</td>
-                    </tr>
-                    <tr>
-                        <td>Rice Kanji</td>
-                        <td>Day -3</td>
-                        <td>2-3 days</td>
-                        <td>3 days</td>
-                    </tr>
-                    <tr>
-                        <td>Wild Yeast Water</td>
-                        <td>Day -3</td>
-                        <td>2-3 days</td>
-                        <td>3 days</td>
-                    </tr>
-                    <tr>
-                        <td>Tulsi Juice</td>
-                        <td>Day -2</td>
-                        <td>1-2 days</td>
-                        <td>2 days</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p class="mb-0"><small><strong>Planning Tip:</strong> Start pond water 20 days in advance, LAB starter 5 days in advance, others 2-3 days before mixing dry ingredients.</small></p>
-        </div>
     </div>
 
     <!-- Dry Ingredients Preparation -->
@@ -1362,9 +833,9 @@
         <p>Accurate measurement and proper preparation of dry ingredients ensure consistent quality and optimal microbial growth.</p>
         
         <h5>Complete Dry Ingredients List (for 1kg finished bran):</h5>
-        <div class="table-responsive">
-            <table class="table table-bordered">
-                <thead class="table-dark">
+        <div class="bokashi-table-container">
+            <table class="bokashi-table bokashi-table-striped">
+                <thead>
                     <tr>
                         <th width="25%">Ingredient</th>
                         <th width="15%">Quantity</th>
@@ -1374,70 +845,70 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Wheat Bran</strong></td>
-                        <td>650g</td>
-                        <td>Sieve to remove lumps</td>
-                        <td>Primary carrier, absorbs moisture, supports microbial growth</td>
+                        <td data-label="Ingredient"><strong>Wheat Bran</strong></td>
+                        <td data-label="Quantity">650g</td>
+                        <td data-label="Preparation Method">Sieve to remove lumps</td>
+                        <td data-label="Purpose & Microbial Contribution">Primary carrier, absorbs moisture, supports microbial growth</td>
                     </tr>
                     <tr>
-                        <td><strong>Mustard Cake Powder</strong></td>
-                        <td>100g</td>
-                        <td>Grind to fine powder, sieve</td>
-                        <td>Nitrogen source, minor microbes, nutrient-rich</td>
+                        <td data-label="Ingredient"><strong>Mustard Cake Powder</strong></td>
+                        <td data-label="Quantity">100g</td>
+                        <td data-label="Preparation Method">Grind to fine powder, sieve</td>
+                        <td data-label="Purpose & Microbial Contribution">Nitrogen source, minor microbes, nutrient-rich</td>
                     </tr>
                     <tr>
-                        <td><strong>Peanut Cake Powder</strong></td>
-                        <td>70g</td>
-                        <td>Grind to fine powder, sieve</td>
-                        <td>Protein source, microbial diversity, slow nutrient release</td>
+                        <td data-label="Ingredient"><strong>Peanut Cake Powder</strong></td>
+                        <td data-label="Quantity">70g</td>
+                        <td data-label="Preparation Method">Grind to fine powder, sieve</td>
+                        <td data-label="Purpose & Microbial Contribution">Protein source, microbial diversity, slow nutrient release</td>
                     </tr>
                     <tr>
-                        <td><strong>Rice Bran</strong></td>
-                        <td>50g</td>
-                        <td>Sieve to remove impurities</td>
-                        <td>Sugars for yeast, minor LAB, additional nutrients</td>
+                        <td data-label="Ingredient"><strong>Rice Bran</strong></td>
+                        <td data-label="Quantity">50g</td>
+                        <td data-label="Preparation Method">Sieve to remove impurities</td>
+                        <td data-label="Purpose & Microbial Contribution">Sugars for yeast, minor LAB, additional nutrients</td>
                     </tr>
                     <tr>
-                        <td><strong>Leaf Mold/Decomposed Matter</strong></td>
-                        <td>30g</td>
-                        <td>Dry completely, crush to powder</td>
-                        <td>Actinomycetes, filamentous fungi, humus-forming microbes</td>
+                        <td data-label="Ingredient"><strong>Leaf Mold/Decomposed Matter</strong></td>
+                        <td data-label="Quantity">30g</td>
+                        <td data-label="Preparation Method">Dry completely, crush to powder</td>
+                        <td data-label="Purpose & Microbial Contribution">Actinomycetes, filamentous fungi, humus-forming microbes</td>
                     </tr>
                     <tr>
-                        <td><strong>Garden Soil</strong></td>
-                        <td>20g</td>
-                        <td>Dry, sieve to remove stones</td>
-                        <td>Rhizobacteria, actinomycetes, diverse soil microbes</td>
+                        <td data-label="Ingredient"><strong>Garden Soil</strong></td>
+                        <td data-label="Quantity">20g</td>
+                        <td data-label="Preparation Method">Dry, sieve to remove stones</td>
+                        <td data-label="Purpose & Microbial Contribution">Rhizobacteria, actinomycetes, diverse soil microbes</td>
                     </tr>
                     <tr>
-                        <td><strong>Old Bokashi Bran</strong></td>
-                        <td>20g</td>
-                        <td>Use from previous batch</td>
-                        <td>EM-1 microbes: LAB, yeast, PSB, accelerates fermentation</td>
+                        <td data-label="Ingredient"><strong>Old Bokashi Bran</strong></td>
+                        <td data-label="Quantity">20g</td>
+                        <td data-label="Preparation Method">Use from previous batch</td>
+                        <td data-label="Purpose & Microbial Contribution">EM-1 microbes: LAB, yeast, PSB, accelerates fermentation</td>
                     </tr>
                     <tr>
-                        <td><strong>Neem Cake Dust</strong> (optional)</td>
-                        <td>10g</td>
-                        <td>Grind to fine powder</td>
-                        <td>Anti-fungal properties, pest deterrent, minor microbes</td>
+                        <td data-label="Ingredient"><strong>Neem Cake Dust</strong> (optional)</td>
+                        <td data-label="Quantity">10g</td>
+                        <td data-label="Preparation Method">Grind to fine powder</td>
+                        <td data-label="Purpose & Microbial Contribution">Anti-fungal properties, pest deterrent, minor microbes</td>
                     </tr>
                     <tr>
-                        <td><strong>Humic Acid Powder</strong></td>
-                        <td>5g</td>
-                        <td>Use as is (powder form)</td>
-                        <td>Nutrient chelation, stimulates microbial activity</td>
+                        <td data-label="Ingredient"><strong>Humic Acid Powder</strong></td>
+                        <td data-label="Quantity">5g</td>
+                        <td data-label="Preparation Method">Use as is (powder form)</td>
+                        <td data-label="Purpose & Microbial Contribution">Nutrient chelation, stimulates microbial activity</td>
                     </tr>
                     <tr>
-                        <td><strong>Tata Ralligold Granules</strong></td>
-                        <td>10g</td>
-                        <td>Crush slightly if large granules</td>
-                        <td>Slow-release micronutrients (Fe, Zn, Mn, Cu, B)</td>
+                        <td data-label="Ingredient"><strong>Tata Ralligold Granules</strong></td>
+                        <td data-label="Quantity">10g</td>
+                        <td data-label="Preparation Method">Crush slightly if large granules</td>
+                        <td data-label="Purpose & Microbial Contribution">Slow-release micronutrients (Fe, Zn, Mn, Cu, B)</td>
                     </tr>
                     <tr>
-                        <td><strong>Biovita X Powder</strong></td>
-                        <td>1g</td>
-                        <td>Use as is (powder form)</td>
-                        <td>N-fixing, P/K solubilizing microbes, plant growth promoters</td>
+                        <td data-label="Ingredient"><strong>Biovita X Powder</strong></td>
+                        <td data-label="Quantity">1g</td>
+                        <td data-label="Preparation Method">Use as is (powder form)</td>
+                        <td data-label="Purpose & Microbial Contribution">N-fixing, P/K solubilizing microbes, plant growth promoters</td>
                     </tr>
                 </tbody>
             </table>
@@ -1504,8 +975,8 @@
         <p>This step combines all fermented liquid components into a single potent inoculant.</p>
         
         <h5>Liquid Components Quantities (Total: 400-500ml):</h5>
-        <div class="table-responsive">
-            <table class="table table-striped">
+        <div class="bokashi-table-container">
+            <table class="bokashi-table bokashi-table-striped">
                 <thead>
                     <tr>
                         <th>Component</th>
@@ -1516,34 +987,34 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>LAB Starter (from curd)</td>
-                        <td>150-200ml</td>
-                        <td>Room temp (25-30°C)</td>
-                        <td>Bring to room temperature before use</td>
+                        <td data-label="Component">LAB Starter</td>
+                        <td data-label="Quantity">150-200ml</td>
+                        <td data-label="Temperature">Room temp (25-30°C)</td>
+                        <td data-label="Preparation Notes">Bring to room temperature before use</td>
                     </tr>
                     <tr>
-                        <td>Rice Kanji</td>
-                        <td>150-200ml</td>
-                        <td>Room temp</td>
-                        <td>Strain any solids before use</td>
+                        <td data-label="Component">Rice Kanji</td>
+                        <td data-label="Quantity">150-200ml</td>
+                        <td data-label="Temperature">Room temp</td>
+                        <td data-label="Preparation Notes">Strain any solids before use</td>
                     </tr>
                     <tr>
-                        <td>Wild Yeast Water</td>
-                        <td>100-150ml</td>
-                        <td>Room temp</td>
-                        <td>Use only clear liquid, strain solids</td>
+                        <td data-label="Component">Wild Yeast Water</td>
+                        <td data-label="Quantity">100-150ml</td>
+                        <td data-label="Temperature">Room temp</td>
+                        <td data-label="Preparation Notes">Use only clear liquid, strain solids</td>
                     </tr>
                     <tr>
-                        <td>Tulsi Juice</td>
-                        <td>40-50ml</td>
-                        <td>Room temp</td>
-                        <td>Use within 3-4 days of preparation</td>
+                        <td data-label="Component">Tulsi Juice</td>
+                        <td data-label="Quantity">40-50ml</td>
+                        <td data-label="Temperature">Room temp</td>
+                        <td data-label="Preparation Notes">Use within 3-4 days of preparation</td>
                     </tr>
                     <tr>
-                        <td>Pond Water</td>
-                        <td>40-50ml</td>
-                        <td>Room temp</td>
-                        <td>Strain through fine cloth</td>
+                        <td data-label="Component">Pond Water</td>
+                        <td data-label="Quantity">40-50ml</td>
+                        <td data-label="Temperature">Room temp</td>
+                        <td data-label="Preparation Notes">Strain through fine cloth</td>
                     </tr>
                 </tbody>
             </table>
@@ -1594,17 +1065,6 @@
             
             <li><strong>Immediate Use:</strong> Use this liquid mix within 1-2 hours of preparation for maximum microbial viability.</li>
         </ol>
-        
-        <div class="tip-box">
-            <h5><span class="material-icons">psychology</span> Why Start from Curd Whey?</h5>
-            <ul>
-                <li><strong>Time Saving:</strong> 3-5 days vs 15 days from rice wash method</li>
-                <li><strong>Consistent Quality:</strong> Curd already contains established LAB colonies</li>
-                <li><strong>Higher Microbial Diversity:</strong> Commercial or homemade curd often contains multiple LAB strains</li>
-                <li><strong>Easy Availability:</strong> Curd is commonly available in most households</li>
-                <li><strong>Reliable Results:</strong> Lower failure rate compared to starting from scratch</li>
-            </ul>
-        </div>
     </div>
 
     <!-- Moistening and Fermentation -->
@@ -1669,9 +1129,9 @@
         </ol>
         
         <h5 class="mt-5">Anaerobic Fermentation Process:</h5>
-        <div class="table-responsive">
-            <table class="table table-bordered">
-                <thead class="table-dark">
+        <div class="bokashi-table-container">
+            <table class="bokashi-table bokashi-table-striped">
+                <thead>
                     <tr>
                         <th width="20%">Time Period</th>
                         <th width="20%">Temperature</th>
@@ -1681,28 +1141,28 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Days 0-3</strong><br>(Initial Phase)</td>
-                        <td>25-30°C ideal<br>20-35°C acceptable</td>
-                        <td>• Microbial activation begins<br>• Mild sweet aroma develops<br>• Slight temperature increase (1-2°C)</td>
-                        <td>• Store in dark location<br>• Do not open container<br>• Maintain stable temperature</td>
+                        <td data-label="Time Period"><strong>Days 0-3</strong><br>(Initial Phase)</td>
+                        <td data-label="Temperature">25-30°C ideal<br>20-35°C acceptable</td>
+                        <td data-label="Expected Changes">• Microbial activation begins<br>• Mild sweet aroma develops<br>• Slight temperature increase (1-2°C)</td>
+                        <td data-label="Actions Required">• Store in dark location<br>• Do not open container<br>• Maintain stable temperature</td>
                     </tr>
                     <tr>
-                        <td><strong>Days 4-10</strong><br>(Active Fermentation)</td>
-                        <td>25-32°C ideal</td>
-                        <td>• Strong sweet-sour pickle smell<br>• Visible white mold may appear<br>• Material may shrink slightly</td>
-                        <td>• Check temperature daily<br>• Ensure container remains sealed<br>• Listen for gas release (normal)</td>
+                        <td data-label="Time Period"><strong>Days 4-10</strong><br>(Active Fermentation)</td>
+                        <td data-label="Temperature">25-32°C ideal</td>
+                        <td data-label="Expected Changes">• Strong sweet-sour pickle smell<br>• Visible white mold may appear<br>• Material may shrink slightly</td>
+                        <td data-label="Actions Required">• Check temperature daily<br>• Ensure container remains sealed<br>• Listen for gas release (normal)</td>
                     </tr>
                     <tr>
-                        <td><strong>Days 11-21</strong><br>(Maturation Phase)</td>
-                        <td>24-30°C</td>
-                        <td>• Aroma becomes more complex<br>• White mold stabilizes<br>• Moisture redistributes evenly</td>
-                        <td>• No action needed<br>• Avoid temperature fluctuations<br>• Container should remain sealed</td>
+                        <td data-label="Time Period"><strong>Days 11-21</strong><br>(Maturation Phase)</td>
+                        <td data-label="Temperature">24-30°C</td>
+                        <td data-label="Expected Changes">• Aroma becomes more complex<br>• White mold stabilizes<br>• Moisture redistributes evenly</td>
+                        <td data-label="Actions Required">• No action needed<br>• Avoid temperature fluctuations<br>• Container should remain sealed</td>
                     </tr>
                     <tr>
-                        <td><strong>Days 22-28</strong><br>(Completion Phase)</td>
-                        <td>24-28°C</td>
-                        <td>• Aroma stabilizes to pleasant sour<br>• Material darkens slightly<br>• Fermentation complete</td>
-                        <td>• Prepare for drying<br>• Gather drying trays<br>• Check final quality</td>
+                        <td data-label="Time Period"><strong>Days 22-28</strong><br>(Completion Phase)</td>
+                        <td data-label="Temperature">24-28°C</td>
+                        <td data-label="Expected Changes">• Aroma stabilizes to pleasant sour<br>• Material darkens slightly<br>• Fermentation complete</td>
+                        <td data-label="Actions Required">• Prepare for drying<br>• Gather drying trays<br>• Check final quality</td>
                     </tr>
                 </tbody>
             </table>
@@ -1789,8 +1249,8 @@
             </li>
             
             <li><strong>Drying Schedule:</strong>
-                <div class="table-responsive">
-                    <table class="table table-sm">
+                <div class="bokashi-table-container">
+                    <table class="bokashi-table bokashi-table-striped">
                         <thead>
                             <tr>
                                 <th>Day</th>
@@ -1801,28 +1261,28 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Day 1</td>
-                                <td>High (40-50%)</td>
-                                <td>Spread, do not disturb</td>
-                                <td>Surface drying begins</td>
+                                <td data-label="Day">Day 1</td>
+                                <td data-label="Moisture Level">High (40-50%)</td>
+                                <td data-label="Actions">Spread, do not disturb</td>
+                                <td data-label="Target">Surface drying begins</td>
                             </tr>
                             <tr>
-                                <td>Day 2</td>
-                                <td>Medium (30-40%)</td>
-                                <td>First gentle turning</td>
-                                <td>Even moisture distribution</td>
+                                <td data-label="Day">Day 2</td>
+                                <td data-label="Moisture Level">Medium (30-40%)</td>
+                                <td data-label="Actions">First gentle turning</td>
+                                <td data-label="Target">Even moisture distribution</td>
                             </tr>
                             <tr>
-                                <td>Day 3</td>
-                                <td>Medium-low (20-30%)</td>
-                                <td>Second turning, break clumps</td>
-                                <td>Crumbly texture developing</td>
+                                <td data-label="Day">Day 3</td>
+                                <td data-label="Moisture Level">Medium-low (20-30%)</td>
+                                <td data-label="Actions">Second turning, break clumps</td>
+                                <td data-label="Target">Crumbly texture developing</td>
                             </tr>
                             <tr>
-                                <td>Day 4-5</td>
-                                <td>Low (10-15%)</td>
-                                <td>Final turning, test dryness</td>
-                                <td>Ready for storage</td>
+                                <td data-label="Day">Day 4-5</td>
+                                <td data-label="Moisture Level">Low (10-15%)</td>
+                                <td data-label="Actions">Final turning, test dryness</td>
+                                <td data-label="Target">Ready for storage</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1886,8 +1346,8 @@
         </div>
         
         <h5 class="mt-4">Shelf Life & Quality Maintenance:</h5>
-        <div class="table-responsive">
-            <table class="table table-bordered">
+        <div class="bokashi-table-container">
+            <table class="bokashi-table bokashi-table-striped">
                 <thead>
                     <tr>
                         <th>Storage Method</th>
@@ -1898,22 +1358,22 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Airtight Glass/Plastic</strong><br>(Cool, dark place)</td>
-                        <td>12-18 months</td>
-                        <td>• Maintains aroma<br>• Free-flowing powder<br>• No moisture absorption</td>
-                        <td>• Foul odor develops<br>• Mold appears<br>• Clumping despite dryness</td>
+                        <td data-label="Storage Method"><strong>Airtight Glass/Plastic</strong><br>(Cool, dark place)</td>
+                        <td data-label="Shelf Life">12-18 months</td>
+                        <td data-label="Quality Indicators">• Maintains aroma<br>• Free-flowing powder<br>• No moisture absorption</td>
+                        <td data-label="When to Discard">• Foul odor develops<br>• Mold appears<br>• Clumping despite dryness</td>
                     </tr>
                     <tr>
-                        <td><strong>Vacuum Sealed</strong><br>(With oxygen absorber)</td>
-                        <td>18-24 months</td>
-                        <td>• Aroma preserved when opened<br>• No color change<br>• Microbial viability maintained</td>
-                        <td>• Package integrity lost<br>• Off odors detected<br>• Insect infestation</td>
+                        <td data-label="Storage Method"><strong>Vacuum Sealed</strong><br>(With oxygen absorber)</td>
+                        <td data-label="Shelf Life">18-24 months</td>
+                        <td data-label="Quality Indicators">• Aroma preserved when opened<br>• No color change<br>• Microbial viability maintained</td>
+                        <td data-label="When to Discard">• Package integrity lost<br>• Off odors detected<br>• Insect infestation</td>
                     </tr>
                     <tr>
-                        <td><strong>Refrigerated</strong><br>(Airtight container)</td>
-                        <td>24+ months</td>
-                        <td>• Aroma remains strong<br>• No condensation in container<br>• Texture unchanged</td>
-                        <td>• Condensation inside jar<br>• Refrigerator odors absorbed<br>• Freezer burn texture</td>
+                        <td data-label="Storage Method"><strong>Refrigerated</strong><br>(Airtight container)</td>
+                        <td data-label="Shelf Life">24+ months</td>
+                        <td data-label="Quality Indicators">• Aroma remains strong<br>• No condensation in container<br>• Texture unchanged</td>
+                        <td data-label="When to Discard">• Condensation inside jar<br>• Refrigerator odors absorbed<br>• Freezer burn texture</td>
                     </tr>
                 </tbody>
             </table>
@@ -1963,8 +1423,8 @@
         </div>
         
         <h5 class="mt-4">Troubleshooting Common Issues:</h5>
-        <div class="table-responsive">
-            <table class="table table-striped">
+        <div class="bokashi-table-container">
+            <table class="bokashi-table bokashi-table-striped">
                 <thead>
                     <tr>
                         <th width="25%">Problem</th>
@@ -1975,28 +1435,28 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Bran develops foul smell in storage</td>
-                        <td>Insufficient drying, container not airtight</td>
-                        <td>Spread and re-dry immediately</td>
-                        <td>Ensure complete dryness before storage</td>
+                        <td data-label="Problem">Bran develops foul smell in storage</td>
+                        <td data-label="Likely Cause">Insufficient drying, container not airtight</td>
+                        <td data-label="Immediate Action">Spread and re-dry immediately</td>
+                        <td data-label="Prevention">Ensure complete dryness before storage</td>
                     </tr>
                     <tr>
-                        <td>Mold appears in storage container</td>
-                        <td>Moisture ingress, storage temperature fluctuations</td>
-                        <td>Remove moldy portion, re-dry remainder</td>
-                        <td>Use desiccant packets in storage containers</td>
+                        <td data-label="Problem">Mold appears in storage container</td>
+                        <td data-label="Likely Cause">Moisture ingress, storage temperature fluctuations</td>
+                        <td data-label="Immediate Action">Remove moldy portion, re-dry remainder</td>
+                        <td data-label="Prevention">Use desiccant packets in storage containers</td>
                     </tr>
                     <tr>
-                        <td>Bran loses potency over time</td>
-                        <td>Storage temperature too high, exposure to light</td>
-                        <td>Test with milk curdling test</td>
-                        <td>Store in cool, dark location</td>
+                        <td data-label="Problem">Bran loses potency over time</td>
+                        <td data-label="Likely Cause">Storage temperature too high, exposure to light</td>
+                        <td data-label="Immediate Action">Test with milk curdling test</td>
+                        <td data-label="Prevention">Store in cool, dark location</td>
                     </tr>
                     <tr>
-                        <td>Insect infestation in storage</td>
-                        <td>Container not sealed, bran attracted pests</td>
-                        <td>Freeze for 48 hours to kill insects</td>
-                        <td>Use airtight containers, add neem cake to mix</td>
+                        <td data-label="Problem">Insect infestation in storage</td>
+                        <td data-label="Likely Cause">Container not sealed, bran attracted pests</td>
+                        <td data-label="Immediate Action">Freeze for 48 hours to kill insects</td>
+                        <td data-label="Prevention">Use airtight containers, add neem cake to mix</td>
                     </tr>
                 </tbody>
             </table>
@@ -2006,9 +1466,9 @@
     <!-- Final Summary -->
     <div class="callout">
         <h5><span class="material-icons">summarize</span> Complete Process Timeline Summary</h5>
-        <div class="table-responsive">
-            <table class="table table-bordered">
-                <thead class="table-dark">
+        <div class="bokashi-table-container">
+            <table class="bokashi-table bokashi-table-striped">
+                <thead>
                     <tr>
                         <th>Phase</th>
                         <th>Duration</th>
@@ -2018,40 +1478,40 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Liquid Preparation</strong></td>
-                        <td>3-20 days</td>
-                        <td>Day -20 to Day 0</td>
-                        <td>• Start pond water 20 days ahead<br>• LAB from curd takes 3-5 days<br>• Other liquids 1-3 days</td>
+                        <td data-label="Phase"><strong>Liquid Preparation</strong></td>
+                        <td data-label="Duration">10-25 days</td>
+                        <td data-label="Start-to-Finish Timeline">Day -25 to Day 0</td>
+                        <td data-label="Critical Requirements">• Multiple components with different timelines<br>• Temperature control (25-30°C)<br>• Clean equipment and environment</td>
                     </tr>
                     <tr>
-                        <td><strong>Dry Ingredient Prep</strong></td>
-                        <td>1 day</td>
-                        <td>Day 0</td>
-                        <td>• Accurate measurements<br>• Complete mixing<br>• Moisture-free ingredients</td>
+                        <td data-label="Phase"><strong>Dry Ingredient Prep</strong></td>
+                        <td data-label="Duration">1 day</td>
+                        <td data-label="Start-to-Finish Timeline">Day 0</td>
+                        <td data-label="Critical Requirements">• Accurate measurements<br>• Complete mixing<br>• Moisture-free ingredients</td>
                     </tr>
                     <tr>
-                        <td><strong>Moistening & Packing</strong></td>
-                        <td>1 day</td>
-                        <td>Day 0</td>
-                        <td>• Correct moisture content<br>• Airtight packing<br>• Air removal from mixture</td>
+                        <td data-label="Phase"><strong>Moistening & Packing</strong></td>
+                        <td data-label="Duration">1 day</td>
+                        <td data-label="Start-to-Finish Timeline">Day 0</td>
+                        <td data-label="Critical Requirements">• Correct moisture content<br>• Airtight packing<br>• Air removal from mixture</td>
                     </tr>
                     <tr>
-                        <td><strong>Anaerobic Fermentation</strong></td>
-                        <td>28 days (minimum 14)</td>
-                        <td>Day 0 to Day 28</td>
-                        <td>• Stable temperature (24-32°C)<br>• Complete airtight seal<br>• No disturbance during fermentation</td>
+                        <td data-label="Phase"><strong>Anaerobic Fermentation</strong></td>
+                        <td data-label="Duration">28 days (minimum 14)</td>
+                        <td data-label="Start-to-Finish Timeline">Day 0 to Day 28</td>
+                        <td data-label="Critical Requirements">• Stable temperature (24-32°C)<br>• Complete airtight seal<br>• No disturbance during fermentation</td>
                     </tr>
                     <tr>
-                        <td><strong>Drying Process</strong></td>
-                        <td>4-7 days</td>
-                        <td>Day 28 to Day 35</td>
-                        <td>• Shaded, ventilated area<br>• Regular turning<br>• Complete dryness before storage</td>
+                        <td data-label="Phase"><strong>Drying Process</strong></td>
+                        <td data-label="Duration">4-7 days</td>
+                        <td data-label="Start-to-Finish Timeline">Day 28 to Day 35</td>
+                        <td data-label="Critical Requirements">• Shaded, ventilated area<br>• Regular turning<br>• Complete dryness before storage</td>
                     </tr>
                     <tr>
-                        <td><strong>Storage Period</strong></td>
-                        <td>12-24 months</td>
-                        <td>Day 35 onward</td>
-                        <td>• Airtight containers<br>• Cool, dark location<br>• Regular quality checks</td>
+                        <td data-label="Phase"><strong>Storage Period</strong></td>
+                        <td data-label="Duration">12-24 months</td>
+                        <td data-label="Start-to-Finish Timeline">Day 35 onward</td>
+                        <td data-label="Critical Requirements">• Airtight containers<br>• Cool, dark location<br>• Regular quality checks</td>
                     </tr>
                 </tbody>
             </table>
@@ -2063,7 +1523,7 @@
 
     <div class="alert alert-success">
         <h5><span class="material-icons">verified</span> Success Indicators</h5>
-        <p>Your enhanced Bokashi bran (starting from curd) is successful when:</p>
+        <p>Your enhanced Bokashi bran is successful when:</p>
         <ul>
             <li>It has a pleasant, complex sour-pickle aroma (not foul or rotten)</li>
             <li>It passes the milk curdling test within 48 hours</li>
@@ -2567,8 +2027,8 @@
             </div>
             
             <h4>Bokashi Troubleshooting Table</h4>
-            <div class="table-responsive">
-              <table class="table table-striped troubleshooting-table">
+            <div class="bokashi-table-container">
+              <table class="bokashi-table bokashi-table-striped">
                 <thead>
                   <tr>
                     <th>Problem</th>
@@ -2578,29 +2038,29 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Foul, rotting smell</td>
-                    <td>Insufficient bran, air exposure, too wet</td>
-                    <td>Add more bran, improve sealing, drain leachate, add dry materials</td>
+                    <td data-label="Problem">Foul, rotting smell</td>
+                    <td data-label="Possible Causes">Insufficient bran, air exposure, too wet</td>
+                    <td data-label="Solutions">Add more bran, improve sealing, drain leachate, add dry materials</td>
                   </tr>
                   <tr>
-                    <td>No leachate production</td>
-                    <td>Dry materials, low moisture content, cool temperatures</td>
-                    <td>Add slightly moist foods, mist with water if too dry, move to warmer location</td>
+                    <td data-label="Problem">No leachate production</td>
+                    <td data-label="Possible Causes">Dry materials, low moisture content, cool temperatures</td>
+                    <td data-label="Solutions">Add slightly moist foods, mist with water if too dry, move to warmer location</td>
                   </tr>
                   <tr>
-                    <td>Excessive leachate</td>
-                    <td>High moisture foods, inadequate drainage</td>
-                    <td>Drain more frequently, pre-dry watery vegetables, add absorbent materials</td>
+                    <td data-label="Problem">Excessive leachate</td>
+                    <td data-label="Possible Causes">High moisture foods, inadequate drainage</td>
+                    <td data-label="Solutions">Drain more frequently, pre-dry watery vegetables, add absorbent materials</td>
                   </tr>
                   <tr>
-                    <td>Fruit flies around bucket</td>
-                    <td>Improper sealing, food exposed on top</td>
-                    <td>Ensure tight seal, add extra bran layer on top, use vinegar traps</td>
+                    <td data-label="Problem">Fruit flies around bucket</td>
+                    <td data-label="Possible Causes">Improper sealing, food exposed on top</td>
+                    <td data-label="Solutions">Ensure tight seal, add extra bran layer on top, use vinegar traps</td>
                   </tr>
                   <tr>
-                    <td>Slow fermentation</td>
-                    <td>Cool temperatures, old/inactive bran, large pieces</td>
-                    <td>Move to warmer spot, test bran activity, chop materials smaller</td>
+                    <td data-label="Problem">Slow fermentation</td>
+                    <td data-label="Possible Causes">Cool temperatures, old/inactive bran, large pieces</td>
+                    <td data-label="Solutions">Move to warmer spot, test bran activity, chop materials smaller</td>
                   </tr>
                 </tbody>
               </table>
@@ -2684,8 +2144,8 @@
             </div>
             
             <h4>Vermicompost Troubleshooting Table</h4>
-            <div class="table-responsive">
-              <table class="table table-striped troubleshooting-table">
+            <div class="bokashi-table-container">
+              <table class="bokashi-table bokashi-table-striped">
                 <thead>
                   <tr>
                     <th>Problem</th>
@@ -2695,34 +2155,34 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Worms dying or trying to escape</td>
-                    <td>Extreme pH, overfeeding, anaerobic conditions, temperature extremes</td>
-                    <td>Test pH, stop feeding, fluff bedding, adjust temperature, add eggshells</td>
+                    <td data-label="Problem">Worms dying or trying to escape</td>
+                    <td data-label="Possible Causes">Extreme pH, overfeeding, anaerobic conditions, temperature extremes</td>
+                    <td data-label="Solutions">Test pH, stop feeding, fluff bedding, adjust temperature, add eggshells</td>
                   </tr>
                   <tr>
-                    <td>Foul odors</td>
-                    <td>Overfeeding, anaerobic conditions, improper food types</td>
-                    <td>Stop feeding, aerate bedding, add dry carbon materials, avoid dairy/meat</td>
+                    <td data-label="Problem">Foul odors</td>
+                    <td data-label="Possible Causes">Overfeeding, anaerobic conditions, improper food types</td>
+                    <td data-label="Solutions">Stop feeding, aerate bedding, add dry carbon materials, avoid dairy/meat</td>
                   </tr>
                   <tr>
-                    <td>Fruit flies or gnats</td>
-                    <td>Exposed food, overripe fruit, too moist</td>
-                    <td>Bury food properly, cover with bedding, add dry materials, use traps</td>
+                    <td data-label="Problem">Fruit flies or gnats</td>
+                    <td data-label="Possible Causes">Exposed food, overripe fruit, too moist</td>
+                    <td data-label="Solutions">Bury food properly, cover with bedding, add dry materials, use traps</td>
                   </tr>
                   <tr>
-                    <td>Slow decomposition</td>
-                    <td>Too few worms, low temperatures, improper feeding</td>
-                    <td>Increase worm population, move to warmer location, chop food smaller</td>
+                    <td data-label="Problem">Slow decomposition</td>
+                    <td data-label="Possible Causes">Too few worms, low temperatures, improper feeding</td>
+                    <td data-label="Solutions">Increase worm population, move to warmer location, chop food smaller</td>
                   </tr>
                   <tr>
-                    <td>Excessive moisture</td>
-                    <td>Overwatering, high-moisture foods, poor drainage</td>
-                    <td>Add dry bedding, drain excess liquid, adjust food types</td>
+                    <td data-label="Problem">Excessive moisture</td>
+                    <td data-label="Possible Causes">Overwatering, high-moisture foods, poor drainage</td>
+                    <td data-label="Solutions">Add dry bedding, drain excess liquid, adjust food types</td>
                   </tr>
                   <tr>
-                    <td>Worms clustered in specific areas</td>
-                    <td>Temperature variations, feeding patterns, moisture differences</td>
-                    <td>Even out conditions, rotate feeding locations, mix bedding gently</td>
+                    <td data-label="Problem">Worms clustered in specific areas</td>
+                    <td data-label="Possible Causes">Temperature variations, feeding patterns, moisture differences</td>
+                    <td data-label="Solutions">Even out conditions, rotate feeding locations, mix bedding gently</td>
                   </tr>
                 </tbody>
               </table>
@@ -2735,37 +2195,39 @@
             <div class="faq-item">
               <h5>How is vermiwash different from Bokashi leachate?</h5>
               <p>Key differences:</p>
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th>Characteristic</th>
-                    <th>Vermiwash</th>
-                    <th>Bokashi Leachate</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>pH Level</td>
-                    <td>Neutral (6.5-7.5)</td>
-                    <td>Acidic (3.5-4.5)</td>
-                  </tr>
-                  <tr>
-                    <td>Primary Use</td>
-                    <td>Foliar spray, soil drench for all plants</td>
-                    <td>Soil conditioner (diluted), drain cleaner</td>
-                  </tr>
-                  <tr>
-                    <td>Nutrient Content</td>
-                    <td>Enzymes, hormones, beneficial microbes</td>
-                    <td>Organic acids, some nutrients</td>
-                  </tr>
-                  <tr>
-                    <td>Storage Life</td>
-                    <td>1-2 weeks fresh, 3-6 months with jaggery</td>
-                    <td>1 week fresh, 2-3 months with jaggery</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="bokashi-table-container">
+                <table class="bokashi-table bokashi-table-striped">
+                  <thead>
+                    <tr>
+                      <th>Characteristic</th>
+                      <th>Vermiwash</th>
+                      <th>Bokashi Leachate</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Characteristic">pH Level</td>
+                      <td data-label="Vermiwash">Neutral (6.5-7.5)</td>
+                      <td data-label="Bokashi Leachate">Acidic (3.5-4.5)</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Characteristic">Primary Use</td>
+                      <td data-label="Vermiwash">Foliar spray, soil drench for all plants</td>
+                      <td data-label="Bokashi Leachate">Soil conditioner (diluted), drain cleaner</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Characteristic">Nutrient Content</td>
+                      <td data-label="Vermiwash">Enzymes, hormones, beneficial microbes</td>
+                      <td data-label="Bokashi Leachate">Organic acids, some nutrients</td>
+                    </tr>
+                    <tr>
+                      <td data-label="Characteristic">Storage Life</td>
+                      <td data-label="Vermiwash">1-2 weeks fresh, 3-6 months with jaggery</td>
+                      <td data-label="Bokashi Leachate">1 week fresh, 2-3 months with jaggery</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             
             <div class="faq-item">
@@ -2791,8 +2253,8 @@
             </div>
             
             <h4>Vermiwash Quality Assessment Guide</h4>
-            <div class="table-responsive">
-              <table class="table table-striped troubleshooting-table">
+            <div class="bokashi-table-container">
+              <table class="bokashi-table bokashi-table-striped">
                 <thead>
                   <tr>
                     <th>Characteristic</th>
@@ -2803,28 +2265,28 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Color</td>
-                    <td>Light brown, tea-colored</td>
-                    <td>Dark brown/black, muddy</td>
-                    <td>Improve drainage, avoid overcollection</td>
+                    <td data-label="Characteristic">Color</td>
+                    <td data-label="Good Quality">Light brown, tea-colored</td>
+                    <td data-label="Poor Quality">Dark brown/black, muddy</td>
+                    <td data-label="Action Required">Improve drainage, avoid overcollection</td>
                   </tr>
                   <tr>
-                    <td>Smell</td>
-                    <td>Earthy, pleasant</td>
-                    <td>Foul, putrid, anaerobic</td>
-                    <td>Do not use on plants; improve aeration</td>
+                    <td data-label="Characteristic">Smell</td>
+                    <td data-label="Good Quality">Earthy, pleasant</td>
+                    <td data-label="Poor Quality">Foul, putrid, anaerobic</td>
+                    <td data-label="Action Required">Do not use on plants; improve aeration</td>
                   </tr>
                   <tr>
-                    <td>Clarity</td>
-                    <td>Slightly cloudy but transparent</td>
-                    <td>Opaque, contains solids</td>
-                    <td>Filter before use, check false bottom</td>
+                    <td data-label="Characteristic">Clarity</td>
+                    <td data-label="Good Quality">Slightly cloudy but transparent</td>
+                    <td data-label="Poor Quality">Opaque, contains solids</td>
+                    <td data-label="Action Required">Filter before use, check false bottom</td>
                   </tr>
                   <tr>
-                    <td>pH Level</td>
-                    <td>6.5-7.5 (neutral)</td>
-                    <td><6 or >8 (acidic/alkaline)</td>
-                    <td>Adjust feeding, add buffering materials</td>
+                    <td data-label="Characteristic">pH Level</td>
+                    <td data-label="Good Quality">6.5-7.5 (neutral)</td>
+                    <td data-label="Poor Quality">&lt;6 or &gt;8 (acidic/alkaline)</td>
+                    <td data-label="Action Required">Adjust feeding, add buffering materials</td>
                   </tr>
                 </tbody>
               </table>
@@ -2948,161 +2410,115 @@
           </div>
         </section>
 
-    </article>
+      </article>
     </div>
   </div>
 </main>
 
-<footer class="mt-5">
+<footer>
   <div class="container">
-    <p>Comprehensive Guide for Home-Scale Bokashi & Vermicomposting with Vermiwash Collection. This guide is designed for clarity and accessibility for gardeners of all experience levels, from complete beginners to experienced composters looking to optimize their system.</p>
-    <p class="text-muted small">Theme: <span id="currentTheme">Light</span> | <button class="btn btn-sm btn-link p-0" id="themeToggleFooter">Switch theme</button></p>
+    <p>Comprehensive Guide for Home-Scale Bokashi & Vermicomposting</p>
+    <p class="small">Theme: <span id="currentTheme">Light</span> | <button class="btn btn-sm btn-link" id="footerToggle">Switch</button></p>
   </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  // Theme Toggle Functionality with Enhanced Animation
-  document.addEventListener('DOMContentLoaded', function() {
-    const themeToggleSwitch = document.getElementById('themeToggleSwitch');
-    const themeToggleFooter = document.getElementById('themeToggleFooter');
-    const currentThemeSpan = document.getElementById('currentTheme');
-    const body = document.body;
-    const themeTransitionLayer = document.getElementById('themeTransitionLayer');
-    
-    // Check for saved theme preference or default to light
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    const savedTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
-    
-    // Apply saved theme
-    if (savedTheme === 'dark') {
-      body.setAttribute('data-theme', 'dark');
-      currentThemeSpan.textContent = 'Dark';
-    } else {
-      body.removeAttribute('data-theme');
-      currentThemeSpan.textContent = 'Light';
-    }
-    
-    // Enhanced theme toggle function with animation
-    function toggleTheme() {
-      // Add transition layer
-      themeTransitionLayer.classList.add('active');
-      
-      // Add animation class to switch
-      themeToggleSwitch.classList.add('animating');
-      
-      // Toggle theme after a short delay
-      setTimeout(() => {
-        if (body.getAttribute('data-theme') === 'dark') {
-          body.removeAttribute('data-theme');
-          localStorage.setItem('theme', 'light');
-          currentThemeSpan.textContent = 'Light';
-        } else {
-          body.setAttribute('data-theme', 'dark');
-          localStorage.setItem('theme', 'dark');
-          currentThemeSpan.textContent = 'Dark';
-        }
-        
-        // Remove animation class
-        setTimeout(() => {
-          themeToggleSwitch.classList.remove('animating');
-        }, 600);
-        
-        // Remove transition layer
-        setTimeout(() => {
-          themeTransitionLayer.classList.remove('active');
-        }, 300);
-      }, 150);
-    }
-    
-    // Add event listeners
-    themeToggleSwitch.addEventListener('click', toggleTheme);
-    themeToggleFooter.addEventListener('click', toggleTheme);
-    
-    // Add active class to table of contents links based on scroll position
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.table-of-contents .nav-link');
-    
-    window.addEventListener('scroll', function() {
-      let current = '';
-      
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if (pageYOffset >= (sectionTop - 200)) {
-          current = section.getAttribute('id');
-        }
-      });
-      
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').substring(1) === current) {
-          link.classList.add('active');
-        }
-      });
+document.addEventListener('DOMContentLoaded', function() {
+  const body = document.body;
+  const themeToggle = document.getElementById('themeToggle');
+  const footerToggle = document.getElementById('footerToggle');
+  const currentTheme = document.getElementById('currentTheme');
+  const progressBar = document.getElementById('readingProgress');
+  
+  // Load saved theme
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  if (savedTheme === 'dark') {
+    body.setAttribute('data-bs-theme', 'dark');
+    currentTheme.textContent = 'Dark';
+  }
+  
+  function toggleTheme() {
+    const isDark = body.getAttribute('data-bs-theme') === 'dark';
+    body.setAttribute('data-bs-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('theme', isDark ? 'light' : 'dark');
+    currentTheme.textContent = isDark ? 'Light' : 'Dark';
+  }
+  
+  themeToggle.addEventListener('click', toggleTheme);
+  footerToggle.addEventListener('click', toggleTheme);
+  
+  // Active navigation
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.nav-link');
+  
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      if (pageYOffset >= sectionTop - 200) {
+        current = section.getAttribute('id');
+      }
     });
     
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          window.scrollTo({
-            top: targetElement.offsetTop - 80,
-            behavior: 'smooth'
-          });
-        }
-      });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').substring(1) === current) {
+        link.classList.add('active');
+      }
     });
     
-    // Table row hover enhancement with highlight animation
-    const tables = document.querySelectorAll('.table tbody tr');
-    tables.forEach(row => {
-      row.addEventListener('mouseenter', function() {
-        this.style.transition = 'all 0.3s ease';
-      });
-      
-      // Add click highlight effect
-      row.addEventListener('click', function() {
-        this.classList.add('highlight-row');
-        setTimeout(() => {
-          this.classList.remove('highlight-row');
-        }, 1500);
-      });
-    });
-    
-    // Listen for system preference changes
-    prefersDarkScheme.addEventListener('change', function(e) {
-      if (!localStorage.getItem('theme')) {
-        if (e.matches) {
-          body.setAttribute('data-theme', 'dark');
-          currentThemeSpan.textContent = 'Dark';
-        } else {
-          body.removeAttribute('data-theme');
-          currentThemeSpan.textContent = 'Light';
-        }
+    // Update progress bar
+    updateProgressBar();
+  });
+  
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        window.scrollTo({
+          top: target.offsetTop - 80,
+          behavior: 'smooth'
+        });
       }
     });
   });
-
-  document.addEventListener('DOMContentLoaded', function() {
-  const tables = document.querySelectorAll('table');
-  tables.forEach(table => {
-    const headers = [];
-    table.querySelectorAll('thead th').forEach(th => {
-      headers.push(th.textContent.trim());
-    });
-    table.querySelectorAll('tbody td').forEach((td, index) => {
-      const headerIndex = index % headers.length;
-      td.setAttribute('data-label', headers[headerIndex]);
-    });
-  });
+  
+  // Reading progress bar function
+  function updateProgressBar() {
+    const article = document.querySelector('article');
+    if (!article) return;
+    
+    const articleRect = article.getBoundingClientRect();
+    const articleTop = articleRect.top + window.pageYOffset;
+    const articleHeight = articleRect.height;
+    const windowHeight = window.innerHeight;
+    
+    // Calculate how far down the page the user has scrolled
+    const scrollPosition = window.pageYOffset;
+    const articleStart = articleTop - windowHeight;
+    const articleEnd = articleTop + articleHeight;
+    
+    // Calculate percentage
+    let progress = 0;
+    if (scrollPosition > articleStart) {
+      progress = (scrollPosition - articleStart) / (articleEnd - articleStart) * 100;
+    }
+    
+    // Clamp between 0 and 100
+    progress = Math.min(100, Math.max(0, progress));
+    
+    // Update progress bar width
+    progressBar.style.width = progress + '%';
+  }
+  
+  // Initialize progress bar
+  updateProgressBar();
+  
+  // Update progress on resize
+  window.addEventListener('resize', updateProgressBar);
 });
 </script>
 </body>
